@@ -53,6 +53,12 @@ Thumbs.db
 
 # データファイル（大容量のため除外）
 data/raw/
+data/temp/
+data/temp_l03/
+03_Analysis/data/
+03_Analysis/results/figures/*.png
+03_Analysis/results/figures/*.pdf
+03_Analysis/results/figures/*.svg
 data/interim/*.csv
 data/interim/*.parquet
 data/interim/*.geojson

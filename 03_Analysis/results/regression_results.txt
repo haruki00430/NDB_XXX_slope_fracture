@@ -1,0 +1,136 @@
+
+--- Total ---
+Model 1 (Slope only): Coeff=6.8500, p=0.0061, R2=0.1556
+Model 2 (Adjusted): Coeff=4.4730, p=0.0989, R2=0.2755
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          fracture_rate   R-squared:                       0.276
+Model:                            OLS   Adj. R-squared:                  0.207
+Method:                 Least Squares   F-statistic:                     3.993
+Date:                Mon, 16 Feb 2026   Prob (F-statistic):            0.00780
+Time:                        20:36:54   Log-Likelihood:                -246.83
+No. Observations:                  47   AIC:                             503.7
+Df Residuals:                      42   BIC:                             512.9
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -53.4840    146.251     -0.366      0.716    -348.630     241.662
+habitable_slope_weighted     4.4730      2.650      1.688      0.099      -0.876       9.822
+aging_rate                   7.1862      3.306      2.174      0.035       0.514      13.858
+fast_walking_rate            3.0138      1.848      1.630      0.110      -0.717       6.744
+pop_density                  0.0007      0.008      0.088      0.930      -0.015       0.016
+==============================================================================
+Omnibus:                        1.497   Durbin-Watson:                   0.952
+Prob(Omnibus):                  0.473   Jarque-Bera (JB):                1.480
+Skew:                          -0.379   Prob(JB):                        0.477
+Kurtosis:                       2.575   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+--- Femur ---
+Model 1 (Slope only): Coeff=5.6456, p=0.0007, R2=0.2254
+Model 2 (Adjusted): Coeff=3.4880, p=0.0432, R2=0.3845
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             femur_rate   R-squared:                       0.385
+Model:                            OLS   Adj. R-squared:                  0.326
+Method:                 Least Squares   F-statistic:                     6.560
+Date:                Mon, 16 Feb 2026   Prob (F-statistic):           0.000340
+Time:                        20:36:55   Log-Likelihood:                -225.20
+No. Observations:                  47   AIC:                             460.4
+Df Residuals:                      42   BIC:                             469.7
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -43.0518     92.316     -0.466      0.643    -229.352     143.248
+habitable_slope_weighted     3.4880      1.673      2.085      0.043       0.112       6.864
+aging_rate                   5.5263      2.087      2.648      0.011       1.315       9.738
+fast_walking_rate            2.0154      1.167      1.727      0.091      -0.339       4.370
+pop_density                 -0.0011      0.005     -0.231      0.818      -0.011       0.009
+==============================================================================
+Omnibus:                        8.200   Durbin-Watson:                   0.862
+Prob(Omnibus):                  0.017   Jarque-Bera (JB):                7.242
+Skew:                          -0.820   Prob(JB):                       0.0268
+Kurtosis:                       4.003   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+--- Humerus ---
+Model 1 (Slope only): Coeff=0.3290, p=0.3545, R2=0.0191
+Model 2 (Adjusted): Coeff=0.2590, p=0.5245, R2=0.1072
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           humerus_rate   R-squared:                       0.107
+Model:                            OLS   Adj. R-squared:                  0.022
+Method:                 Least Squares   F-statistic:                     1.260
+Date:                Mon, 16 Feb 2026   Prob (F-statistic):              0.301
+Time:                        20:36:55   Log-Likelihood:                -158.38
+No. Observations:                  47   AIC:                             326.8
+Df Residuals:                      42   BIC:                             336.0
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -11.3062     22.272     -0.508      0.614     -56.252      33.640
+habitable_slope_weighted     0.2590      0.404      0.642      0.524      -0.555       1.074
+aging_rate                   0.6818      0.503      1.354      0.183      -0.334       1.698
+fast_walking_rate            0.4782      0.281      1.699      0.097      -0.090       1.046
+pop_density                  0.0007      0.001      0.602      0.551      -0.002       0.003
+==============================================================================
+Omnibus:                        1.525   Durbin-Watson:                   1.481
+Prob(Omnibus):                  0.467   Jarque-Bera (JB):                1.135
+Skew:                          -0.112   Prob(JB):                        0.567
+Kurtosis:                       2.272   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+--- Forearm ---
+Model 1 (Slope only): Coeff=0.8754, p=0.2330, R2=0.0315
+Model 2 (Adjusted): Coeff=0.7260, p=0.4017, R2=0.0624
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           forearm_rate   R-squared:                       0.062
+Model:                            OLS   Adj. R-squared:                 -0.027
+Method:                 Least Squares   F-statistic:                    0.6986
+Date:                Mon, 16 Feb 2026   Prob (F-statistic):              0.597
+Time:                        20:36:55   Log-Likelihood:                -193.76
+No. Observations:                  47   AIC:                             397.5
+Df Residuals:                      42   BIC:                             406.8
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    0.8741     47.288      0.018      0.985     -94.557      96.305
+habitable_slope_weighted     0.7260      0.857      0.847      0.402      -1.003       2.455
+aging_rate                   0.9781      1.069      0.915      0.365      -1.179       3.135
+fast_walking_rate            0.5202      0.598      0.870      0.389      -0.686       1.726
+pop_density                  0.0011      0.002      0.440      0.662      -0.004       0.006
+==============================================================================
+Omnibus:                        0.512   Durbin-Watson:                   1.486
+Prob(Omnibus):                  0.774   Jarque-Bera (JB):                0.587
+Skew:                           0.226   Prob(JB):                        0.745
+Kurtosis:                       2.691   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.

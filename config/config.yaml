@@ -1,0 +1,142 @@
+# NDB_XXX_slope_fracture プロジェクト設定ファイル
+# 地形傾斜度と高齢者骨折リスクの関連研究
+
+# プロジェクト基本情報
+project:
+  name: "NDB_XXX_slope_fracture"
+  title: "地形傾斜度と高齢者骨折リスク・歩行習慣の関連研究"
+  description: "国土地理院DEMデータから算出した傾斜度と、NDB骨折手術データを組み合わせた全国規模の生態学的研究"
+  author: "NDB Research Hub"
+  created_date: "2026-02-16"
+  version: "1.0.0"
+
+# 実験モード設定
+experiment_mode: false  # true: ダミーデータ, false: 実データ
+
+# 研究対象
+target:
+  disease: "fracture"
+  population: "高齢者（65歳以上）"
+  outcome_primary: "大腿骨近位部骨折手術実施率"
+  outcome_secondary:
+    - "上腕骨骨折手術率"
+    - "歩行速度（特定健診質問票Q16）"
+  exposure: "地形傾斜度（DEM由来）"
+
+# データソース
+data_sources:
+  ndb:
+    version: "第10回NDBオープンデータ"
+    base_path: "../../02_Data/raw/NDB_OpenData/No.10"
+    files:
+      surgery:
+        # 大腿骨近位部骨折観血的手術（K0461）
+        femoral_fracture: "06_手術/01_公費レセプトを含まないデータ/都道府県別_手術実施件数_2021年度_公費レセプトを含まない_大腿骨.xlsx"
+        # 上腕骨骨折観血的手術（K0421）
+        humeral_fracture: "06_手術/01_公費レセプトを含まないデータ/都道府県別_手術実施件数_2021年度_公費レセプトを含まない_上腕骨.xlsx"
+      checkup:
+        # 特定健診質問票Q16「人と比較して歩く速度が速い」
+        walking_speed: "07_特定健診 質問票/01_公費レセプトを含まないデータ/都道府県別_健診_質問票_2021年度_公費レセプトを含まない.xlsx"
+
+  gsi:
+    # 国土地理院数値標高モデル（DEM）
+    dem_source: "基盤地図情報（数値標高モデル）5mメッシュ"
+    dem_path: "data/raw/DEM"  # プロジェクト内相対パス
+    resolution: "5m"  # または10m
+
+  statistics:
+    # e-Stat 国勢調査データ
+    census:
+      aging_rate: "../../02_Data/master/aging_rate_by_prefecture_2020.csv"
+      population_density: "../../02_Data/master/population_density_2020.csv"
+    climate:
+      snowfall: "../../02_Data/master/annual_snowfall_by_prefecture.csv"
+
+# 出力パス
+output_paths:
+  interim: "data/interim"
+  results: "results"
+  figures: "results/figures"
+  statistics: "results/statistics"
+  manuscript: "."
+
+# 中間データファイル名
+interim_files:
+  fracture_surgery: "fracture_surgery.csv"
+  walking_speed: "walking_speed_q16.csv"
+  slope_index: "slope_index.csv"
+  demographics: "demographics.csv"
+  analysis_dataset: "analysis_dataset.csv"
+
+# 解析パラメータ
+analysis:
+  # 傾斜度算出
+  slope:
+    method: "Horn"  # 傾斜度計算アルゴリズム（Horn, Zevenbergen-Thorne）
+    unit: "degree"  # degree または percent
+    exclude_areas:
+      - "forest"   # 森林を除外
+      - "water"    # 水域を除外
+    aggregation:
+      - "mean"     # 平均傾斜度
+      - "median"   # 中央値
+      - "p75"      # 75パーセンタイル
+      - "max"      # 最大傾斜度
+      - "steep_ratio"  # 傾斜15度以上の面積比率
+
+  # 年齢調整
+  age_standardization:
+    method: "direct"  # direct または indirect
+    standard_population: "national"  # 全国人口を標準
+    age_groups:
+      - "65-69"
+      - "70-74"
+      - "75-79"
+      - "80-84"
+      - "85+"
+
+  # 統計検定
+  statistical_tests:
+    correlation:
+      method: "pearson"  # pearson, spearman
+      significance_level: 0.05
+    regression:
+      model_type: "linear"  # linear, poisson
+      confounders:
+        - "aging_rate"         # 高齢化率
+        - "population_density" # 人口密度
+        - "snowfall_flag"      # 積雪地域フラグ
+    mediation:
+      bootstrap_samples: 1000
+      confidence_level: 0.95
+
+# 可視化設定
+visualization:
+  japanese_font: true
+  font_name: "Meiryo"
+  dpi: 300
+  figure_format: "png"
+  color_palette: "viridis"
+  map:
+    projection: "JGD2011"  # 日本測地系2011
+    basemap: true
+
+# 論文設定
+manuscript:
+  format: "qmd"  # Quarto markdown
+  output_formats:
+    - "html"
+    - "docx"
+    - "pdf"
+  citation_style: "vancouver"
+  bibliography: "references.bib"
+  target_journal:
+    - "Journal of Epidemiology"
+    - "Environmental Health Perspectives"
+    - "Injury Prevention"
+
+# ログ設定
+logging:
+  level: "INFO"
+  log_file: "docs/session_log.log"
+  console_output: true
