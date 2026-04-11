@@ -1,0 +1,16 @@
+Listing: C:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\02_Data\raw\NDB_OpenData\No.10
+ - 01_医科診療行為（患者数）
+ - 01_医科診療行為（算定回数）
+ - 02_歯科診療行為（患者数）
+ - 02_歯科診療行為（算定回数）
+ - 03_調剤行為（患者数）
+ - 03_調剤行為（算定回数）
+ - 04_歯科傷病
+ - 05_処方薬
+ - 06_特定保険医療材料
+ - 07_特定健診 検査
+ - 07_特定健診 質問票
+   Listing subdirectory: C:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\02_Data\raw\NDB_OpenData\No.10\07_特定健診 質問票
+     - 01_公費レセプトを含まないデータ
+ - 第１０回NDBオープンデータについて.pdf
+ - 第１０回NDBオープンデータ解説編.pdf

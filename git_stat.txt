@@ -1,0 +1,192 @@
+﻿commit 751a1b3b560aaf20cf680d306eef0f90aebf627d
+Author: haruki00430 <haruki00430@gmail.com>
+Date:   Sat Mar 7 14:23:54 2026 +0900
+
+    霑ｽ蜉蛻・ｒ繧ｳ繝溘ャ繝医＠縺ｾ縺吶・
+ 03_Analysis/data/interim/dem_coverage_report.txt   |     60 +
+ 03_Analysis/data/interim/fracture_surgery.csv      |     48 +
+ 03_Analysis/data/interim/fracture_surgery_site.csv |     14 +
+ 03_Analysis/data/interim/gml_structure.txt         |    216 +
+ 03_Analysis/data/interim/hokkaido_analysis.txt     |     86 +
+ .../data/interim/hokkaido_incorrect_meshes.txt     |     64 +
+ .../data/interim/hokkaido_mesh_analysis.csv        |     44 +
+ .../data/interim/interim_combined_phase1.csv       |     48 +
+ .../data/interim/island_prefecture_analysis.txt    |    231 +
+ .../data/interim/mesh_5235_verification.txt        |     32 +
+ 03_Analysis/data/interim/mesh_check_result.txt     |    103 +
+ 03_Analysis/data/interim/mesh_coordinates.csv      |    177 +
+ .../data/interim/mesh_prefecture_mapping.csv       |    177 +
+ .../interim/mesh_prefecture_mapping_corrected.csv  |    177 +
+ .../data/interim/mesh_prefecture_mapping_final.csv |    177 +
+ .../interim/mesh_prefecture_mapping_final_v2.csv   |    177 +
+ .../mesh_prefecture_mapping_final_verified.csv     |    177 +
+ .../data/interim/mesh_prefecture_mapping_gis.csv   |    177 +
+ .../interim/mesh_prefecture_mapping_no_islands.csv |    177 +
+ .../data/interim/mesh_prefecture_mapping_v2.csv    |    177 +
+ .../mesh_prefecture_mapping_verified_v2.csv        |    177 +
+ .../data/interim/prefecture_coverage_report.txt    |    115 +
+ .../prefecture_coverage_report_corrected.txt       |     54 +
+ .../interim/prefecture_coverage_report_final.txt   |    110 +
+ .../prefecture_coverage_report_final_v2.txt        |     29 +
+ .../interim/prefecture_coverage_report_gis.txt     |    122 +
+ .../prefecture_coverage_report_no_islands.txt      |     30 +
+ .../data/interim/prefecture_coverage_report_v2.txt |    101 +
+ .../data/interim/prefecture_coverage_report_v3.txt |    107 +
+ .../interim/prefecture_mesh_counts_verified.csv    |     48 +
+ 03_Analysis/data/interim/recount_result.txt        |    110 +
+ 03_Analysis/data/interim/remap_result.txt          |    111 +
+ .../data/interim/sample_gml/G04-c-11_5030-jgd.xml  |  92418 +++
+ ...1_5030-jgd_ElevationAndSlopeAngleFourthMesh.dbf |    Bin 0 -> 1284862 bytes
+ ...1_5030-jgd_ElevationAndSlopeAngleFourthMesh.shp |    Bin 0 -> 2393156 bytes
+ ...1_5030-jgd_ElevationAndSlopeAngleFourthMesh.shx |    Bin 0 -> 140868 bytes
+ .../sample_gml/KS-META-G04-c-11_5030-jgd.xml       |    276 +
+ 03_Analysis/data/interim/slope_by_prefecture.csv   |    177 +
+ .../data/interim/slope_by_prefecture_final.csv     |     26 +
+ .../data/interim/slope_by_prefecture_verified.csv  |     48 +
+ .../data/interim/slope_verification_report.txt     |     59 +
+ 03_Analysis/data/interim/statistics_2020.csv       |     48 +
+ 03_Analysis/data/interim/target_meshes.csv         |     20 +
+ 03_Analysis/data/interim/walking_speed_q12.csv     |     49 +
+ 03_Analysis/data/interim/walking_speed_q16.csv     |      1 +
+ 03_Analysis/data/processed/analysis_dataset_v1.csv |     48 +
+ 03_Analysis/report/statistical_report.md           |     69 +
+ 03_Analysis/results/correlation_matrix.csv         |      9 +
+ 03_Analysis/results/figures/fig_map_bivariate.png  |    Bin 0 -> 107029 bytes
+ 03_Analysis/results/figures/fig_map_combined.png   |    Bin 0 -> 269015 bytes
+ 03_Analysis/results/figures/fig_map_fracture.png   |    Bin 0 -> 108409 bytes
+ 03_Analysis/results/figures/fig_map_slope.png      |    Bin 0 -> 98897 bytes
+ .../results/figures/heatmap_correlation.png        |    Bin 0 -> 71416 bytes
+ .../results/figures/preliminary_scatter.png        |    Bin 0 -> 40121 bytes
+ 03_Analysis/results/figures/scatter_matrix.png     |    Bin 0 -> 282408 bytes
+ .../results/figures/scatter_slope_fracture.png     |    Bin 0 -> 354633 bytes
+ 03_Analysis/results/k046_inspection.txt            |    179 +
+ 03_Analysis/results/regression_results.txt         |    136 +
+ 03_Analysis/results/table1_descriptive.csv         |     10 +
+ 03_Analysis/results/table1_descriptive.md          |     13 +
+ .../scripts/00_analyze_surgery_data_detail.py      |    116 +
+ 03_Analysis/scripts/00_check_estat_api.py          |     43 +
+ 03_Analysis/scripts/00_explore_ndb_structure.py    |    122 +
+ 03_Analysis/scripts/00_find_k046_surgery.py        |     67 +
+ 03_Analysis/scripts/00_inspect_dem_shapefile.py    |     33 +
+ 03_Analysis/scripts/00_inspect_l03.py              |     19 +
+ 03_Analysis/scripts/00_inspect_l03_content.py      |     32 +
+ 03_Analysis/scripts/00_parse_l03_tags.py           |     19 +
+ 03_Analysis/scripts/00_read_l03_head.py            |     16 +
+ 03_Analysis/scripts/00_temp_inspect.py             |     13 +
+ 03_Analysis/scripts/00_temp_inspect_census.py      |     22 +
+ 03_Analysis/scripts/00_temp_inspect_census_v2.py   |     19 +
+ 03_Analysis/scripts/00_temp_inspect_output.txt     |     22 +
+ 03_Analysis/scripts/01_extract_ndb_fracture.py     |    277 +
+ 03_Analysis/scripts/01_extract_ndb_fracture_v2.py  |    171 +
+ .../scripts/01_extract_walking_speed_q12.py        |    146 +
+ 03_Analysis/scripts/01_fetch_census_data.py        |    137 +
+ 03_Analysis/scripts/01_find_questionnaire_file.py  |     17 +
+ 03_Analysis/scripts/02_aggregate_slope_xml.py      |    131 +
+ 03_Analysis/scripts/02_inspect_k044_k045.py        |     67 +
+ 03_Analysis/scripts/02_inspect_k046_structure.py   |     42 +
+ .../scripts/02_inspect_k046_structure_v2.py        |     59 +
+ 03_Analysis/scripts/02_inspect_ndb_headers.py      |     45 +
+ 03_Analysis/scripts/02_inspect_q16.py              |     24 +
+ 03_Analysis/scripts/02_inspect_q16_output.txt      |     22 +
+ 03_Analysis/scripts/02_verify_exact_codes.py       |     86 +
+ 03_Analysis/scripts/02_verify_output.txt           |     97 +
+ 03_Analysis/scripts/03_check_coverage.py           |     36 +
+ 03_Analysis/scripts/03_check_mesh_codes.py         |     31 +
+ .../scripts/03_comprehensive_fracture_codes.txt    |   1213 +
+ 03_Analysis/scripts/03_comprehensive_inspection.py |     84 +
+ 03_Analysis/scripts/03_dir_list.txt                |     16 +
+ 03_Analysis/scripts/03_dir_list_deep.txt           |     45 +
+ 03_Analysis/scripts/03_list_dirs.py                |     18 +
+ 03_Analysis/scripts/03_list_dirs_deep.py           |     12 +
+ 03_Analysis/scripts/03_list_dirs_to_file.py        |     25 +
+ 03_Analysis/scripts/03_verify_l03_coverage.py      |     66 +
+ 03_Analysis/scripts/04_find_result.txt             |      3 +
+ 03_Analysis/scripts/04_find_walking_speed_file.py  |     38 +
+ 03_Analysis/scripts/04_integrate_datasets.py       |    112 +
+ 03_Analysis/scripts/04_integrate_preliminary.py    |    115 +
+ 03_Analysis/scripts/05_create_mesh_pref_mapping.py |    101 +
+ 03_Analysis/scripts/05_verify_integration.py       |     35 +
+ 03_Analysis/scripts/05_verify_output.txt           |    Bin 0 -> 2416 bytes
+ 03_Analysis/scripts/06_aggregate_slope_by_pref.py  |     90 +
+ 03_Analysis/scripts/06_descriptive_stats.py        |     81 +
+ 03_Analysis/scripts/07_correlation_analysis.py     |     69 +
+ 03_Analysis/scripts/07_generate_coverage_report.py |    119 +
+ 03_Analysis/scripts/07_verify_full_coverage.py     |    103 +
+ 03_Analysis/scripts/07_verify_full_coverage_v2.py  |    115 +
+ 03_Analysis/scripts/08_read_report.py              |      7 +
+ 03_Analysis/scripts/08_regression_analysis.py      |     88 +
+ .../scripts/09_verify_prefecture_coverage.py       |    149 +
+ 03_Analysis/scripts/09_visualization.py            |     93 +
+ 03_Analysis/scripts/10_create_prefecture_maps.py   |    305 +
+ 03_Analysis/scripts/10_extract_sample_gml.py       |     60 +
+ 03_Analysis/scripts/10_run_complete_analysis.py    |    425 +
+ .../scripts/11_extract_all_mesh_coordinates.py     |    109 +
+ 03_Analysis/scripts/12_map_mesh_to_prefecture.py   |    137 +
+ 03_Analysis/scripts/13_check_specific_meshes.py    |     69 +
+ 03_Analysis/scripts/14_remap_mesh_to_prefecture.py |    145 +
+ 03_Analysis/scripts/15_final_prefecture_mapping.py |    155 +
+ .../scripts/16_recount_prefecture_meshes.py        |     32 +
+ 03_Analysis/scripts/17_verify_mesh_5235.py         |     69 +
+ .../scripts/18_corrected_prefecture_mapping.py     |    141 +
+ .../19_final_corrected_prefecture_mapping.py       |    160 +
+ 03_Analysis/scripts/20_analyze_hokkaido_meshes.py  |     81 +
+ .../scripts/21_analyze_island_prefectures.py       |     69 +
+ 03_Analysis/scripts/22_final_mapping_no_islands.py |    155 +
+ .../23_identify_incorrect_hokkaido_meshes.py       |     71 +
+ 03_Analysis/scripts/24_check_gml_download.py       |     43 +
+ 03_Analysis/scripts/25_download_mlit_n03.py        |     49 +
+ .../scripts/26_gis_based_prefecture_mapping.py     |    120 +
+ .../27_gis_based_prefecture_mapping_optimized.py   |    115 +
+ .../scripts/28_recalculate_slope_refined.py        |    147 +
+ 03_Analysis/scripts/29_read_log.py                 |     31 +
+ 03_Analysis/scripts/30_inspect_csv_encoding.py     |     36 +
+ 03_Analysis/scripts/31_check_shp_encoding.py       |     31 +
+ 03_Analysis/scripts/32_gis_mapping_utf8_fix.py     |     83 +
+ 03_Analysis/scripts/33_extract_sample_l03.py       |     31 +
+ 03_Analysis/scripts/34_inspect_l03_shp.py          |     39 +
+ 03_Analysis/scripts/35_generate_habitable_mask.py  |    190 +
+ .../scripts/35_generate_habitable_mask_parallel.py |    173 +
+ .../scripts/36_recalculate_slope_habitable.py      |    131 +
+ .../scripts/37_generate_mesh_slope_and_mapping.py  |    220 +
+ 03_Analysis/scripts/37_inspect_g04_xml.py          |     49 +
+ 03_Analysis/scripts/38_aggregate_final_results.py  |    108 +
+ 03_Analysis/scripts/xml_head.txt                   |    200 +
+ README.md                                          |    220 +
+ config/config.yaml                                 |    142 +
+ data/interim/.gitkeep                              |      0
+ data/temp/KS-META-L03-b-06_3923-jgd.xml            |    281 +
+ data/temp/KS-META-L03-b-21_5339.xml                |    351 +
+ data/temp/L03-b-06_3923-jgd.xml                    |  35132 +
+ .../L03-b-06_3923-jgd_LandUseSubdivisionMesh.dbf   |    Bin 0 -> 360098 bytes
+ .../L03-b-06_3923-jgd_LandUseSubdivisionMesh.shp   |    Bin 0 -> 4080100 bytes
+ .../L03-b-06_3923-jgd_LandUseSubdivisionMesh.shx   |    Bin 0 -> 240100 bytes
+ data/temp/L03-b-21_5339.dbf                        |    Bin 0 -> 14490130 bytes
+ data/temp/L03-b-21_5339.geojson                    | 630006 ++++++++++++++++++
+ data/temp/L03-b-21_5339.prj                        |      1 +
+ data/temp/L03-b-21_5339.shp                        |    Bin 0 -> 85680100 bytes
+ data/temp/L03-b-21_5339.shx                        |    Bin 0 -> 5040100 bytes
+ data/temp/L03-b-21_5339.xml                        |   1681 +
+ data/temp/inspect_dem/G04-c-11_5339-jgd.xml        | 122763 ++++
+ ...1_5339-jgd_ElevationAndSlopeAngleFourthMesh.dbf |    Bin 0 -> 1706802 bytes
+ ...1_5339-jgd_ElevationAndSlopeAngleFourthMesh.shp |    Bin 0 -> 3179236 bytes
+ ...1_5339-jgd_ElevationAndSlopeAngleFourthMesh.shx |    Bin 0 -> 187108 bytes
+ .../temp/inspect_dem/KS-META-G04-c-11_5339-jgd.xml |    276 +
+ data/temp_l03/KS-META-L03-b-21_4730.xml            |    351 +
+ data/temp_l03/L03-b-21_4730.dbf                    |    Bin 0 -> 13110130 bytes
+ data/temp_l03/L03-b-21_4730.geojson                | 570006 ++++++++++++++++
+ data/temp_l03/L03-b-21_4730.prj                    |      1 +
+ data/temp_l03/L03-b-21_4730.shp                    |    Bin 0 -> 77520100 bytes
+ data/temp_l03/L03-b-21_4730.shx                    |    Bin 0 -> 4560100 bytes
+ data/temp_l03/L03-b-21_4730.xml                    |   1681 +
+ docs/DATA_LOCATIONS.md                             |    267 +
+ docs/SESSION_LOG_2026-02-16.md                     |    653 +
+ docs/hypothesis_and_discussion.md                  |    470 +
+ docs/implementation_plan.md                        |    860 +
+ ...252\250\346\212\230\347\240\224\347\251\266.md" |     40 +
+ ...203\227\343\203\251\343\202\244\343\203\263.md" |     37 +
+ reference_verification_report.md                   |    226 +
+ results/figures/.gitkeep                           |      0
+ results/statistics/.gitkeep                        |      0
+ results/statistics/prefecture_habitable_slope.csv  |     48 +
+ results/statistics/slope_comparison_report.md      |     32 +
+ 186 files changed, 1471471 insertions(+)

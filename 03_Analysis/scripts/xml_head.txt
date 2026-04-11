@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ksj:Dataset gml:id="G04Dataset" xmlns:ksj="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app KsjAppSchema-G04c-v2_1.xsd">
+	<gml:description>国土数値情報 標高・傾斜度メッシュ インスタンス文書</gml:description>
+	<!-- データ提供範囲 -->
+	<gml:boundedBy>
+		<gml:EnvelopeWithTimePeriod srsName="JGD2000 / (B, L)" frame="GC / JST">
+			<gml:lowerCorner>35.33333333 139.00000000</gml:lowerCorner>
+			<gml:upperCorner>36.00000000 140.00000000</gml:upperCorner>
+			<gml:beginPosition indeterminatePosition="unknown" />
+			<gml:endPosition indeterminatePosition="unknown" />
+		</gml:EnvelopeWithTimePeriod>
+	</gml:boundedBy>
+	<!-- 被覆データの定義域 -->
+	<gml:Grid gml:id="grid" dimension="2">
+		<gml:description>3次メッシュに含まれる4次メッシュ</gml:description>
+		<gml:limits>
+			<gml:GridEnvelope>
+				<gml:low>0 0</gml:low>
+				<gml:high>1 1</gml:high>
+			</gml:GridEnvelope>
+		</gml:limits>
+		<gml:axisLabels>x y</gml:axisLabels>
+	</gml:Grid>
+	<!-- 被覆データの値域構造 -->
+	<gml:CompositeValue gml:id="recordType">
+		<gml:valueComponents>
+			<gml:CategoryList>4次メッシュコード</gml:CategoryList>
+			<gml:QuantityList uom="m">平均標高</gml:QuantityList>
+			<gml:QuantityList uom="m">最高標高</gml:QuantityList>
+			<gml:QuantityList uom="m">最低標高</gml:QuantityList>
+			<gml:CategoryList>最低標高コード</gml:CategoryList>
+			<gml:QuantityList uom="度">最大傾斜角度</gml:QuantityList>
+			<gml:CategoryList>最大傾斜方向</gml:CategoryList>
+			<gml:QuantityList uom="度">最小傾斜角度</gml:QuantityList>
+			<gml:CategoryList>最小傾斜方向</gml:CategoryList>
+			<gml:QuantityList uom="度">平均傾斜角度</gml:QuantityList>
+		</gml:valueComponents>
+	</gml:CompositeValue>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_1">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900001,563.0,631.5,485.1,0,6.2,2,5.5,1,5.9
+533900002,581.0,660.0,507.8,0,8.6,7,3.4,8,6.6
+533900003,511.5,566.2,415.0,0,9.3,2,5.0,2,7.4
+533900004,563.4,632.6,462.7,0,11.5,8,7.3,8,9.0
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390000</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_2">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900011,641.6,725.0,549.0,0,11.5,1,9.5,1,10.5
+533900012,592.8,683.8,497.5,0,12.7,2,12.4,1,12.5
+533900013,532.0,609.8,445.3,0,13.1,1,8.9,1,11.2
+533900014,507.0,583.4,431.9,0,15.0,1,7.6,1,12.1
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390001</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_3">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900021,643.2,742.5,514.5,0,12.5,7,6.9,7,9.3
+533900022,669.3,753.3,564.0,0,9.9,4,7.6,3,8.8
+533900023,542.5,728.8,460.4,0,23.8,8,12.0,8,18.0
+533900024,723.4,816.9,553.8,0,19.3,7,5.3,6,11.5
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390002</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_4">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900031,613.9,692.1,496.4,0,12.9,5,5.8,2,9.3
+533900032,578.1,697.8,394.8,0,28.0,4,7.3,1,18.3
+533900033,659.8,802.3,538.7,0,20.4,4,13.2,4,15.9
+533900034,589.1,694.3,491.7,0,9.3,2,3.0,3,6.1
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390003</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_5">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900041,354.7,504.0,279.7,0,27.0,3,4.6,4,16.5
+533900042,286.6,339.3,202.8,0,10.4,3,6.5,3,8.3
+533900043,428.9,582.7,322.4,0,21.6,4,14.9,4,18.4
+533900044,321.9,405.8,239.3,0,11.3,4,10.6,4,11.0
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390004</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_6">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900051,226.7,280.2,158.6,0,7.7,4,3.1,2,5.1
+533900052,187.9,226.9,151.7,0,6.8,3,3.0,2,5.2
+533900053,230.5,324.2,159.0,0,10.4,3,6.6,4,8.5
+533900054,167.4,231.1,128.0,0,8.3,4,6.2,3,7.3
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390005</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_7">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900061,169.0,191.6,129.9,0,3.3,1,1.7,3,2.4
+533900062,140.8,172.9,104.9,0,4.5,3,2.7,2,3.6
+533900063,152.3,184.3,119.0,0,3.7,1,2.9,2,3.3
+533900064,133.7,162.0,103.6,0,3.0,3,2.5,3,2.8
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
+				<gml:sequenceRule axisOrder="+1 +2">Linear</gml:sequenceRule>
+				<gml:startPoint>0 0</gml:startPoint>
+			</gml:GridFunction>
+		</gml:coverageFunction>
+		<ksj:tertiaryMeshCode>53390006</ksj:tertiaryMeshCode>
+	</ksj:ElevationAndSlopeAngleFourthMesh>
+	<ksj:ElevationAndSlopeAngleFourthMesh gml:id="fi_8">
+		<gml:domainSet xlink:href="#grid" />
+		<gml:rangeSet>
+			<gml:DataBlock>
+				<gml:rangeParameters xlink:href="#recordType" />
+				<gml:tupleList>
+533900071,109.2,143.3,88.2,0,3.1,3,1.3,3,2.5
+533900072,86.4,120.3,62.9,0,3.7,3,1.3,4,2.6
+533900073,104.0,131.7,82.1,0,3.0,3,1.6,4,2.3
+533900074,90.4,121.6,71.6,0,3.4,4,2.4,4,2.9
+				</gml:tupleList>
+			</gml:DataBlock>
+		</gml:rangeSet>
+		<gml:coverageFunction>
+			<gml:GridFunction>
