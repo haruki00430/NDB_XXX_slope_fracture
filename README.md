@@ -1,3 +1,5 @@
+﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_slope_fracture
+
 # NDB_XXX_slope_fracture
 
 ## 地形傾斜度と高齢者骨折リスク・歩行習慣の関連研究
