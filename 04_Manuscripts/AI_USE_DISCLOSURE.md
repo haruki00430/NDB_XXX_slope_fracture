@@ -97,11 +97,11 @@
 
 ### 日本語（案）
 
-本研究の原稿作成および解析に生成AI支援ツールを用いた。手法・解釈・結論は著者が検証した。AIは著者としていない。
+本研究では、文献整理、コード補助、英文推敲、原稿構成の支援に生成AIを利用した。外部クラウドAIには個人情報およびNDB生データの実数値を入力せず、必要時のみ機微性の低いメタデータ（変数名、コード断片、手順記述）を用いた。統計手法の選択、解析結果、解釈、結論は著者が最終確認・修正し、内容に対する責任は著者が負う。生成AIは著者に含めていない。
 
 ### English (draft)
 
-The authors used AI-assisted tools, verified outputs, and accept full responsibility. AI was not listed as an author.
+During the preparation of this work, the authors used AI-assisted tools to support literature organization, coding assistance, language editing, and manuscript structuring. No individually identifiable data and no protected raw NDB values were entered into external cloud AI services; only low-sensitivity metadata (e.g., variable names, code fragments, and workflow descriptions) were used where needed. All statistical methods, results, interpretations, and conclusions were reviewed and finalized by the human authors, who take full responsibility for the content. No AI tool was listed as an author.
 
 ---
 
