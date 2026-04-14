@@ -1,0 +1,105 @@
+========================================================================
+Regression diagnostics & sensitivity (prefecture N=47)
+Data: C:\Users\user\.ag-cursor-common\research_workspace\projects\NDB_Research_Hub\projects\NDB_XXX_slope_fracture\03_Analysis\data\processed\analysis_dataset_v1.csv
+========================================================================
+
+## Marginal distributions (for Table 1 reporting)
+
+Variable                                    n     skew       SW p
+------------------------------------------------------------------------
+Total fracture surgery rate                47   -0.112     0.1069
+Hip (femur) fracture surgery rate          47   -0.265     0.4114
+Humerus fracture surgery rate              47    0.155     0.3669
+Forearm fracture surgery rate              47    0.255     0.5150
+Habitable-area-weighted slope              47    0.201     0.3369
+Simple mean slope                          47    0.112     0.6436
+Aging rate (≥65 years)                     47   -0.728     0.0897
+Fast walking rate                          47   -1.605     0.0003
+Population density                         47    3.523     0.0000
+
+## Model 2 OLS (default SE)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             femur_rate   R-squared:                       0.385
+Model:                            OLS   Adj. R-squared:                  0.326
+Method:                 Least Squares   F-statistic:                     6.560
+Date:                Tue, 14 Apr 2026   Prob (F-statistic):           0.000340
+Time:                        11:44:59   Log-Likelihood:                -225.20
+No. Observations:                  47   AIC:                             460.4
+Df Residuals:                      42   BIC:                             469.7
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -43.0518     92.316     -0.466      0.643    -229.352     143.248
+habitable_slope_weighted     3.4880      1.673      2.085      0.043       0.112       6.864
+aging_rate                   5.5263      2.087      2.648      0.011       1.315       9.738
+fast_walking_rate            2.0154      1.167      1.727      0.091      -0.339       4.370
+pop_density                 -0.0011      0.005     -0.231      0.818      -0.011       0.009
+==============================================================================
+Omnibus:                        8.200   Durbin-Watson:                   0.862
+Prob(Omnibus):                  0.017   Jarque-Bera (JB):                7.242
+Skew:                          -0.820   Prob(JB):                       0.0268
+Kurtosis:                       4.003   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+## Model 2 OLS with heteroskedasticity-robust SE (HC3)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             femur_rate   R-squared:                       0.385
+Model:                            OLS   Adj. R-squared:                  0.326
+Method:                 Least Squares   F-statistic:                     8.065
+Date:                Tue, 14 Apr 2026   Prob (F-statistic):           6.42e-05
+Time:                        11:44:59   Log-Likelihood:                -225.20
+No. Observations:                  47   AIC:                             460.4
+Df Residuals:                      42   BIC:                             469.7
+Df Model:                           4                                         
+Covariance Type:                  HC3                                         
+============================================================================================
+                               coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  -43.0518     68.357     -0.630      0.529    -177.029      90.925
+habitable_slope_weighted     3.4880      1.878      1.858      0.063      -0.192       7.168
+aging_rate                   5.5263      2.012      2.746      0.006       1.582       9.470
+fast_walking_rate            2.0154      0.881      2.287      0.022       0.288       3.743
+pop_density                 -0.0011      0.005     -0.232      0.817      -0.011       0.008
+==============================================================================
+Omnibus:                        8.200   Durbin-Watson:                   0.862
+Prob(Omnibus):                  0.017   Jarque-Bera (JB):                7.242
+Skew:                          -0.820   Prob(JB):                       0.0268
+Kurtosis:                       4.003   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+## Residual normality (Model 2), Shapiro–Wilk on OLS residuals
+
+Shapiro–Wilk W = 0.9566, p = 0.0791
+(Small-sample tests on residuals are indicative only.)
+
+Saved: C:\Users\user\.ag-cursor-common\research_workspace\projects\NDB_Research_Hub\projects\NDB_XXX_slope_fracture\03_Analysis\results\figures\fig_residual_diagnostics_hip_m2.png
+
+## Nonparametric bootstrap for β(slope), Model 2 (B=5000, prefecture resampling)
+
+Bootstrap 95% CI for habitable_slope_weighted: [-0.0294, 7.0914]
+OLS 95% CI (default):   [0.1119, 6.8641]
+OLS 95% CI (HC3):      [-0.1922, 7.1681]
+Point estimate β:      3.4880
+p-value (slope, default SE): 0.0432
+p-value (slope, HC3):        0.0632
+
+## Synthesis for manuscript
+
+- OLS assumes linearity and (for classical SE) homoskedastic, independent errors; marginal normality of Table 1 variables is not required.
+- Compare bootstrap / HC3 to default OLS: if substantive conclusions agree, state robustness in Methods/Results.
