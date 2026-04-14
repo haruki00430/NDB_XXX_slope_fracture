@@ -14,29 +14,9 @@ format:
     number-sections: false
 ---
 
----
-
 # Abstract
 
-## Background
-
-Hip fracture imposes a large burden on older adults in Japan. Community-level environmental correlates of hip fracture surgery rates are incompletely understood. Terrain slope may matter; prior evidence outside Japan is limited.
-
-## Objective
-
-To examine whether prefecture-level habitable-area-weighted terrain slope is associated with hip fracture surgery rates independently of aging and walking speed, and whether associations differ by fracture site.
-
-## Methods
-
-We conducted an ecological study of 47 Japanese prefectures using the 10th National Database (NDB) Open Data. Fracture surgery rates (per 100,000) were derived from **Reiwa 5 fiscal year** (April 2023 through March 2024) health insurance claims; the fast walking covariate came from **Reiwa 4 fiscal year** (April 2022 through March 2023) Specific Health Checkup tabulations included in the same release (Ministry of Health, Labour and Welfare). Terrain slope was derived from 10-m digital elevation models (habitable-area weighted). Other covariates were aging rate and population density (2020 National Census). We used unadjusted and multivariable linear regression.
-
-## Results
-
-Mean slope was 8.57 degrees (SD 3.16); mean hip fracture rate was 254.0 per 100,000 (SD 37.6). Slope was positively associated with hip fracture rate unadjusted (β = 5.65; 95% CI, 2.50–8.79; R² = 0.225; *p* = 0.001) and adjusted (β = 3.49; 95% CI, 0.11–6.86; R² = 0.385; *p* = 0.043). Associations were absent for humerus and forearm fractures.
-
-## Conclusions
-
-Prefecture-level terrain slope was independently associated with hip fracture surgery rates after adjustment, with fracture-site specificity consistent with lateral-fall mechanisms. Individual-level studies should confirm these ecological findings.
+Hip fracture imposes a large burden on older adults in Japan, and community-level environmental correlates of hip fracture surgery rates remain incompletely understood, including terrain slope. We conducted an ecological study of 47 prefectures using the 10th National Database (NDB) Open Data: fracture surgery rates (per 100,000) from Reiwa 5 health insurance claims (April 2023 through March 2024) and habitual walking speed from Reiwa 4 Specific Health Checkup tabulations (April 2022 through March 2023); habitable-area-weighted terrain slope from national 10-m digital elevation models; aging rate and population density from the 2020 census. We fitted ordinary least squares (OLS) models with heteroskedasticity-robust (HC3) standard errors and nonparametric bootstrap resampling (*B* = 5000) as sensitivity analyses. Mean slope was 8.57 degrees (SD 3.16) and mean hip fracture surgery rate was 254.0 per 100,000 (SD 37.6). Terrain slope was positively associated with hip fracture rates in unadjusted models (β = 5.65; 95% CI, 2.50–8.79; *p* = 0.001) and in adjusted models with conventional standard errors (β = 3.49; 95% CI, 0.11–6.86; *p* = 0.043); HC3 and bootstrap intervals for the slope coefficient were borderline at *N* = 47. No associations were observed for humerus or forearm fractures. Prefecture-level terrain slope showed a hip-specific signal consistent with lateral-fall mechanisms, but inferential sensitivity at small ecological *N* warrants cautious interpretation.
 
 **Keywords**: terrain; slope; hip; fracture; ecology; Japan; epidemiology
 
@@ -169,6 +149,10 @@ Second, the cross-sectional design precludes causal inference. Although reverse 
 
 Fourth, the walking speed variable was based on self-reported habitual walking speed in the Specific Health Checkup questionnaire, administered to individuals aged 40–74 years, which may not accurately represent the functional capacity of the oldest-old (≥75 years) at highest fracture risk. This self-reported measure may be subject to non-differential measurement error, biasing our estimates toward the null. Fifth, the DEM-based slope calculation reflects the topographic exposure of the prefecture as a whole and does not capture micro-scale terrain variations (e.g., steep residential pathways, stairways) encountered during daily activities by individual residents. High-resolution spatial analysis at the municipal or neighborhood level would provide more granular insights into the terrain–fracture relationship.
 
+Sixth, with only 47 prefectures, regression inference can be sensitive to heteroskedasticity and leverage from skewed covariates (especially population density). Sensitivity analyses using HC3 robust standard errors and nonparametric bootstrap resampling of prefectures indicated that the conventional *p* = 0.043 result for the primary slope coefficient in the adjusted hip-fracture model was borderline and compatible with no association under alternative variance assumptions.
+
+Seventh, sex- and gender-stratified outcome tables were not available in the prefecture-level NDB Open Data extracts used here; findings therefore describe aggregate populations and should be interpreted with this limitation in mind.
+
 ---
 
 # Conclusions
@@ -181,7 +165,7 @@ Future studies using individual-level data with residential geocoding, objective
 
 # Data availability
 
-Aggregate data used in this study are publicly available from the Japanese National Database Open Data and official statistics cited in the Methods. Under Ministry of Health, Labour and Welfare distribution rules, individual-level claims and identifiable records cannot be shared. Prefecture-level values supporting this analysis can be reproduced from those public sources using the procedures described.
+Aggregate data used in this study are publicly available from the Japanese National Database Open Data and official statistics cited in the Methods. Under Ministry of Health, Labour and Welfare distribution rules, individual-level claims and identifiable records cannot be shared. Prefecture-level values supporting this analysis can be reproduced from those public sources using the procedures described. We encourage deposition of analysis code and derived prefecture-level tables in a public repository (e.g., Zenodo) with a DOI and citation in this article, in line with the journal's research data guidance (Option B). Author contributions will be reported using the CRediT taxonomy on the separate title page required for double-anonymized submission.
 
 ---
 
@@ -319,11 +303,11 @@ All models adjusted for aging rate, fast walking rate, and population density.
 
 **Figure 2.** Correlation heatmap of key study variables across 47 Japanese prefectures. Pearson correlation coefficients are displayed in each cell. Color intensity represents the magnitude of correlation (red = positive, blue = negative).
 
-**Figure 3.** Prefectural distribution of habitable-area-weighted terrain slope (degrees) across Japan. Darker shading indicates steeper terrain. Prefectures in the Chugoku, Shikoku, and Kyushu mountain ranges show the highest slope values. Map boundaries delineate prefectures for display; they do not necessarily depict internationally accepted political boundaries.
+**Figure 3.** Prefectural distribution of habitable-area-weighted terrain slope (degrees) across Japan. Darker shading indicates steeper terrain. Prefectures in the Chugoku, Shikoku, and Kyushu mountain ranges show the highest slope values. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
 
-**Figure 4.** Prefectural distribution of hip fracture surgery rate (per 100,000 population) across Japan. Darker shading indicates higher rates. Prefectures in mountainous regions tend to show elevated rates. Map boundaries delineate prefectures for display; they do not necessarily depict internationally accepted political boundaries.
+**Figure 4.** Prefectural distribution of hip fracture surgery rate (per 100,000 population) across Japan. Darker shading indicates higher rates. Prefectures in mountainous regions tend to show elevated rates. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
 
-**Figure 5.** Bivariate choropleth map displaying the joint distribution of terrain slope (horizontal axis of legend) and hip fracture surgery rate (vertical axis of legend) by prefecture. The 3×3 color grid classifies each prefecture into one of nine categories based on tertile rankings of each variable. Purple-brown colors indicate high slope and high fracture rate; light grey indicates low on both dimensions. Map boundaries delineate prefectures for display; they do not necessarily depict internationally accepted political boundaries.
+**Figure 5.** Bivariate choropleth map displaying the joint distribution of terrain slope (horizontal axis of legend) and hip fracture surgery rate (vertical axis of legend) by prefecture. The 3×3 color grid classifies each prefecture into one of nine categories based on tertile rankings of each variable. Purple-brown colors indicate high slope and high fracture rate; light grey indicates low on both dimensions. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
 
 ## Figure 1
 
