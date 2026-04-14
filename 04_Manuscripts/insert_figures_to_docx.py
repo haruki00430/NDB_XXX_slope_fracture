@@ -3,7 +3,7 @@
 insert_figures_to_docx.py
 --------------------------
 Wordファイル (Manuscript_slope_fracture.docx) の
-"Figure 1" / "Figure 2" / "Figure 3" 見出し段落の直後に
+"Figure 1" … "Figure 5" 見出し段落の直後に
 対応するPNGを挿入するスクリプト。
 
 実行方法（04_Manuscripts フォルダ内で）:
@@ -32,10 +32,9 @@ FIGURES_DIR = os.path.join(
 FIGURE_MAP = {
     "Figure 1": "scatter_slope_fracture.png",
     "Figure 2": "heatmap_correlation.png",
-    "Figure 3": "scatter_matrix.png",
-    "Figure 4": "fig_map_slope.png",
-    "Figure 5": "fig_map_fracture.png",
-    "Figure 6": "fig_map_bivariate.png",
+    "Figure 3": "fig_map_slope.png",
+    "Figure 4": "fig_map_fracture.png",
+    "Figure 5": "fig_map_bivariate.png",
 }
 
 IMAGE_WIDTH_INCHES = 5.5  # 挿入幅（インチ）

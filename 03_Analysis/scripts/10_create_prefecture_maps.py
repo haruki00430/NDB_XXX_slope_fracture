@@ -4,9 +4,9 @@
 ----------------------------
 都道府県別日本地図を3種類作成するスクリプト。
 
-Figure 4: 傾斜度の地域分布（コロプレス地図）
-Figure 5: 大腿骨骨折手術率の地域分布（コロプレス地図）
-Figure 6: 傾斜度 × 骨折率の二変量コロプレス地図（3×3グリッド）
+Figure 3: 傾斜度の地域分布（コロプレス地図）
+Figure 4: 大腿骨骨折手術率の地域分布（コロプレス地図）
+Figure 5: 傾斜度 × 骨折率の二変量コロプレス地図（3×3グリッド）
 
 実行方法（NDB_Research_Hub ルートまたは 03_Analysis/scripts から）:
     python 10_create_prefecture_maps.py
@@ -92,9 +92,9 @@ def add_scalebar(ax, length_km=200, x_frac=0.05, y_frac=0.04, lw=2.5):
 
 
 # ---------------------------------------------------------------------------
-# Figure 4: 傾斜度の地域分布
+# Figure 3: 傾斜度の地域分布
 # ---------------------------------------------------------------------------
-print("\n[Figure 4] Slope distribution map ...")
+print("\n[Figure 3] Slope distribution map ...")
 
 fig4, ax4 = plt.subplots(figsize=(8, 9))
 divider = make_axes_locatable(ax4)
@@ -115,7 +115,7 @@ merged.plot(
 # 5分位の等値線境界を点線で示す
 style_ax(ax4)
 ax4.set_title(
-    "Figure 4. Prefectural Distribution of\nHabitable-Area-Weighted Terrain Slope",
+    "Figure 3. Prefectural Distribution of\nHabitable-Area-Weighted Terrain Slope",
     fontsize=FONT_TITLE, fontweight="bold", pad=12
 )
 add_scalebar(ax4)
@@ -128,9 +128,9 @@ plt.close(fig4)
 print(f"  Saved: {out_path}")
 
 # ---------------------------------------------------------------------------
-# Figure 5: 大腿骨骨折手術率の地域分布
+# Figure 4: 大腿骨骨折手術率の地域分布
 # ---------------------------------------------------------------------------
-print("[Figure 5] Fracture rate distribution map ...")
+print("[Figure 4] Fracture rate distribution map ...")
 
 fig5, ax5 = plt.subplots(figsize=(8, 9))
 divider = make_axes_locatable(ax5)
@@ -151,7 +151,7 @@ merged.plot(
 
 style_ax(ax5)
 ax5.set_title(
-    "Figure 5. Prefectural Distribution of\nHip Fracture Surgery Rate",
+    "Figure 4. Prefectural Distribution of\nHip Fracture Surgery Rate",
     fontsize=FONT_TITLE, fontweight="bold", pad=12
 )
 add_scalebar(ax5)
@@ -164,9 +164,9 @@ plt.close(fig5)
 print(f"  Saved: {out_path}")
 
 # ---------------------------------------------------------------------------
-# Figure 6: 二変量コロプレス地図（傾斜度 × 骨折率 3×3）
+# Figure 5: 二変量コロプレス地図（傾斜度 × 骨折率 3×3）
 # ---------------------------------------------------------------------------
-print("[Figure 6] Bivariate choropleth map ...")
+print("[Figure 5] Bivariate choropleth map ...")
 
 #  3×3 二変量カラーパレット（Stevens & Brewer palette）
 #  行 = 骨折率（低→高）, 列 = 傾斜度（低→高）
@@ -203,7 +203,7 @@ for _, row in merged.iterrows():
 
 style_ax(ax6)
 ax6.set_title(
-    "Figure 6. Bivariate Distribution of Terrain Slope\nand Hip Fracture Surgery Rate by Prefecture",
+    "Figure 5. Bivariate Distribution of Terrain Slope\nand Hip Fracture Surgery Rate by Prefecture",
     fontsize=FONT_TITLE, fontweight="bold", pad=12
 )
 add_scalebar(ax6)
@@ -237,9 +237,9 @@ plt.close(fig6)
 print(f"  Saved: {out_path}")
 
 # ---------------------------------------------------------------------------
-# Figure 6a: 2列横並び（傾斜度 | 骨折率）＋相関散布図（補足）
+# 補足: 2列横並び（傾斜度 | 骨折率）＋相関散布図（本文未掲載の合成図）
 # ---------------------------------------------------------------------------
-print("[Figure 6a] Side-by-side maps + scatter ...")
+print("[Supplementary combined map] Side-by-side maps + scatter ...")
 
 fig_sb, axes = plt.subplots(1, 3, figsize=(18, 8))
 
@@ -292,7 +292,7 @@ ax_c.spines["right"].set_visible(False)
 ax_c.grid(alpha=0.3, lw=0.5)
 
 fig_sb.suptitle(
-    "Figure 6. Geographic Distribution of Terrain Slope and Hip Fracture Surgery Rate\nAcross 47 Japanese Prefectures",
+    "Supplementary figure. Geographic Distribution of Terrain Slope and Hip Fracture Surgery Rate\nAcross 47 Japanese Prefectures",
     fontsize=FONT_TITLE + 1, fontweight="bold", y=1.02
 )
 fig_sb.tight_layout()
