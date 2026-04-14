@@ -91,7 +91,7 @@ We first examined the distribution of all variables using descriptive statistics
 - **Model 1 (unadjusted)**: Simple linear regression of fracture rate on terrain slope only.
 - **Model 2 (multivariable)**: Multiple linear regression of fracture rate on terrain slope, aging rate, fast walking rate, and population density.
 
-Model performance was assessed using the coefficient of determination (R²), adjusted R², and the F-statistic. Regression coefficients (β) and 95% confidence intervals (CIs) are reported. Statistical significance was defined as *p* < 0.05 (two-sided). All analyses were performed using Python (version 3.11) with the `statsmodels` library (version 0.14).
+Model performance was assessed using the coefficient of determination (R²), adjusted R², and the F-statistic. Regression coefficients (β) and 95% confidence intervals (CIs) are reported. Statistical significance was defined as *p* < 0.05 (two-sided). All analyses were performed using Python (version 3.14.2) with `statsmodels` (version 0.14.6). Linear regression models were estimated by ordinary least squares (OLS) using the `statsmodels` formula interface (`statsmodels.formula.api.ols`).
 
 This study used publicly available aggregate data; individual informed consent was not required, and institutional ethics review was not applicable in accordance with Japanese ethical guidelines for epidemiological research.
 
