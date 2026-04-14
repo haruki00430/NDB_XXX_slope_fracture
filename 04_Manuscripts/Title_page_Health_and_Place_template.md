@@ -36,3 +36,7 @@ Association between Terrain Slope and Hip Fracture Surgery Rates Among Older Adu
 
 - [Author A]: Conceptualization, Methodology, Formal analysis, Writing – original draft.
 - [Author B]: Data curation, Visualization, Writing – review & editing.
+
+## Generative AI (manuscript body)
+
+The anonymized main file should include the same **Declaration of generative AI and AI-assisted technologies in the manuscript preparation process** section as the non-anonymous Quarto source (placed immediately before the reference list), edited to match what was actually used. If only grammar/spell-checkers were used, follow Elsevier guidance and omit that section.

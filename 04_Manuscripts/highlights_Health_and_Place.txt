@@ -1,5 +1,5 @@
 Ecological study of 47 prefectures links terrain slope to hip fracture rates
-Association holds after adjustment for aging, walking speed, and population density
+OLS association borderline under robust SE and bootstrap at N=47 prefectures
 Hip-specific pattern; no association for upper-extremity fractures
 Habitable-area-weighted DEM slope from national 10-m elevation data
 Supports environment-tailored fall prevention in high-slope prefectures

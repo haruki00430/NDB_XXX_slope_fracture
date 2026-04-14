@@ -169,6 +169,12 @@ Aggregate data used in this study are publicly available from the Japanese Natio
 
 ---
 
+# Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
+
+During the preparation of this work the authors used artificial-intelligence–assisted tools (large language models and related editing assistants) to support literature review, language editing, and manuscript structuring. After using these tools, the authors reviewed and edited the content as needed and take full responsibility for the content of the article.
+
+---
+
 # References
 
 [1] Hagino H, Katagiri H, Okano T, Yamamoto K, Teshima R. Increasing incidence of hip fracture in Tottori Prefecture, Japan: trend from 1986 to 2001. Osteoporos Int. 2005;16(12):1963-1968.
@@ -225,6 +231,8 @@ Aggregate data used in this study are publicly available from the Japanese Natio
 
 
 # Tables and Figures
+
+*Submission note (Health & Place):* tables must be submitted as editable text (not images). The journal requests avoiding vertical rules and cell shading in final Word typesetting; if borders appear after import from this document, remove vertical lines in the submission file. Figures must be supplied as separate image files in the submission system (e.g., `Figure_1.png`, `Figure_2.png`, …) with logical file names; embedded figures below are included for Quarto compilation and internal review only.
 
 ## Table 1. Descriptive Statistics of Prefecture-Level Variables (N = 47)
 
