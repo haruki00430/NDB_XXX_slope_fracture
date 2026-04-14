@@ -28,7 +28,7 @@ To examine whether prefecture-level habitable-area-weighted terrain slope is ass
 
 ## Methods
 
-We conducted an ecological study of 47 Japanese prefectures using fiscal year 2021 National Database (NDB) Open Data. Outcomes were fracture surgery rates per 100,000. Terrain slope was derived from 10-m digital elevation models (habitable-area weighted). Covariates were aging rate, fast walking rate (NDB Specific Health Checkup), and population density. We used unadjusted and multivariable linear regression.
+We conducted an ecological study of 47 Japanese prefectures using the 10th National Database (NDB) Open Data. Fracture surgery rates (per 100,000) were derived from **Reiwa 5 fiscal year** (April 2023 through March 2024) health insurance claims; the fast walking covariate came from **Reiwa 4 fiscal year** (April 2022 through March 2023) Specific Health Checkup tabulations included in the same release (Ministry of Health, Labour and Welfare). Terrain slope was derived from 10-m digital elevation models (habitable-area weighted). Other covariates were aging rate and population density (2020 National Census). We used unadjusted and multivariable linear regression.
 
 ## Results
 
@@ -62,11 +62,11 @@ In this study, we examined whether terrain slope was associated with hip fractur
 
 ## 1. Study Design
 
-We conducted a nationwide ecological study in which the Japanese prefecture (N = 47) served as the unit of analysis. Prefecture-level aggregate data were used because individual-level geospatial information is not available from NDB Open Data. The study period was fiscal year 2021 (April 2021 through March 2022).
+We conducted a nationwide ecological study in which the Japanese prefecture (N = 47) served as the unit of analysis. Prefecture-level aggregate data were used because individual-level geospatial information is not available from NDB Open Data. The analysis used open-data tables from the **10th NDB Open Data** release: fracture-related procedure counts correspond to **Reiwa 5 fiscal year** (April 2023 through March 2024) health insurance claims, whereas Specific Health Checkup aggregates used for walking speed correspond to **Reiwa 4 fiscal year** (April 2022 through March 2023), as defined in Ministry of Health, Labour and Welfare documentation for that release.
 
 ## 2. Outcome: Fracture Surgery Rates
 
-Fracture surgery rates were derived from the 10th NDB Open Data (released 2023), which contains prefecture-level counts of medical procedures claimed under the national health insurance system. We extracted claims for three fracture surgery categories: (1) hip (femur) fracture surgery, (2) humerus fracture surgery, and (3) forearm fracture surgery. Rates were calculated per 100,000 population using population estimates from the 2020 National Census.
+Fracture surgery rates were derived from the **10th NDB Open Data** (released May 30, 2025), which contains prefecture-level counts of medical procedures from **Reiwa 5 fiscal year** (April 2023 through March 2024) claims under the national health insurance system. We extracted counts for three fracture surgery categories: (1) hip (femur) fracture surgery, (2) humerus fracture surgery, and (3) forearm fracture surgery. Rates were calculated per 100,000 population using population estimates from the 2020 National Census.
 
 ## 3. Exposure: Terrain Slope
 
@@ -74,7 +74,7 @@ Terrain slope was calculated from a 10-m resolution digital elevation model (DEM
 
 ## 4. Covariate: Walking Speed
 
-The proportion of individuals who reported walking fast (fast walking rate, %) was derived from the NDB Specific Health Checkup (Tokutei Kenko Shinsa) questionnaire administered as part of the national annual health screening program. Participants aged 40–74 years responded to a question on habitual walking speed, and we calculated the prefecture-level proportion of respondents who reported "fast" walking.
+The proportion of individuals who reported walking fast (fast walking rate, %) was derived from the NDB Specific Health Checkup (Tokutei Kenko Shinsa) questionnaire administered as part of the national annual health screening program. In the 10th NDB Open Data release, prefecture-level Specific Health Checkup tabulations correspond to **Reiwa 4 fiscal year** (April 2022 through March 2023), which does not coincide with the Reiwa 5 claims window used for fracture outcomes. Participants aged 40–74 years responded to a question on habitual walking speed, and we calculated the prefecture-level proportion of respondents who reported "fast" walking.
 
 ## 5. Additional Covariates
 
@@ -163,7 +163,7 @@ This study has several strengths. We used nationally representative administrati
 
 ## 8. Limitations
 
-Several limitations should be considered. First, as an ecological study, our findings are subject to the ecological fallacy: associations observed at the prefecture level may not reflect individual-level relationships.[48] We cannot establish whether individuals living in steeper terrain within a prefecture have higher fracture risk than those in flatter areas of the same prefecture. Individual-level studies with residential geocoding and objective measures of daily terrain exposure (e.g., GPS tracking, accelerometry) are necessary to confirm our prefecture-level findings.
+Several limitations should be considered. First, as an ecological study, our findings are subject to the ecological fallacy: associations observed at the prefecture level may not reflect individual-level relationships.[48] We cannot establish whether individuals living in steeper terrain within a prefecture have higher fracture risk than those in flatter areas of the same prefecture. Individual-level studies with residential geocoding and objective measures of daily terrain exposure (e.g., GPS tracking, accelerometry) are necessary to confirm our prefecture-level findings. Relatedly, fracture procedure counts (Reiwa 5), Specific Health Checkup walking-speed aggregates (Reiwa 4), and 2020 census denominators are not temporally co-extensive; we therefore interpret results as an administrative-data snapshot rather than a strictly harmonized single-year cohort.
 
 Second, the cross-sectional design precludes causal inference. Although reverse causation is unlikely for a fixed environmental exposure such as terrain slope, residual confounding by unmeasured variables cannot be excluded. Third, important unmeasured confounders—including individual-level socioeconomic status, healthcare access (e.g., prefectural orthopedic surgeon density, distance to emergency hospitals), nutritional status (calcium and vitamin D intake), bone mineral density (BMD), and medication use (bisphosphonates, vitamin D supplementation)—may account for part of the observed association. Future studies incorporating NDB prescription data and BMD screening results at finer geographic resolution would strengthen causal inference.
 
