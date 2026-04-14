@@ -101,7 +101,7 @@
 
 ### English (draft)
 
-During the preparation of this work, the authors used AI-assisted tools to support literature organization, coding assistance, language editing, and manuscript structuring. No individually identifiable data and no protected raw NDB values were entered into external cloud AI services; only low-sensitivity metadata (e.g., variable names, code fragments, and workflow descriptions) were used where needed. All statistical methods, results, interpretations, and conclusions were reviewed and finalized by the human authors, who take full responsibility for the content. No AI tool was listed as an author.
+The authors used AI-assisted coding and writing tools to support manuscript preparation and analysis scripting. No individually identifiable data or protected raw NDB values were entered into external cloud AI services. The authors were solely responsible for the selection of statistical methods, interpretation of findings, conclusions, and final reference list, and verified all AI-assisted code and text. AI was not listed as an author.
 
 ---
 
@@ -110,3 +110,4 @@ During the preparation of this work, the authors used AI-assisted tools to suppo
 | 日付 | 変更内容 |
 |------|----------|
 | 2026-04-08 | 初版（プロジェクト一括整備） |
+| 2026-04-14 | 投稿原稿・匿名稿・本ファイルの English draft を同一文に同期（AI開示文を簡潔化・統一） |

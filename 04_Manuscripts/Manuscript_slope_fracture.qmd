@@ -182,7 +182,7 @@ Aggregate data used in this study are publicly available from the Japanese Natio
 
 # Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
-During the preparation of this work, the authors used AI-assisted tools (including large language models) for literature organization, coding assistance, language editing, and manuscript structuring. No individually identifiable data or protected raw NDB values were entered into external cloud AI services; the authors reviewed and finalized all content and take full responsibility.
+The authors used AI-assisted coding and writing tools to support manuscript preparation and analysis scripting. No individually identifiable data or protected raw NDB values were entered into external cloud AI services. The authors were solely responsible for the selection of statistical methods, interpretation of findings, conclusions, and final reference list, and verified all AI-assisted code and text. AI was not listed as an author.
 
 ---
 
