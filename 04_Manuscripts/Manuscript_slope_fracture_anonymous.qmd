@@ -171,7 +171,7 @@ Aggregate data used in this study are publicly available from the Japanese Natio
 
 # Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
-During the preparation of this work, the authors used AI-assisted coding and writing tools to support manuscript preparation and analysis scripting. The authors reviewed and edited all AI-assisted outputs, were solely responsible for the selection of statistical methods, interpretation of findings, conclusions, and references, and take full responsibility for the final content. AI was not listed as an author.
+During the preparation and writing of this work, the authors used AI-assisted tools to support manuscript drafting and statistical analysis scripting. Cursor 2.0 (Anysphere) and Google Antigravity (Google) were used for AI-assisted writing and Python code development. Large language models used through these platforms included Claude Sonnet 4.6 and Claude Opus 4.6 (Anthropic) and Gemini 3 Pro (Google). These tools were used only for text drafting and code generation; no generative AI or AI-assisted tools were used to create, alter, or otherwise process any figures, images, or artwork in this manuscript. The authors reviewed and edited all AI-assisted outputs and were responsible for the study design, selection of statistical methods, interpretation of findings, conclusions, and final reference list. The authors take full responsibility for the integrity and accuracy of the final content. AI was not listed as an author.
 
 ---
 
