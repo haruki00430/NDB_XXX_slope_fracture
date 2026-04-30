@@ -1,0 +1,23 @@
+SIR masking-imputation sensitivity analysis
+=========================================
+Main analysis remains unchanged; this is sensitivity-only.
+
+Scenarios:
+  A: '-' = 0
+  B: '-' = 5
+  C: '-' = 9
+
+Model for comparison (primary): isr_per100k ~ slope + aging + fast_walking + pop_density
+
+scenario  mask_fill  beta_m2  ci_low_m2  ci_high_m2     p_m2
+ A_mask0        0.0 5.712453   0.539965   10.884941 0.031238
+ B_mask5        5.0 3.609699   0.296426    6.922972 0.033465
+ C_mask9        9.0 3.638805   0.275411    7.002199 0.034650
+
+Sign stability (beta_m2): True
+Magnitude ratio max/min (beta_m2): 1.5825
+
+Note on chained masking:
+  Public NDB masking rule can include secondary masking;
+  therefore A/B/C should be interpreted as pragmatic sensitivity bounds,
+  not exact reconstruction of hidden cells.
