@@ -161,3 +161,12 @@
   - Discussionに、公開データのマスキング制約下での解釈方針（頑健性確認として扱う）を追記。
   - Limitationsに、補完依存性と二次マスキングの可能性を明記し、番号を Fifth〜Ninth に再整列。
 - SKILL準拠チェック: 短文化、断定回避（robustness checks / interpret cautiously）、時制整合を確認。
+
+## 2026-04-30: Results文体微修正（解釈文の削除）
+
+- 修正意図: Resultsでは事実記述に徹するため、解釈文（`We therefore interpret ...`）を削除する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: Hip fracture回帰結果段落から、`Results` 内の解釈表現を1文削除。
+- SKILL準拠チェック: Resultsの「事実を淡々と記述」の原則に整合。
