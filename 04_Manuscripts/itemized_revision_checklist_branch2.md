@@ -13,7 +13,7 @@
 | 6 | 線形性仮定 | Done | 大平先生方針（今回は無視でOK）に基づき本文変更なし | No.6 commit |
 | 7 | 曝露指標（都道府県平均傾斜）の粗さ | Done | Limitationsに「prefecture as a whole / does not capture micro-scale terrain variations」を既記載確認（本文追記なし） | No.7 commit |
 | 8 | 年齢構成不一致（歩行速度40–74 vs 骨折高齢） | Done | Discussion/Limitationsに「40–74のみ公開」「直接影響は限定的」「限界明記」を追記（唯一表現の誤解回避に微修正済み） | No.8 commit + No.8 wording-fix commit |
-| 9 | 年齢標準化不足（粗率） | Pending |  |  |
+| 9 | 年齢標準化不足（粗率） | Deferred | No.12（寳澤先生コメント）と連動して同時処理する方針 | No.9 deferred commit |
 | 10 | 結果解釈の強さ（因果を弱める） | Pending |  |  |
 | 11 | biological plausibility文が断定的 | Pending |  |  |
 | 12 | 高齢化率調整のみでは不十分（80歳以上等） | Pending |  |  |

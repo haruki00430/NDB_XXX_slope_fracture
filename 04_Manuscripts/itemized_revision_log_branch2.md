@@ -111,3 +111,12 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: Limitations該当文の `for which` を `because` に置換。
 - SKILL準拠チェック: 冗長性を減らし、平易で誤解の少ない接続へ改善。
+
+## 2026-04-30: No.9 年齢標準化不足（粗率）をDeferred化
+
+- 修正意図: 大平先生コメント「寳澤先生コメント参照」に従い、No.9をNo.12と連動処理する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: No.9は単独確定せず Deferred として記録。本文変更は行わない。
+- SKILL準拠チェック: 先行して不要な重複修正を避け、整合性優先の運用とした。
