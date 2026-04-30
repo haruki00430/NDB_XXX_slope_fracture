@@ -80,3 +80,15 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: `Manuscript_slope_fracture.qmd` の Limitations に既に「prefecture as a whole」「does not capture micro-scale terrain variations」が明記されていることを確認。本文追加修正は不要と判定。
 - SKILL準拠チェック: 既存limitationは簡潔かつ客観的で、過剰主張なく妥当と確認。
+
+## 2026-04-30: No.8 年齢構成不一致（歩行速度40–74 vs 骨折高齢）
+
+- 修正意図: 大平先生コメントの3点（40–74データ制約、直接影響の限定性、Limitation明記）を本文で明示する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - Discussionに「40–74歳質問票集計しか公開されていないため、文脈共変量として扱う」文を追加。
+  - Limitationsに「当該集計が唯一の公開タブであること」「最高齢群への直接関連は限定的」を追加。
+- SKILL準拠チェック: 断定回避（likely limited）、簡潔表現、Limitationsでの制約明示を確認。
