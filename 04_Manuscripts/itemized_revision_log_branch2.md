@@ -120,3 +120,16 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: No.9は単独確定せず Deferred として記録。本文変更は行わない。
 - SKILL準拠チェック: 先行して不要な重複修正を避け、整合性優先の運用とした。
+
+## 2026-04-30: No.10 結果解釈の強さ（因果を弱める）
+
+- 修正意図: 因果を示唆しすぎる語感を抑え、関連の示唆として統一する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - Discussionで `demonstrated` を `showed` に変更。
+  - Discussionで `amplifying` を `potentially amplifying` に変更。
+  - Conclusionsで `remained positively associated` を `was positively associated` に変更。
+- SKILL準拠チェック: 断定を弱める語へ置換し、結論の慎重性を向上。
