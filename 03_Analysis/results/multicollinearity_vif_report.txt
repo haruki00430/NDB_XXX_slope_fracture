@@ -1,0 +1,9 @@
+Multicollinearity check (VIF)
+=============================
+Rule-of-thumb thresholds: VIF >= 5 (moderate), VIF >= 10 (high)
+
+                variable      vif  flag_ge_5  flag_ge_10
+              aging_rate 2.028397      False       False
+             pop_density 1.706853      False       False
+habitable_slope_weighted 1.350519      False       False
+       fast_walking_rate 1.242538      False       False

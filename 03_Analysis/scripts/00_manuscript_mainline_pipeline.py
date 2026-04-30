@@ -24,6 +24,7 @@ import pandas as pd
 import seaborn as sns
 import statsmodels.formula.api as smf
 from scipy import stats
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -196,6 +197,33 @@ def run_statistics(df: pd.DataFrame) -> None:
         "femur_rate ~ habitable_slope_weighted + aging_rate + fast_walking_rate + pop_density",
         data=df,
     ).fit(cov_type="HC3")
+
+    vif_cols = ["habitable_slope_weighted", "aging_rate", "fast_walking_rate", "pop_density"]
+    x = df[vif_cols].copy()
+    x["const"] = 1.0
+    vif_rows = []
+    for i, c in enumerate(x.columns):
+        if c == "const":
+            continue
+        v = float(variance_inflation_factor(x.values, i))
+        vif_rows.append(
+            {
+                "variable": c,
+                "vif": v,
+                "flag_ge_5": bool(v >= 5.0),
+                "flag_ge_10": bool(v >= 10.0),
+            }
+        )
+    vif_df = pd.DataFrame(vif_rows).sort_values("vif", ascending=False)
+    vif_df.to_csv(RESULTS_DIR / "multicollinearity_vif.csv", index=False, encoding="utf-8-sig")
+    vif_lines = [
+        "Multicollinearity check (VIF)",
+        "=============================",
+        "Rule-of-thumb thresholds: VIF >= 5 (moderate), VIF >= 10 (high)",
+        "",
+        vif_df.to_string(index=False),
+    ]
+    (RESULTS_DIR / "multicollinearity_vif_report.txt").write_text("\n".join(vif_lines) + "\n", encoding="utf-8")
 
     lines = [m2.summary().as_text(), "", "HC3", m2_hc3.summary().as_text()]
     (RESULTS_DIR / "regression_results.txt").write_text("\n".join(lines), encoding="utf-8")

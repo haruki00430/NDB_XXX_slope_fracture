@@ -4,7 +4,7 @@ Dep. Variable:             femur_rate   R-squared:                       0.385
 Model:                            OLS   Adj. R-squared:                  0.326
 Method:                 Least Squares   F-statistic:                     6.560
 Date:                Thu, 30 Apr 2026   Prob (F-statistic):           0.000340
-Time:                        14:13:54   Log-Likelihood:                -225.20
+Time:                        15:51:09   Log-Likelihood:                -225.20
 No. Observations:                  47   AIC:                             460.4
 Df Residuals:                      42   BIC:                             469.7
 Df Model:                           4                                         
@@ -36,7 +36,7 @@ Dep. Variable:             femur_rate   R-squared:                       0.385
 Model:                            OLS   Adj. R-squared:                  0.326
 Method:                 Least Squares   F-statistic:                     8.065
 Date:                Thu, 30 Apr 2026   Prob (F-statistic):           6.42e-05
-Time:                        14:13:54   Log-Likelihood:                -225.20
+Time:                        15:51:09   Log-Likelihood:                -225.20
 No. Observations:                  47   AIC:                             460.4
 Df Residuals:                      42   BIC:                             469.7
 Df Model:                           4                                         
