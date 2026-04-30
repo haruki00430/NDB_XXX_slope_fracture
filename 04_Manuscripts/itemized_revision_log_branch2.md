@@ -71,3 +71,12 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: No.6は本文の新規追記なし（非修正対応）とし、チェックリスト/ログに判断根拠を明記。
 - SKILL準拠チェック: 不要な本文追記を行わず、過剰解釈を回避する方針を維持。
+
+## 2026-04-30: No.7 曝露指標（都道府県平均傾斜）の粗さ
+
+- 修正意図: 都道府県平均傾斜という粗い曝露指標の限界が本文に適切に反映されているかを確認し、項目別運用として確定する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: `Manuscript_slope_fracture.qmd` の Limitations に既に「prefecture as a whole」「does not capture micro-scale terrain variations」が明記されていることを確認。本文追加修正は不要と判定。
+- SKILL準拠チェック: 既存limitationは簡潔かつ客観的で、過剰主張なく妥当と確認。

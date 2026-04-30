@@ -11,7 +11,7 @@
 | 4 | 未調整交絡（気候・医療資源） | Done | Limitationsの未測定交絡にclimate（snowfall and icing）を明記 | No.4 commit |
 | 5 | 空間相関の可能性 | Done | 大平先生方針（今回は無視でOK）に基づき本文変更なしを明示 | No.5 commit |
 | 6 | 線形性仮定 | Done | 大平先生方針（今回は無視でOK）に基づき本文変更なし | No.6 commit |
-| 7 | 曝露指標（都道府県平均傾斜）の粗さ | Pending |  |  |
+| 7 | 曝露指標（都道府県平均傾斜）の粗さ | Done | Limitationsに「prefecture as a whole / does not capture micro-scale terrain variations」を既記載確認（本文追記なし） | No.7 commit |
 | 8 | 年齢構成不一致（歩行速度40–74 vs 骨折高齢） | Pending |  |  |
 | 9 | 年齢標準化不足（粗率） | Pending |  |  |
 | 10 | 結果解釈の強さ（因果を弱める） | Pending |  |  |
