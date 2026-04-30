@@ -92,3 +92,13 @@
   - Discussionに「40–74歳質問票集計しか公開されていないため、文脈共変量として扱う」文を追加。
   - Limitationsに「当該集計が唯一の公開タブであること」「最高齢群への直接関連は限定的」を追加。
 - SKILL準拠チェック: 断定回避（likely limited）、簡潔表現、Limitationsでの制約明示を確認。
+
+## 2026-04-30: No.8 wording fix（「唯一」表現の明確化）
+
+- 修正意図: 「唯一」の解釈がNDB全体を指すように読める曖昧性を除去する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: `the only publicly released prefecture-level questionnaire tabulation` を `the only ... tabulation used for this analysis` に置換。
+- SKILL準拠チェック: 誤読を招く過剰表現を避け、意味を限定した明確な文へ調整。
