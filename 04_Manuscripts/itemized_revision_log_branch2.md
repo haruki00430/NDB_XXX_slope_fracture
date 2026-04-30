@@ -33,3 +33,13 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: Statistical Analysisに、*N*=47での係数安定性・多重共線性診断（condition numberを含む）を確認し慎重解釈する旨を追記。
 - SKILL準拠チェック: Methodsの簡潔な追記で過剰主張を回避し、解釈の慎重性を維持。
+
+## 2026-04-30: No.3 アウトカム（手術率）の解釈
+
+- 修正意図: アウトカムが発症率ではなく手術率である制約を明示する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: Limitationsに「surgery rates rather than true fracture incidence」および治療方針・アクセス差の影響可能性を追加。
+- SKILL準拠チェック: limitationを具体化しつつ、断定的因果主張を避ける記述へ調整。
