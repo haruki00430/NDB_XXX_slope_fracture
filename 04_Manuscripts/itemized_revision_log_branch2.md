@@ -43,3 +43,13 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: Limitationsに「surgery rates rather than true fracture incidence」および治療方針・アクセス差の影響可能性を追加。
 - SKILL準拠チェック: limitationを具体化しつつ、断定的因果主張を避ける記述へ調整。
+
+## 2026-04-30: No.4 未調整交絡（気候・医療資源）
+
+- 修正意図: 未測定交絡の具体例（気候・医療資源）を本文で明示する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: Limitationsの未測定交絡リストへ `climate (snowfall and icing)` を追加。
+- SKILL準拠チェック: Limitationsで客観的・具体的に列挙し、主張の強さを抑制。
