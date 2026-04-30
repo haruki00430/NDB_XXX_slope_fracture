@@ -133,3 +133,17 @@
   - Discussionで `amplifying` を `potentially amplifying` に変更。
   - Conclusionsで `remained positively associated` を `was positively associated` に変更。
 - SKILL準拠チェック: 断定を弱める語へ置換し、結論の慎重性を向上。
+
+## 2026-04-30: No.11 biological plausibility文のトーン調整
+
+- 修正意図: 島袋先生コメントに沿って、biological plausibility節の断定性をさらに弱める。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - `is biologically plausible and supported` → `may be biologically plausible and may be partly supported`
+  - `predominant fall mechanism` → `a common fall mechanism`
+  - `confirmed` → `suggested`
+  - `maximizing fracture vulnerability` → `potentially increasing fracture vulnerability`
+- SKILL準拠チェック: may/partly/potentially を使用し、過剰断定を回避。

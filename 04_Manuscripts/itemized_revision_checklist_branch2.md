@@ -15,5 +15,5 @@
 | 8 | 年齢構成不一致（歩行速度40–74 vs 骨折高齢） | Done | Discussion/Limitationsに「40–74のみ公開」「直接影響は限定的」「限界明記」を追記（唯一表現の誤解回避に微修正済み） | No.8 commit + No.8 wording-fix commit |
 | 9 | 年齢標準化不足（粗率） | Deferred | No.12（寳澤先生コメント）と連動して同時処理する方針 | No.9 deferred commit |
 | 10 | 結果解釈の強さ（因果を弱める） | Done | Discussion/Conclusionsで demonstrated→showed, remained→was, amplifying→potentially amplifying に調整 | No.10 commit |
-| 11 | biological plausibility文が断定的 | Pending |  |  |
+| 11 | biological plausibility文が断定的 | Done | Discussion 2の冒頭文を may / partly supported / suggested / potentially に調整 | No.11 commit |
 | 12 | 高齢化率調整のみでは不十分（80歳以上等） | Pending |  |  |
