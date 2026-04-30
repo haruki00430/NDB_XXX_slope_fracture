@@ -53,3 +53,12 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: Limitationsの未測定交絡リストへ `climate (snowfall and icing)` を追加。
 - SKILL準拠チェック: Limitationsで客観的・具体的に列挙し、主張の強さを抑制。
+
+## 2026-04-30: No.5 空間相関の可能性
+
+- 修正意図: コメント対応の判断根拠を残しつつ、合意方針どおり本文の追加変更は行わない。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: 「今回は追加解析せず、本文変更なし」の対応を明示してチェックリストをDone化。
+- SKILL準拠チェック: 本文へ不要な断定・過剰追記を行わない方針を維持。

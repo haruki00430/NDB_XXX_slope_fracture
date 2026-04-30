@@ -9,7 +9,7 @@
 | 2 | サンプルサイズとモデル安定性（N=47） | Done | Methodsにsmall-Nでの係数安定性/多重共線性診断への言及を追記 | No.2 commit |
 | 3 | アウトカムは発症でなく手術率 | Done | Limitationsに「surgery rates rather than true fracture incidence」を追記 | No.3 commit |
 | 4 | 未調整交絡（気候・医療資源） | Done | Limitationsの未測定交絡にclimate（snowfall and icing）を明記 | No.4 commit |
-| 5 | 空間相関の可能性 | Pending |  |  |
+| 5 | 空間相関の可能性 | Done | 大平先生方針（今回は無視でOK）に基づき本文変更なしを明示 | No.5 commit |
 | 6 | 線形性仮定 | Pending |  |  |
 | 7 | 曝露指標（都道府県平均傾斜）の粗さ | Pending |  |  |
 | 8 | 年齢構成不一致（歩行速度40–74 vs 骨折高齢） | Pending |  |  |
