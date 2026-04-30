@@ -1,0 +1,19 @@
+# Itemized Revision Checklist (branch-2)
+
+対象コメント正本: `comment_response_checklist_slope_fracture_20260430.md`（No.1〜12）  
+対象原稿: `Manuscript_slope_fracture.qmd`
+
+| No. | 指摘事項（要約） | 状態 | 反映箇所メモ | commit |
+|---|---|---|---|---|
+| 1 | 高齢化率・歩行速度の位置づけ（交絡/媒介） | Pending |  |  |
+| 2 | サンプルサイズとモデル安定性（N=47） | Pending |  |  |
+| 3 | アウトカムは発症でなく手術率 | Pending |  |  |
+| 4 | 未調整交絡（気候・医療資源） | Pending |  |  |
+| 5 | 空間相関の可能性 | Pending |  |  |
+| 6 | 線形性仮定 | Pending |  |  |
+| 7 | 曝露指標（都道府県平均傾斜）の粗さ | Pending |  |  |
+| 8 | 年齢構成不一致（歩行速度40–74 vs 骨折高齢） | Pending |  |  |
+| 9 | 年齢標準化不足（粗率） | Pending |  |  |
+| 10 | 結果解釈の強さ（因果を弱める） | Pending |  |  |
+| 11 | biological plausibility文が断定的 | Pending |  |  |
+| 12 | 高齢化率調整のみでは不十分（80歳以上等） | Pending |  |  |
