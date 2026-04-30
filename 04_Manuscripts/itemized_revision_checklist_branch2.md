@@ -6,7 +6,7 @@
 | No. | 指摘事項（要約） | 状態 | 反映箇所メモ | commit |
 |---|---|---|---|---|
 | 1 | 高齢化率・歩行速度の位置づけ（交絡/媒介） | Done | MethodsのModel定義直下に「confounder-adjustment variables」明記 | No.1 commit |
-| 2 | サンプルサイズとモデル安定性（N=47） | Pending |  |  |
+| 2 | サンプルサイズとモデル安定性（N=47） | Done | Methodsにsmall-Nでの係数安定性/多重共線性診断への言及を追記 | No.2 commit |
 | 3 | アウトカムは発症でなく手術率 | Pending |  |  |
 | 4 | 未調整交絡（気候・医療資源） | Pending |  |  |
 | 5 | 空間相関の可能性 | Pending |  |  |
