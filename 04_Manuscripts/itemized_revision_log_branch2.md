@@ -147,3 +147,17 @@
   - `confirmed` → `suggested`
   - `maximizing fracture vulnerability` → `potentially increasing fracture vulnerability`
 - SKILL準拠チェック: may/partly/potentially を使用し、過剰断定を回避。
+
+## 2026-04-30: No.12（No.9同時）高齢化率調整のみでは不十分／年齢標準化不足
+
+- 修正意図: 年齢構造の交絡懸念に対し、公開データのマスキング制約を前提とした補完感度分析（`"-" = 0/5/9`）を本文へ統合し、No.9とNo.12を同時解消する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - Methodsに、年齢階級別手術表＋e-Stat人口を用いた間接法SIR/ISRの感度分析手順（`0/5/9`シナリオ）を追記。
+  - Resultsに、各シナリオでのISR回帰係数（β, 95%CI, *p*）を並記し、符号安定・効果量変動を明示。
+  - Discussionに、公開データのマスキング制約下での解釈方針（頑健性確認として扱う）を追記。
+  - Limitationsに、補完依存性と二次マスキングの可能性を明記し、番号を Fifth〜Ninth に再整列。
+- SKILL準拠チェック: 短文化、断定回避（robustness checks / interpret cautiously）、時制整合を確認。
