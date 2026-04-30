@@ -73,6 +73,7 @@ We summarized prefecture-level distributions using mean, SD, median, 25th and 75
 
 - **Model 1 (unadjusted)**: Simple linear regression of fracture rate on terrain slope only.
 - **Model 2 (multivariable)**: Multiple linear regression of fracture rate on terrain slope, aging rate, fast walking rate, and population density.
+In the primary causal interpretation, aging rate and fast walking rate were treated as confounder-adjustment variables rather than formal mediators.
 
 Model performance was assessed using the coefficient of determination (R²), adjusted R², and the F-statistic. Regression coefficients (β) and 95% confidence intervals (CIs) are reported. Statistical significance was defined as *p* < 0.05 (two-sided). All analyses were performed using Python (version 3.14.2) with `statsmodels` (version 0.14.6). Linear regression models were estimated by ordinary least squares (OLS) using the `statsmodels` formula interface (`statsmodels.formula.api.ols`).
 
