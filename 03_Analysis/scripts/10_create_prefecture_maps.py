@@ -8,6 +8,9 @@ Figure 3: 傾斜度の地域分布（コロプレス地図）
 Figure 4: 大腿骨骨折手術率の地域分布（コロプレス地図）
 Figure 5: 傾斜度 × 骨折率の二変量コロプレス地図（3×3グリッド）
 
+図番号・キャプションは原稿の Figure legends に記載するため、地図パネル内には
+「Figure N.」形式のタイトルを付けない。
+
 実行方法（NDB_Research_Hub ルートまたは 03_Analysis/scripts から）:
     python 10_create_prefecture_maps.py
 """
@@ -114,10 +117,6 @@ merged.plot(
 
 # 5分位の等値線境界を点線で示す
 style_ax(ax4)
-ax4.set_title(
-    "Figure 3. Prefectural Distribution of\nHabitable-Area-Weighted Terrain Slope",
-    fontsize=FONT_TITLE, fontweight="bold", pad=12
-)
 add_scalebar(ax4)
 cax4.tick_params(labelsize=FONT_TICK)
 
@@ -150,10 +149,6 @@ merged.plot(
 )
 
 style_ax(ax5)
-ax5.set_title(
-    "Figure 4. Prefectural Distribution of\nHip Fracture Surgery Rate",
-    fontsize=FONT_TITLE, fontweight="bold", pad=12
-)
 add_scalebar(ax5)
 cax5.tick_params(labelsize=FONT_TICK)
 
@@ -202,10 +197,6 @@ for _, row in merged.iterrows():
     )
 
 style_ax(ax6)
-ax6.set_title(
-    "Figure 5. Bivariate Distribution of Terrain Slope\nand Hip Fracture Surgery Rate by Prefecture",
-    fontsize=FONT_TITLE, fontweight="bold", pad=12
-)
 add_scalebar(ax6)
 
 # --- 凡例：3×3 グリッドを inset axes に描画 ---

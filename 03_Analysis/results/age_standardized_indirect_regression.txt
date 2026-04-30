@@ -1,0 +1,63 @@
+Indirect age-standardization analysis (femur surgery outcome)
+================================================================
+Common age groups: 0-4, 10-14, 15-19, 5-9, 50-54, 55-59, 60-64, 65-69, 70-74, 75-79, 80-84
+National crude femur surgery rate (/100,000): 1.0729
+
+Model A: isr_femur_per100k ~ habitable_slope_weighted
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      isr_femur_per100k   R-squared:                       0.170
+Model:                            OLS   Adj. R-squared:                  0.152
+Method:                 Least Squares   F-statistic:                     9.221
+Date:                Thu, 30 Apr 2026   Prob (F-statistic):            0.00397
+Time:                        13:59:52   Log-Likelihood:                -247.48
+No. Observations:                  47   AIC:                             499.0
+Df Residuals:                      45   BIC:                             502.7
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                  355.1126     20.372     17.432      0.000     314.082     396.143
+habitable_slope_weighted     6.7837      2.234      3.037      0.004       2.284      11.283
+==============================================================================
+Omnibus:                        4.971   Durbin-Watson:                   0.832
+Prob(Omnibus):                  0.083   Jarque-Bera (JB):                3.777
+Skew:                          -0.618   Prob(JB):                        0.151
+Kurtosis:                       3.633   Cond. No.                         26.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Model B: isr_femur_per100k ~ habitable_slope_weighted + fast_walking_rate + pop_density + aging_rate
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      isr_femur_per100k   R-squared:                       0.245
+Model:                            OLS   Adj. R-squared:                  0.173
+Method:                 Least Squares   F-statistic:                     3.407
+Date:                Thu, 30 Apr 2026   Prob (F-statistic):             0.0168
+Time:                        13:59:52   Log-Likelihood:                -245.26
+No. Observations:                  47   AIC:                             500.5
+Df Residuals:                      42   BIC:                             509.8
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   73.0062    141.436      0.516      0.608    -212.423     358.435
+habitable_slope_weighted     5.7125      2.563      2.229      0.031       0.540      10.885
+fast_walking_rate            2.9025      1.788      1.624      0.112      -0.705       6.510
+pop_density                  0.0020      0.007      0.275      0.785      -0.013       0.017
+aging_rate                   4.8403      3.197      1.514      0.138      -1.612      11.293
+==============================================================================
+Omnibus:                       10.080   Durbin-Watson:                   0.947
+Prob(Omnibus):                  0.006   Jarque-Bera (JB):                9.768
+Skew:                          -0.899   Prob(JB):                      0.00757
+Kurtosis:                       4.324   Cond. No.                     2.83e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.83e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
