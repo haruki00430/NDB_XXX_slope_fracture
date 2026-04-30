@@ -62,3 +62,12 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: 「今回は追加解析せず、本文変更なし」の対応を明示してチェックリストをDone化。
 - SKILL準拠チェック: 本文へ不要な断定・過剰追記を行わない方針を維持。
+
+## 2026-04-30: No.6 線形性仮定
+
+- 修正意図: 大平先生コメント（グラフ上、線形性を否定する結果ではないため今回は無視でOK）に沿って運用する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約: No.6は本文の新規追記なし（非修正対応）とし、チェックリスト/ログに判断根拠を明記。
+- SKILL準拠チェック: 不要な本文追記を行わず、過剰解釈を回避する方針を維持。
