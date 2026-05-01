@@ -196,3 +196,17 @@
 - SKILL準拠チェック:
   - `manuscript-writing-quality`: 1論文1メッセージ原則を維持し、不要な論点拡散を回避。
   - `manuscript-revision`: コメントごとの採否理由をログ化し、再現可能な意思決定履歴を保持。
+
+## 2026-05-01: No.15 追加解析提案（自動車保有率・歩数など）
+
+- 修正意図: 舟久保先生コメント③（移動手段・身体活動指標の追加調整/感度分析提案）について、大平先生回答に従った運用判断を記録する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - 主解析への新規感度分析（自動車保有率・歩数指標追加）は今回は実施しない。
+  - 歩行速度等の既存共変量を踏まえ、追加解析は査読段階で要求があれば検討する方針を明記。
+  - 本文（`Manuscript_slope_fracture.qmd`）は変更なし。
+- SKILL準拠チェック:
+  - `manuscript-writing-quality`: 結果に基づかない解析追加を避け、メッセージの焦点を維持。
+  - `manuscript-revision`: 指摘採否の理由をログに残し、後続査読対応の可監査性を確保。
