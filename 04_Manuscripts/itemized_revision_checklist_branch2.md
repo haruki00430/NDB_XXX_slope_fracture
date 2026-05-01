@@ -18,3 +18,4 @@
 | 11 | biological plausibility文が断定的 | Done | Discussion 2の冒頭文を may / partly supported / suggested / potentially に調整 | No.11 commit |
 | 12 | 高齢化率調整のみでは不十分（80歳以上等） | Done | No.9と同時に、マスキング補完シナリオ（0/5/9）による間接法SIR/ISR感度分析の結果と解釈制約を明記 | No.12+9 combined commit |
 | 13 | 傾斜指標の解釈（個人曝露との乖離） | Done | 大平先生回答に従い今回は本文変更なし（査読者指摘時に対応）。ログ更新のみ実施 | No.13 commit |
+| 14 | 行動・生活環境の影響（地域特性・交絡） | Done | 医療アクセス/残余交絡は既対応済み。地域構造指標の追記は論理一貫性の観点で今回は見送り（本文変更なし） | No.14 commit |

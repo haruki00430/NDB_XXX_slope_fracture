@@ -183,3 +183,16 @@
 - SKILL準拠チェック:
   - `manuscript-writing-quality`: 過剰な追記・断定を避け、結論の一貫性を保持。
   - `manuscript-revision`: 項目別ログを更新し、判断根拠の追跡可能性を確保。
+
+## 2026-05-01: No.14 行動・生活環境の影響（地域特性・交絡）
+
+- 修正意図: 舟久保先生コメント②（行動回避・地域特性・地域構造指標としての解釈）に対し、大平先生回答に沿って本文改変の要否を整理し記録する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - 医療アクセスと残余交絡は既に Limitations で対応済みであることを確認。
+  - 傾斜を「地域構造指標」として新規追記すると現行の論理線（骨折部位特異性の考察）と競合するため、今回は本文変更なしとした。
+- SKILL準拠チェック:
+  - `manuscript-writing-quality`: 1論文1メッセージ原則を維持し、不要な論点拡散を回避。
+  - `manuscript-revision`: コメントごとの採否理由をログ化し、再現可能な意思決定履歴を保持。
