@@ -170,3 +170,16 @@
   - `04_Manuscripts/itemized_revision_log_branch2.md`
 - 反映要約: Hip fracture回帰結果段落から、`Results` 内の解釈表現を1文削除。
 - SKILL準拠チェック: Resultsの「事実を淡々と記述」の原則に整合。
+
+## 2026-05-01: No.13 傾斜指標の解釈（個人曝露との乖離）
+
+- 修正意図: 舟久保先生コメント①（都道府県平均傾斜と個人曝露の乖離）について、大平先生回答「今回は対応不要（査読時対応）」を運用記録として明示する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - 本文（`Manuscript_slope_fracture.qmd`）は更新しない。
+  - チェックリスト No.13 を Done 化し、対応方針（査読指摘時に追記検討）を記録。
+- SKILL準拠チェック:
+  - `manuscript-writing-quality`: 過剰な追記・断定を避け、結論の一貫性を保持。
+  - `manuscript-revision`: 項目別ログを更新し、判断根拠の追跡可能性を確保。

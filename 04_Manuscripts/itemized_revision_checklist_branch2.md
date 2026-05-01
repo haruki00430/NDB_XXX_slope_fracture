@@ -17,3 +17,4 @@
 | 10 | 結果解釈の強さ（因果を弱める） | Done | Discussion/Conclusionsで demonstrated→showed, remained→was, amplifying→potentially amplifying に調整 | No.10 commit |
 | 11 | biological plausibility文が断定的 | Done | Discussion 2の冒頭文を may / partly supported / suggested / potentially に調整 | No.11 commit |
 | 12 | 高齢化率調整のみでは不十分（80歳以上等） | Done | No.9と同時に、マスキング補完シナリオ（0/5/9）による間接法SIR/ISR感度分析の結果と解釈制約を明記 | No.12+9 combined commit |
+| 13 | 傾斜指標の解釈（個人曝露との乖離） | Done | 大平先生回答に従い今回は本文変更なし（査読者指摘時に対応）。ログ更新のみ実施 | No.13 commit |
