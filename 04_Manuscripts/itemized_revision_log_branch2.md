@@ -210,3 +210,18 @@
 - SKILL準拠チェック:
   - `manuscript-writing-quality`: 結果に基づかない解析追加を避け、メッセージの焦点を維持。
   - `manuscript-revision`: 指摘採否の理由をログに残し、後続査読対応の可監査性を確保。
+
+## 2026-05-01: No.16 歩行速度の解釈（能力と曝露の差）
+
+- 修正意図: 舟久保先生コメント④に対し、大平先生回答（Limitationsに不足があれば追記）に沿って、歩行速度指標の解釈範囲を明確化する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/Manuscript_slope_fracture_anonymous.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - Limitationsの歩行速度段落に、`fast-walking` は「知覚された歩行能力」の指標であり、実際の歩行量や坂道曝露そのものの代理ではない旨を1文追記。
+  - 匿名投稿版（anonymous）にも同趣旨を同期し、版間整合を維持。
+- SKILL準拠チェック:
+  - `manuscript-writing-quality`: 過剰断定を避け、limitationを具体化。
+  - `manuscript-revision`: 本文修正時の版間同期を維持し、提出体裁の整合性を確保。
