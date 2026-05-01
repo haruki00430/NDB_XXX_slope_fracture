@@ -22,3 +22,4 @@
 | 15 | 追加解析提案（自動車保有率・歩数など） | Done | 大平先生回答に従い主解析への追加感度分析は見送り（本文変更なし）。必要時は査読対応で検討 | No.15 commit |
 | 16 | 歩行速度の解釈（能力と曝露の差） | Done | Limitationsに「fast-walkingは能力指標であり歩行量/坂道曝露の直接代理ではない」を1文追記（匿名版にも同期） | No.16 commit |
 | 17 | 統計的解釈（控えめ表現・N=47） | Done | Conclusions等で「suggestive rather than confirmatory」を明記し、匿名版の断定表現も控えめ化（N=47の不安定性を反映） | No.17 commit |
+| 18 | 体裁・形式（引用位置／Figure整合） | Done | 本文変更なし。投稿直前に引用番号位置・Figure参照/別添ファイル名整合を最終点検する運用をログ化 | No.18 commit |

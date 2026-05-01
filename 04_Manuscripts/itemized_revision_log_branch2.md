@@ -240,3 +240,19 @@
 - SKILL準拠チェック:
   - `manuscript-writing-quality`: 結論を過去形かつ慎重表現に調整し、過剰一般化を回避。
   - `manuscript-revision`: 主要版と匿名版の解釈トーンを同期。
+
+## 2026-05-01: No.18 体裁・形式（引用位置／Figure整合）
+
+- 修正意図: 舟久保先生コメント⑥に対し、本文改変ではなく提出直前チェック項目として運用固定する。
+- 修正ファイル:
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - 本文（`Manuscript_slope_fracture.qmd` / `Manuscript_slope_fracture_anonymous.qmd`）は変更しない。
+  - 最終投稿前に以下を確認する運用を記録:
+    - 引用番号の句読点前後位置が投稿規定と一致しているか
+    - 本文中 `Figure 1–5` 参照順と図キャプション番号が一致しているか
+    - 提出システム別添ファイル名（`Figure_1.png` など）と本文記載が一致しているか
+- SKILL準拠チェック:
+  - `manuscript-writing-quality`: 本文主張を増やさず、提出品質管理に限定。
+  - `manuscript-revision`: 項目別対応の監査ログとして再実行可能なチェック手順を明記。
