@@ -225,3 +225,18 @@
 - SKILL準拠チェック:
   - `manuscript-writing-quality`: 過剰断定を避け、limitationを具体化。
   - `manuscript-revision`: 本文修正時の版間同期を維持し、提出体裁の整合性を確保。
+
+## 2026-05-01: No.17 統計的解釈（控えめ表現・N=47）
+
+- 修正意図: 舟久保先生コメント⑤に対し、大平先生回答（因果を控えめに）に沿って、結論トーンと small-*N* の不安定性を明示する。
+- 修正ファイル:
+  - `04_Manuscripts/Manuscript_slope_fracture.qmd`
+  - `04_Manuscripts/Manuscript_slope_fracture_anonymous.qmd`
+  - `04_Manuscripts/itemized_revision_checklist_branch2.md`
+  - `04_Manuscripts/itemized_revision_log_branch2.md`
+- 反映要約:
+  - main原稿の Conclusions に `Given ... N = 47` と `suggestive rather than confirmatory` を追記し、推定不確実性の強調を明確化。
+  - anonymous原稿では Main Findings と Conclusions の断定語（`demonstrated`, `independently associated`, `amplifying`）を抑制し、HC3/bootstrapで境界的である点を反映。
+- SKILL準拠チェック:
+  - `manuscript-writing-quality`: 結論を過去形かつ慎重表現に調整し、過剰一般化を回避。
+  - `manuscript-revision`: 主要版と匿名版の解釈トーンを同期。
