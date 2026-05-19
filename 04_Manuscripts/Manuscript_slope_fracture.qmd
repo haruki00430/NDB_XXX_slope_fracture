@@ -65,7 +65,7 @@ The proportion of individuals who reported walking fast (fast walking rate, %) w
 
 ## 5. Additional Covariates
 
-Aging rate (proportion of individuals aged ≥65 years, %) was obtained from the 2020 National Census. Population density (persons per km²) was calculated as total population divided by prefecture area from the same source.
+The proportion of individuals aged ≥65 years (%) was obtained from the 2020 National Census. Population density (persons per km²) was calculated as total population divided by prefecture area from the same source.
 
 ## 6. Statistical Analysis
 

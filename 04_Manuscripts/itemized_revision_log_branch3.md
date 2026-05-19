@@ -149,6 +149,17 @@
 
 ---
 
+## No.10（exec 12/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Methods **§5 Additional Covariates のみ**（**山10**）
+- **置換**: `Aging rate (proportion of individuals aged ≥65 years, %)` → `The proportion of individuals aged ≥65 years (%)`（定義文1文）
+- **MQ**: 鉄則4（老年人口割合の定義を誤解しない表現）；鉄則2（共変量ラベル `aging rate` は Abstract・Results・表・Discussion では維持）
+- **DATA**: 不変
+- **UTF-8**: pass
+- **意図的に未変更**: 全文の `aging rate` / `Aging rate` / `## 4. Role of Aging Rate`（**山15** = No.12 で rate vs proportion を検討）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
