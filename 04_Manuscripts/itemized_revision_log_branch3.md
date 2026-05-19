@@ -52,4 +52,22 @@
 
 ---
 
-（以下、Phase 0b 以降の完了記録を追記）
+## 2026-05-19: Commit 1–13 — Manuscript revisions (No.1–32)
+
+- 修正ファイル: `Manuscript_slope_fracture.qmd`, `Manuscript_slope_fracture_anonymous.qmd`（同期）
+- 反映要約: Abstract 平易化（200 words）；proxy・total outcome・解析目的；Results 主/感度分離；Figure 2 削除・再番号；用語（proportion vs rate）；Discussion/Conclusions 調整
+- SKILL/H&P: pass（Abstract ≤250；引用なし）
+
+## 2026-05-19: Commit 13 — Figures (No.32)
+
+- `regen_scatter_figure1_english.py`, `10_create_prefecture_maps.py`：フォント拡大・300 dpi
+- 図ファイル再生成: `scatter_slope_fracture.png`, `fig_map_*.png`
+
+## 2026-05-19: Commit 14 — H&P 提出準備
+
+- 語数（Introduction〜Data availability）: **5044 words**（6,000 以内 → Discussion 一括削減は不要；ユーザー相談待ち不要）
+- Abstract: **200 words**
+- `HEALTH_AND_PLACE_SUBMISSION_CHECKLIST.md` 更新
+- `quarto render`: 未実行（環境依存のためローカルで実施推奨）
+
+（commit hash は push 後に checklist へ追記）
