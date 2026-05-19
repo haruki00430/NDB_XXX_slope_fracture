@@ -198,6 +198,20 @@
 
 ---
 
+## No.23（山23）— エージェント草案（未コミット）
+
+- **PDF 再確認**（`Manuscript_slope_fracture_20260425_saito0430-1.pdf` / `_yamagishi_highlights.txt` word_id=162）:
+  - ハイライト: `steeper habitable terrain`
+  - コメント: 「**そのような県に住んでいること**、との関連という方がこの研究の特徴を表せる」
+- **番号メモ**: 山岸表の **No.18 = 山23**（Discussion）。整合順の **Checklist No.23** は江口・Methods 副次解析（別項目）— 本コミットは **山23 のみ**
+- **変更範囲**: Discussion §1 Main Findings の締め1文のみ
+- **置換**: `steeper habitable terrain may track … at the population level` → `residence in prefectures with steeper habitable terrain may be associated with … at the prefecture level`（県単位生态学の解釈を明示）
+- **MQ**: 鉄則4・5（研究デザインと整合した framing）；鉄則2（過剰な Main Findings 全面書き換えは No.18 相当の別コミットとして回避）
+- **UTF-8**: pass
+- **意図的に未変更**: Comparison 節の dose-response 記述；Biological Plausibility の地形メカニズム（No.19 山29 で車利用を別途）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
