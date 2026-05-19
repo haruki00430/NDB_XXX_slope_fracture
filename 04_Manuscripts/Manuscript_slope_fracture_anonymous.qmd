@@ -16,7 +16,7 @@ format:
 
 # Abstract
 
-Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Annual fracture surgery rates (per 100,000 population per year) came from the 10th National Database (NDB) Open Data (Reiwa 5 health insurance claims, April 2023 through March 2024). Habitual fast walking came from Reiwa 4 Specific Health Checkup tabulations (April 2022 through March 2023). We calculated habitable-area-weighted mean terrain slope from national 10-m digital elevation models. Aging rate and population density came from the 2020 census. We used multivariable linear regression to test whether terrain slope was independently associated with hip fracture surgery rates after adjustment for aging rate, fast walking rate, and population density. Across prefectures, the mean terrain slope was 8.57 degrees (SD, 3.16). Slopes ranged from 1.81 to 15.43 degrees, reflecting how steep residential land is in each prefecture. The mean annual hip fracture surgery rate was 254.0 per 100,000 population (SD 37.6). Before adjustment for aging rate, fast walking rate, and population density, each additional degree of slope corresponded to approximately 5.7 additional hip fracture surgeries per 100,000 population (95% CI, 2.50–8.79; *p* = 0.001). After adjustment for those covariates, terrain slope was positively associated with annual hip fracture surgery rates. Each additional degree of slope corresponded to approximately 3.5 additional hip fracture surgeries per 100,000 population (95% CI, 0.11–6.86; *p* = 0.043). The adjusted association was specific to hip fracture surgery rates and was not observed for humerus or forearm fracture surgery rates.
+Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Annual fracture surgery rates (per 100,000 population per year) came from the 10th National Database (NDB) Open Data (Reiwa 5 health insurance claims, April 2023 through March 2024). Habitual fast walking came from Reiwa 4 Specific Health Checkup tabulations (April 2022 through March 2023). We calculated habitable-area-weighted mean terrain slope from national 10-m digital elevation models. Proportion aged ≥65 years and population density came from the 2020 census. We used multivariable linear regression to test whether terrain slope was independently associated with hip fracture surgery rates after adjustment for proportion aged ≥65 years, fast-walking proportion, and population density. Across prefectures, the mean terrain slope was 8.57 degrees (SD, 3.16). Slopes ranged from 1.81 to 15.43 degrees, reflecting how steep residential land is in each prefecture. The mean annual hip fracture surgery rate was 254.0 per 100,000 population (SD 37.6). Before adjustment for proportion aged ≥65 years, fast-walking proportion, and population density, each additional degree of slope corresponded to approximately 5.7 additional hip fracture surgeries per 100,000 population (95% CI, 2.50–8.79; *p* = 0.001). After adjustment for those covariates, terrain slope was positively associated with annual hip fracture surgery rates. Each additional degree of slope corresponded to approximately 3.5 additional hip fracture surgeries per 100,000 population (95% CI, 0.11–6.86; *p* = 0.043). The adjusted association was specific to hip fracture surgery rates and was not observed for humerus or forearm fracture surgery rates.
 
 **Keywords**: terrain; slope; hip; fracture; ecology; Japan; epidemiology
 
@@ -34,7 +34,7 @@ Previous studies have demonstrated that environmental terrain features are assoc
 
 Despite these theoretical considerations, no nationwide study has examined the association between prefectural-level terrain slope and fracture surgery rates using population-based administrative data. International ecological studies from Norway (NOREPOS) and China (CHARLS) have demonstrated significant associations between high elevation, complex terrain, and elevated hip fracture risk,[20, 21] but Japan-specific nationwide evidence has been lacking. The National Database (NDB) of Health Insurance Claims, released as open data by Japan's Ministry of Health, Labour and Welfare, provides a unique opportunity to assess fracture surgery rates across all 47 Japanese prefectures. Combined with digital elevation model (DEM) data from the Geospatial Information Authority of Japan, this ecological approach enables the first nationwide quantitative assessment of the terrain–fracture surgery relationship in Japan.
 
-In this study, we examined whether terrain slope was associated with hip fracture surgery rates across prefectures. We adjusted for aging rate, fast walking rate, and population density using nationwide administrative and geospatial data. NDB Open Data provide procedure counts, not fracture incidence. We therefore interpreted prefecture-level surgery rates as administrative proxies for fracture-related surgical burden. Not all fractures receive surgery, and operative thresholds may vary across regions.
+In this study, we examined whether terrain slope was associated with hip fracture surgery rates across prefectures. We adjusted for proportion aged ≥65 years, fast-walking proportion, and population density using nationwide administrative and geospatial data. NDB Open Data provide procedure counts, not fracture incidence. We therefore interpreted prefecture-level surgery rates as administrative proxies for fracture-related surgical burden. Not all fractures receive surgery, and operative thresholds may vary across regions.
 
 ---
 
@@ -54,7 +54,7 @@ Terrain slope was calculated from a 10-m resolution digital elevation model (DEM
 
 ## 4. Covariate: Walking Speed
 
-The proportion of individuals who reported walking fast (fast walking rate, %) was derived from the NDB Specific Health Checkup (Tokutei Kenko Shinsa) questionnaire administered as part of the national annual health screening program. In the 10th NDB Open Data release, prefecture-level Specific Health Checkup tabulations correspond to **Reiwa 4 fiscal year** (April 2022 through March 2023), which does not coincide with the Reiwa 5 claims window used for fracture outcomes. Participants aged 40–74 years responded to a question on habitual walking speed, and we calculated the prefecture-level proportion of respondents who reported "fast" walking.
+The proportion of individuals who reported walking fast (proportion with fast habitual walking, %) was derived from the NDB Specific Health Checkup (Tokutei Kenko Shinsa) questionnaire administered as part of the national annual health screening program. In the 10th NDB Open Data release, prefecture-level Specific Health Checkup tabulations correspond to **Reiwa 4 fiscal year** (April 2022 through March 2023), which does not coincide with the Reiwa 5 claims window used for fracture outcomes. Participants aged 40–74 years responded to a question on habitual walking speed, and we calculated the prefecture-level proportion of respondents who reported "fast" walking.
 
 ## 5. Additional Covariates
 
@@ -65,7 +65,7 @@ The proportion of individuals aged ≥65 years (%) was obtained from the 2020 Na
 We first examined the distribution of all variables using descriptive statistics (mean, SD, minimum, and maximum). Pearson correlation coefficients were computed between terrain slope and each outcome and covariate variable. We fit two regression models for each fracture outcome:
 
 - **Model 1 (unadjusted)**: Simple linear regression of fracture rate on terrain slope only.
-- **Model 2 (multivariable)**: Multiple linear regression of fracture rate on terrain slope, aging rate, fast walking rate, and population density.
+- **Model 2 (multivariable)**: Multiple linear regression of fracture rate on terrain slope, proportion aged ≥65 years, fast-walking proportion, and population density.
 
 Model performance was assessed using the coefficient of determination (R²), adjusted R², and the F-statistic. Regression coefficients (β) and 95% confidence intervals (CIs) are reported. Statistical significance was defined as *p* < 0.05 (two-sided). All analyses were performed using Python (version 3.14.2) with `statsmodels` (version 0.14.6). Linear regression models were estimated by ordinary least squares (OLS) using the `statsmodels` formula interface (`statsmodels.formula.api.ols`).
 
@@ -77,19 +77,19 @@ This study used publicly available aggregate data; individual informed consent w
 
 ## 1. Descriptive Statistics
 
-Across the 47 Japanese prefectures, the mean habitable-area-weighted terrain slope was 8.57 ± 3.16 degrees (range: 1.81–15.43 degrees) (Table 1). The mean hip fracture surgery rate was 254.0 ± 37.6 per 100,000 population (range: 167.6–329.6), and the mean total fracture surgery rate was 352.8 ± 54.9 per 100,000. The mean aging rate was 30.7 ± 3.1%, and the mean proportion with fast walking speed was 48.6 ± 4.3%.
+Across the 47 Japanese prefectures, the mean habitable-area-weighted terrain slope was 8.57 ± 3.16 degrees (range: 1.81–15.43 degrees) (Table 1). The mean hip fracture surgery rate was 254.0 ± 37.6 per 100,000 population (range: 167.6–329.6), and the mean total fracture surgery rate was 352.8 ± 54.9 per 100,000. The mean proportion aged ≥65 years was 30.7 ± 3.1%, and the mean fast-walking proportion was 48.6 ± 4.3%.
 
 ## 2. Correlation Analysis
 
-Terrain slope showed a moderate positive correlation with hip fracture surgery rate (r = 0.475, *p* < 0.01) and with total fracture surgery rate (r = 0.394, *p* < 0.01) (Table 2). Figure 1 illustrates the bivariate association between terrain slope and hip fracture surgery rate; Figure 2 displays the correlation matrix. Slope was also positively correlated with aging rate (r = 0.505, *p* < 0.01), indicating that prefectures with steeper terrain tend to have older populations. In contrast, slope showed a weak negative correlation with fast walking rate (r = −0.264), suggesting that residents in steeper prefectures were less likely to report fast walking. Slope showed weak and non-significant correlations with humerus fracture rate (r = 0.138) and forearm fracture rate (r = 0.177).
+Terrain slope showed a moderate positive correlation with hip fracture surgery rate (r = 0.475, *p* < 0.01) and with total fracture surgery rate (r = 0.394, *p* < 0.01) (Table 2). Figure 1 illustrates the bivariate association between terrain slope and hip fracture surgery rate; Figure 2 displays the correlation matrix. Slope was also positively correlated with proportion aged ≥65 years (r = 0.505, *p* < 0.01), indicating that prefectures with steeper terrain tend to have older populations. In contrast, slope showed a weak negative correlation with fast-walking proportion (r = −0.264), suggesting that residents in steeper prefectures were less likely to report fast walking. Slope showed weak and non-significant correlations with humerus fracture rate (r = 0.138) and forearm fracture rate (r = 0.177).
 
 ## 3. Regression Analysis: Hip Fracture
 
-In the unadjusted model (Model 1), terrain slope was significantly and positively associated with hip fracture surgery rate (β = 5.65; 95% CI, 2.50–8.79; R² = 0.225; *p* = 0.001). After adjustment for aging rate, fast walking rate, and population density (Model 2), the association between slope and hip fracture rate remained statistically significant (β = 3.49; 95% CI, 0.11–6.86; R² = 0.385; *p* = 0.043) (Table 3). Aging rate was also independently associated with hip fracture rate (β = 5.53; 95% CI, 1.32–9.74; *p* = 0.011). Fast walking rate showed a tendency toward a negative association with hip fracture rate, although this did not reach statistical significance (β = 2.02; *p* = 0.091). Population density was not significantly associated with hip fracture rate (β = −0.001; *p* = 0.818).
+In the unadjusted model (Model 1), terrain slope was significantly and positively associated with hip fracture surgery rate (β = 5.65; 95% CI, 2.50–8.79; R² = 0.225; *p* = 0.001). After adjustment for proportion aged ≥65 years, fast-walking proportion, and population density (Model 2), the association between slope and hip fracture rate remained statistically significant (β = 3.49; 95% CI, 0.11–6.86; R² = 0.385; *p* = 0.043) (Table 3). Proportion aged ≥65 years was also independently associated with hip fracture rate (β = 5.53; 95% CI, 1.32–9.74; *p* = 0.011). Fast-walking proportion showed a tendency toward a negative association with hip fracture rate, although this did not reach statistical significance (β = 2.02; *p* = 0.091). Population density was not significantly associated with hip fracture rate (β = −0.001; *p* = 0.818).
 
 ## 4. Regression Analysis: Total, Humerus, and Forearm Fractures
 
-In the unadjusted model, slope was significantly associated with total fracture surgery rate (β = 6.85; 95% CI, 2.06–11.64; R² = 0.156; *p* = 0.006). In the multivariable model, however, slope did not reach statistical significance for total fracture rate (β = 4.47; *p* = 0.099), although aging rate remained a significant predictor (β = 7.19; *p* = 0.035; R² = 0.276). Neither humerus fracture rate (Model 1: *p* = 0.355; Model 2: R² = 0.107) nor forearm fracture rate (Model 1: *p* = 0.233; Model 2: R² = 0.062) was significantly associated with terrain slope in either model.
+In the unadjusted model, slope was significantly associated with total fracture surgery rate (β = 6.85; 95% CI, 2.06–11.64; R² = 0.156; *p* = 0.006). In the multivariable model, however, slope did not reach statistical significance for total fracture rate (β = 4.47; *p* = 0.099), although proportion aged ≥65 years remained a significant predictor (β = 7.19; *p* = 0.035; R² = 0.276). Neither humerus fracture rate (Model 1: *p* = 0.355; Model 2: R² = 0.107) nor forearm fracture rate (Model 1: *p* = 0.233; Model 2: R² = 0.062) was significantly associated with terrain slope in either model.
 
 ---
 
@@ -97,7 +97,7 @@ In the unadjusted model, slope was significantly associated with total fracture 
 
 ## 1. Main Findings
 
-This ecological study showed a positive association between prefectural-level terrain slope and hip fracture surgery rates across Japan after adjustment for aging rate, walking speed, and population density (β = 3.49 per one-degree increase, *p* = 0.043 in conventional OLS). Each additional degree of slope was associated with approximately 3.5 additional hip fracture surgeries per 100,000 population. This association was specific to hip fractures and was not observed for humerus or forearm fractures. Figures 3–5 map prefectural distributions of terrain slope, hip fracture rates, and their joint classification. Together, these findings suggest that, at the population level, steeper habitable terrain may track hip-specific surgical burden beyond compositional aging and self-reported walking pace, although robust and bootstrap intervals were borderline at *N* = 47.
+This ecological study showed a positive association between prefectural-level terrain slope and hip fracture surgery rates across Japan after adjustment for proportion aged ≥65 years, walking speed, and population density (β = 3.49 per one-degree increase, *p* = 0.043 in conventional OLS). Each additional degree of slope was associated with approximately 3.5 additional hip fracture surgeries per 100,000 population. This association was specific to hip fractures and was not observed for humerus or forearm fractures. Figures 3–5 map prefectural distributions of terrain slope, hip fracture rates, and their joint classification. Together, these findings suggest that, at the population level, steeper habitable terrain may track hip-specific surgical burden beyond compositional aging and self-reported walking pace, although robust and bootstrap intervals were borderline at *N* = 47.
 
 ## 2. Biological Plausibility
 
@@ -113,19 +113,19 @@ Our findings align with and extend international ecological studies examining ge
 
 In Asia, a recent retrospective cohort analysis using data from the China Health and Retirement Longitudinal Study (CHARLS) demonstrated that exposure to high altitude and steep terrain was associated with a 1.65-fold elevated hazard ratio for hip fracture, with particularly pronounced effects among overweight individuals and women.[21] These findings reinforce the generalizability of our results across diverse geographic and ethnic contexts.
 
-Previous ecological studies have also examined the relationship between outdoor environment and fall-related injuries. Studies in multiple countries found that neighborhood green space, walkability, and environmental safety were associated with fall-related hospital admissions and fracture risk.[34] In Japan, Fujita et al. reported that frequent outdoor activity predicts physical function in rural community-dwelling older adults.[14] However, to our knowledge, no prior study has used nationwide DEM data linked to administrative fracture data to quantify the dose-response association between terrain slope and hip fracture rates at the population level in Japan. Our study provides the first nationwide quantitative evidence that each one-degree increase in terrain slope is associated with approximately 3.5 additional hip fracture surgeries per 100,000 population, independent of aging rate. This quantitative estimate is novel and contributes to the global evidence base for terrain as a modifiable environmental risk factor.
+Previous ecological studies have also examined the relationship between outdoor environment and fall-related injuries. Studies in multiple countries found that neighborhood green space, walkability, and environmental safety were associated with fall-related hospital admissions and fracture risk.[34] In Japan, Fujita et al. reported that frequent outdoor activity predicts physical function in rural community-dwelling older adults.[14] However, to our knowledge, no prior study has used nationwide DEM data linked to administrative fracture data to quantify the dose-response association between terrain slope and hip fracture rates at the population level in Japan. Our study provides the first nationwide quantitative evidence that each one-degree increase in terrain slope is associated with approximately 3.5 additional hip fracture surgeries per 100,000 population, independent of proportion aged ≥65 years. This quantitative estimate is novel and contributes to the global evidence base for terrain as a modifiable environmental risk factor.
 
-## 4. Role of Aging Rate
+## 4. Proportion Aged ≥65 Years
 
-Aging rate was the strongest predictor of hip fracture rate in the multivariable model (β = 5.53, *p* = 0.011). Prefectures with steeper terrain also tended to have higher aging rates (r = 0.505), reflecting the well-documented trend of rural aging in Japan, where mountainous prefectures experience greater outmigration of younger populations.[35, 36, 37] Older adults in these high-slope prefectures thus face a double burden: the physical challenge of navigating harsh terrain on a daily basis (environmental hazard) and the social isolation and lack of medical access associated with rural depopulation (social determinants of health).[38, 39]
+Proportion aged ≥65 years was the strongest predictor of hip fracture rate in the multivariable model (β = 5.53, *p* = 0.011). Prefectures with steeper terrain also tended to have higher proportions aged ≥65 years (r = 0.505), reflecting the well-documented trend of rural aging in Japan, where mountainous prefectures experience greater outmigration of younger populations.[35, 36, 37] Older adults in these high-slope prefectures thus face a double burden: the physical challenge of navigating harsh terrain on a daily basis (environmental hazard) and the social isolation and lack of medical access associated with rural depopulation (social determinants of health).[38, 39]
 
-The independent association of slope with hip fracture after adjustment for aging rate indicates that terrain constitutes a risk factor over and above demographic composition. This finding has practical implications: even within the context of Japan's nationwide aging, geographic topography represents an additional and modifiable layer of fracture risk. Terrain slope is not merely a proxy for aging, but an independent environmental hazard that chronically erodes physical function among rural-dwelling older adults.
+The independent association of slope with hip fracture after adjustment for proportion aged ≥65 years indicates that terrain constitutes a risk factor over and above demographic composition. This finding has practical implications: even within the context of Japan's nationwide aging, geographic topography represents an additional and modifiable layer of fracture risk. Terrain slope is not merely a proxy for aging, but an independent environmental hazard that chronically erodes physical function among rural-dwelling older adults.
 
 ## 5. Walking Speed as a Mediator
 
-Fast walking rate showed a tendency toward a negative association with hip fracture rate (*p* = 0.091), consistent with the extensive literature designating walking speed as the "sixth vital sign" and a powerful predictor of fracture risk, sarcopenia, frailty, and mortality.[15, 16, 17] Prospective cohort studies in community-dwelling older adults have demonstrated that walking speeds below 0.8 m/s or 0.69 m/s significantly elevate hip fracture incidence.[16] Moreover, walking speed measured in clinical settings (flat 10-meter walk tests) may not accurately reflect real-world walking ability on complex outdoor terrain.[18]
+Fast-walking proportion showed a tendency toward a negative association with hip fracture rate (*p* = 0.091), consistent with the extensive literature designating walking speed as the "sixth vital sign" and a powerful predictor of fracture risk, sarcopenia, frailty, and mortality.[15, 16, 17] Prospective cohort studies in community-dwelling older adults have demonstrated that walking speeds below 0.8 m/s or 0.69 m/s significantly elevate hip fracture incidence.[16] Moreover, walking speed measured in clinical settings (flat 10-meter walk tests) may not accurately reflect real-world walking ability on complex outdoor terrain.[18]
 
-When confronted with uneven or sloped terrain, older adults unconsciously adopt cautious gait strategies, reducing step length and cadence to enhance stability, which results in substantially slower walking speeds.[11, 18, 19] Older adults residing in high-slope regions are exposed to such challenging terrain daily during shopping and outdoor activities, leading to chronic fear of falling, reduced outdoor activity, and progressive deconditioning (disuse muscle atrophy).[40, 41] The observed correlation between higher slope and lower fast walking rate (r = −0.264) in our data supports this chronic mediation pathway.
+When confronted with uneven or sloped terrain, older adults unconsciously adopt cautious gait strategies, reducing step length and cadence to enhance stability, which results in substantially slower walking speeds.[11, 18, 19] Older adults residing in high-slope regions are exposed to such challenging terrain daily during shopping and outdoor activities, leading to chronic fear of falling, reduced outdoor activity, and progressive deconditioning (disuse muscle atrophy).[40, 41] The observed correlation between higher slope and lower fast-walking proportion (r = −0.264) in our data supports this chronic mediation pathway.
 
 However, walking speed did not reach statistical significance in our multivariable model, and we did not observe a significant mediating role of walking speed in the slope–fracture association. This may reflect several limitations: (1) the NDB Specific Health Checkup captures self-reported habitual walking speed in adults aged 40–74 years, which may not accurately represent the functional capacity of the oldest-old (≥75 years) who are at highest fracture risk; (2) prefecture-level ecological analysis inherently lacks the granularity required to detect individual-level mediation pathways; and (3) non-differential measurement error in self-reported walking speed may bias estimates toward the null. Future studies using individual-level data (e.g., objectively measured gait speed, accelerometry) with formal causal mediation analysis are warranted to clarify whether terrain slope influences hip fracture risk partly through its chronic effect on habitual walking capacity.
 
@@ -157,7 +157,7 @@ Seventh, sex- and gender-stratified outcome tables were not available in the pre
 
 # Conclusions
 
-Under primary ordinary least squares estimation, terrain slope was positively associated with hip fracture surgery rates across Japanese prefectures after adjustment for aging rate, walking speed, and population density. Each one-degree increase in terrain slope was associated with approximately 3.5 additional hip fracture surgeries per 100,000 population. However, robust and bootstrap uncertainty quantification was borderline at *N* = 47, so the findings should be interpreted as suggestive rather than confirmatory. The association was specific to hip fractures, with no significant relationship observed for humerus or forearm fractures, consistent with biomechanical hypotheses on lateral falls over sloped terrain.
+Under primary ordinary least squares estimation, terrain slope was positively associated with hip fracture surgery rates across Japanese prefectures after adjustment for proportion aged ≥65 years, walking speed, and population density. Each one-degree increase in terrain slope was associated with approximately 3.5 additional hip fracture surgeries per 100,000 population. However, robust and bootstrap uncertainty quantification was borderline at *N* = 47, so the findings should be interpreted as suggestive rather than confirmatory. The association was specific to hip fractures, with no significant relationship observed for humerus or forearm fractures, consistent with biomechanical hypotheses on lateral falls over sloped terrain.
 
 Future studies using individual-level data with residential geocoding, objective gait measurements, formal causal mediation analysis, and high-resolution spatial modeling are warranted to delineate the precise causal pathways—direct biomechanical effects versus chronic functional decline—underlying the terrain–fracture association observed at the population level.
 
@@ -247,23 +247,23 @@ During the preparation and writing of this work, the authors used AI-assisted to
 | Habitable-area-weighted slope | degrees | 47 | 8.57 | 3.16 | 1.81 | 15.43 |
 | Simple mean slope | degrees | 47 | 8.28 | 2.90 | 1.88 | 14.22 |
 | **Covariate variables** | | | | | | |
-| Aging rate (≥65 years) | % | 47 | 30.74 | 3.10 | 22.61 | 36.45 |
-| Fast walking rate | % | 47 | 48.62 | 4.34 | 29.79 | 57.30 |
+| Proportion aged ≥65 years | % | 47 | 30.74 | 3.10 | 22.61 | 36.45 |
+| Proportion with fast habitual walking | % | 47 | 48.62 | 4.34 | 29.79 | 57.30 |
 | Population density | persons/km² | 47 | 657 | 1,223 | 62.63 | 6,402.64 |
 
 ---
 
 ## Table 2. Pearson Correlation Matrix of Study Variables (N = 47)
 
-| Variable | Hip Fracture | Total Fracture | Humerus Fracture | Forearm Fracture | Terrain Slope | Aging Rate | Fast Walking Rate | Pop Density |
+| Variable | Hip Fracture | Total Fracture | Humerus Fracture | Forearm Fracture | Terrain Slope | Proportion aged ≥65 years | Fast-walking proportion | Pop Density |
 |:---|:---:|---:|---:|---:|---:|---:|---:|---:|
 | Hip Fracture | 1.000 |  |  |  |  |  |  |  |
 | Total Fracture | 0.962*** | 1.000 |  |  |  |  |  |  |
 | Humerus Fracture | 0.697*** | 0.801*** | 1.000 |  |  |  |  |  |
 | Forearm Fracture | 0.640*** | 0.813*** | 0.656*** | 1.000 |  |  |  |  |
 | Terrain Slope | 0.475*** | 0.394** | 0.138 | 0.177 | 1.000 |  |  |  |
-| Aging Rate | 0.533*** | 0.430** | 0.152 | 0.156 | 0.505*** | 1.000 |  |  |
-| Fast Walking Rate | −0.044 | 0.011 | 0.177 | 0.060 | −0.264 | −0.406** | 1.000 |  |
+| Proportion aged ≥65 years | 0.533*** | 0.430** | 0.152 | 0.156 | 0.505*** | 1.000 |  |  |
+| Fast-walking proportion | −0.044 | 0.011 | 0.177 | 0.060 | −0.264 | −0.406** | 1.000 |  |
 | Pop Density | −0.336* | −0.238 | 0.006 | −0.032 | −0.345* | −0.628*** | 0.381** | 1.000 |
 
 *p* < 0.05 (*), *p* < 0.01 (**), *p* < 0.001 (***).
@@ -276,15 +276,15 @@ During the preparation and writing of this work, the authors used AI-assisted to
 | :--- | ---: | ---: | ---: | ---: |
 | **Variable** | **β (95% CI)** | ***p*** | **β (95% CI)** | ***p*** |
 | Terrain slope (per 1 degree) | **5.65 (2.50, 8.79)** | **0.001** | **3.49 (0.11, 6.86)** | **0.043** |
-| Aging rate (per 1%) | — | — | **5.53 (1.32, 9.74)** | **0.011** |
-| Fast walking rate (per 1%) | — | — | 2.02 (−0.34, 4.37) | 0.091 |
+| Proportion aged ≥65 years (per 1%) | — | — | **5.53 (1.32, 9.74)** | **0.011** |
+| Fast-walking proportion (per 1%) | — | — | 2.02 (−0.34, 4.37) | 0.091 |
 | Population density (per 1 person/km²) | — | — | −0.001 (−0.01, 0.01) | 0.818 |
 | **R²** | 0.225 | | 0.385 | |
 | **Adjusted R²** | 0.208 | | 0.326 | |
 | **F-statistic (*p*)** | 13.23 (0.001) | | 6.56 (0.0003) | |
 
 Model 1: simple linear regression of hip fracture rate on terrain slope alone.
-Model 2: multivariable linear regression adjusting for aging rate, fast walking rate, and population density.
+Model 2: multivariable linear regression adjusting for proportion aged ≥65 years, fast-walking proportion, and population density.
 β, unstandardized regression coefficient; CI, confidence interval.
 **Bold** indicates *p* < 0.05.
 
@@ -292,14 +292,14 @@ Model 2: multivariable linear regression adjusting for aging rate, fast walking 
 
 ## Table 4. Linear Regression Results for All Fracture Outcomes: Model 2 (Multivariable, N = 47)
 
-| **Outcome** | **Slope β (95% CI)** | ***p*** | **Aging rate β (95% CI)** | ***p*** | **R²** | **Adj. R²** |
+| **Outcome** | **Slope β (95% CI)** | ***p*** | **Proportion aged ≥65 years β (95% CI)** | ***p*** | **R²** | **Adj. R²** |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Hip (femur) fracture | **3.49 (0.11, 6.86)** | **0.043** | **5.53 (1.32, 9.74)** | **0.011** | **0.385** | **0.326** |
 | Total fracture | 4.47 (−0.88, 9.82) | 0.099 | **7.19 (0.51, 13.86)** | **0.035** | 0.276 | 0.206 |
 | Humerus fracture | 0.23 (−0.50, 0.96) | 0.524 | 0.54 (−0.38, 1.46) | 0.245 | 0.107 | 0.022 |
 | Forearm fracture | 0.67 (−0.95, 2.30) | 0.402 | 1.28 (−0.77, 3.33) | 0.218 | 0.062 | −0.027 |
 
-All models adjusted for aging rate, fast walking rate, and population density.
+All models adjusted for proportion aged ≥65 years, fast-walking proportion, and population density.
 β, unstandardized regression coefficient; CI, confidence interval.
 **Bold** indicates *p* < 0.05.
 

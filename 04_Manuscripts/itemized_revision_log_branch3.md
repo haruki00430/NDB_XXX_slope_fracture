@@ -160,6 +160,20 @@
 
 ---
 
+## No.12（exec 13/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Methods（§4–§6）・Results・Discussion・Conclusions・表・Abstract（**山15**：単なる割合の `rate` → `proportion`）
+- **置換**:
+  - `aging rate` / `Aging rate` → `proportion aged ≥65 years` / `Proportion aged ≥65 years`（§5 定義文は No.10 済みのまま）
+  - `fast walking rate` → `fast-walking proportion`；Methods §4 は `proportion with fast habitual walking`
+  - 表1–4・Table 2 行列ラベルを同期；Discussion §4 見出し `Proportion Aged ≥65 Years`
+- **MQ**: 鉄則4（疫学用語：割合と発生率の区別）
+- **DATA**: 不変
+- **UTF-8**: pass
+- **意図的に未変更**: `fracture surgery rate`・`surgery rate`・`rate of elevation change`・`national age-specific surgery rates`・`compositional aging` / `rural aging`（一般語）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
