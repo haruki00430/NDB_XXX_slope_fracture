@@ -35,3 +35,13 @@
 - **残作業（No.22以降）**: Results/Discussion 内の `fracture rate` 表記は未一括置換（意図的に No.21 範囲外）
 
 **コミット例**: `No.21 (exec 1/32): Eguchi proxy terminology and surgery-rate framing (Intro, Methods §2)`
+
+---
+
+## No.22（exec 2/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（解析目的の明示）
+- **MQ**: 鉄則1（OLS 文を分割）、鉄則4（We used … at 文頭）、鉄則11（能動態）；JAMA Objective 要素
+- **DATA**: 調整変数・モデルは ca57785 / Methods と整合（数値変更なし）
+- **UTF-8**: pass
+- **意図的に未変更**: HC3/bootstrap の削除（No.2）、Abstract 全体の平易化（No.1 以降）
