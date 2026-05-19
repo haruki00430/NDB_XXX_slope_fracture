@@ -82,6 +82,17 @@
 
 ---
 
+## No.4（exec 6/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（**山4**：per 100,000 ＝ 年間・人口10万人当たりか）
+- **置換**: (1) `Annual fracture surgery rates (per 100,000 population per year)`＋Reiwa 5 期間 (2) `The mean annual hip fracture surgery rate was 254.0 per 100,000 population`
+- **MQ**: 鉄則1・4（The mean… was）；鉄則2（Methods §2 の annual rates と用語整合）
+- **DATA**: 254.0・SD 37.6・令和5年度は変更なし（Methods §2: annual rates per 100,000）
+- **UTF-8**: pass
+- **意図的に未変更**: Methods §2（既に annual と明記）、β 平易化（山5）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
