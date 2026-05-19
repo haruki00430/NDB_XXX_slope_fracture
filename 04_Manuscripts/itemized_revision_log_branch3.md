@@ -212,6 +212,17 @@
 
 ---
 
+## No.26（exec 18/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Discussion §5（江口：地形–fast-walking の相関 *p* 追記）
+- **確認**: Results §2 は No.13 済み `(r = −0.264, *p* = 0.073)`（Table 2 と整合）
+- **置換**: Discussion の `(r = −0.264)` → `(r = −0.264, *p* = 0.073)`（正本・匿名版）
+- **DATA**: *r*・*p* は Table 2（*N* = 47）と一致；α = 0.05 では非有意である旨は Results の “weak negative” で既出のため Discussion では *p* 値のみ追記
+- **UTF-8**: pass
+- **意図的に未変更**: Table 2 行列の個別 *p* 脚注；humerus/forearm の *r* = 0.138・0.177
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
