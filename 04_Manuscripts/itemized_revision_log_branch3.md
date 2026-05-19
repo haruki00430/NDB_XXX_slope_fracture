@@ -56,3 +56,14 @@
 - **UTF-8**: pass
 - **体裁**: Abstract は単一段落のまま（H&P 向け）
 - **意図的に未変更**: HC3/bootstrap 削除（No.2）、OLS/β の言い換え（No.3）、年間 per 100,000（No.4）、Main Findings 調（No.5）、調整変数の追加説明（No.6）、末尾簡潔化（No.7）
+
+---
+
+## No.2（exec 4/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（山2：HC3・bootstrap・OLS 頑健性の記述削除）
+- **削除**: `We fitted OLS…`, `HC3… (*B* = 5000)`, `HC3 and bootstrap intervals… borderline`, `conventional standard errors`（HC3 との対比句）
+- **MQ**: 鉄則1（統計細部の削減）、2（冗長な頑健性列挙の除去）
+- **DATA**: 主解析の β・CI・*p* は変更なし；感度分析の詳細は本文・Table 3 脚注に残置
+- **UTF-8**: pass
+- **意図的に未変更**: β/OLS の平易化（No.3）、末尾の *N*=47 注意（No.7 で整理可）
