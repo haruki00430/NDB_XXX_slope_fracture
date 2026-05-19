@@ -104,6 +104,17 @@
 
 ---
 
+## No.6（exec 8/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（**山6**：調整後結果に調整変数を明示）
+- **置換**: `After covariate adjustment` → `After adjustment for aging rate, fast walking rate, and population density`（Methods Model 2 と整合）
+- **MQ**: 鉄則4（After adjustment… each additional degree）；鉄則2（covariate adjustment の曖昧語を具体化）
+- **DATA**: 調整変数セットは Table 3 Model 2 と同一
+- **UTF-8**: pass
+- **意図的に未変更**: `before covariate adjustment`（未調整側は山6のハイライト外）、aging rate 用語（山10）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
