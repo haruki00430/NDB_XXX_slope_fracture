@@ -1,0 +1,103 @@
+﻿FILE: Manuscript_slope_fracture_20260425_saito0430-1_saito0519.docx
+
+================================================================================
+
+[YAMAGISHI] comment_id=1
+ANCHOR: Abstract
+TEXT: 今のままだと、ちょっと難解で、統計の細かい知識がない人でも、どのような分析をしたのかがイメージできるような書き方でないと、なかなか読まれないのではないかと心配します。（本文よりもabstractの方が難解に書かれているので、本文の書き方を持ってくる方がいい）　abstractを全体的にもう一度見直して、重要なメッセージがストレートに伝わるように検討してみてください。
+
+[治輝 齋藤] comment_id=2
+ANCHOR: Abstract
+TEXT: アブストラクトの記載について、どのような分析を行いどのような結果が得られたか、難解な記載を修正いたしました。
+
+[YAMAGISHI] comment_id=31
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: 感度分析の話は細かいのでabstractには不要ではないか。
+
+[治輝 齋藤] comment_id=32
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: 感度分析の内容について、abstractから削除しました。
+
+[YAMAGISHI] comment_id=35
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: これが何を意味するのかがわかりにくいので説明が必要と思います。
+
+[YAMAGISHI] comment_id=42
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: 年間１０万人当たりという意味ですか？
+
+[治輝 齋藤] comment_id=43
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: （江口先生コメント①）hip fracture rates → hip fracture surgery rates に修正しました
+
+[YAMAGISHI] comment_id=45
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: これが何を意味するのかがよくわかりませんでした。Discussionで使われている表現の方がわかりやすい。
+
+[YAMAGISHI] comment_id=50
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: これもこれだけだと何かがよくわからないと思います。何で調整したのかも書く必要があります。
+
+[治輝 齋藤] comment_id=58
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: （江口先生コメント①）forearm fractures → forearm fracture surgeries に修正しました。
+
+[YAMAGISHI] comment_id=62
+ANCHOR: Hip fractures place a heavy burden on older adults in Japan. Whether steeper regional terrain relates to hip fracture surgery rates across prefectures remains unclear. We studied all 47 Japanese prefectures in an ecological design. We linked prefecture-level data from national open sources. Fracture surgery rates (per 100,000) came from the 10th National Database (NDB) Open Data (Reiwa 5 health in
+TEXT: 抄録の最後でこのようなことは言わない方がいい。重要なことは、「傾斜が強い県に住んでいる人では股関節骨折手術が多いが、それ以外の骨折は関係ない」ことが、明確に読者に伝わることです。それ以外の細かな情報は本文で議論すればよい。
+
+[YAMAGISHI] comment_id=65
+ANCHOR: Previous studies have demonstrated that environmental terrain features are associated with physical activity levels and walking speed in community-dwelling older adults. [14] Walking speed is itself a powerful predictor of fracture risk [15, 16] and has been designated the “sixth vital sign.” [17] Older adults walking on complex outdoor terrain unconsciously adopt cautious gait strategies, reducin
+TEXT: なんとなく、傾斜地に住んでいる人の方が、坂を上ったり下りたりするので、足腰が鍛えられる気がしますが、どのようには考えられないですか？逆に傾斜地はしんどいので車を使う人が多いということもあるのでは？
+
+[治輝 齋藤] comment_id=66
+ANCHOR: Previous studies have demonstrated that environmental terrain features are associated with physical activity levels and walking speed in community-dwelling older adults. [14] Walking speed is itself a powerful predictor of fracture risk [15, 16] and has been designated the “sixth vital sign.” [17] Older adults walking on complex outdoor terrain unconsciously adopt cautious gait strategies, reducin
+TEXT: （江口先生コメント①）hip fracture rates → hip fracture surgery rates に修正のうえ、本文の表現も修正しました。
+
+[YAMAGISHI] comment_id=76
+ANCHOR: Despite these theoretical considerations, no nationwide study has examined the association between prefectural-level terrain slope and fracture surgery rates using population-based administrative data. International ecological studies from Norway (NOREPOS) and China (CHARLS) have demonstrated significant associations between high elevation, complex terrain, and elevated hip fracture risk, [20, 21]
+TEXT: ここで県レベルというのがでてくるが、県レベルで十分なのですか？山の多い県でも実際に人々が多く住んでいるのは平野部で、山奥に住んでいる人はわずかですが、それでも代表性は担保できるのですか？limitationで少し述べられていますが、そのような欠点があっても、今回の研究を出す意義があることをdiscussionまたはconclusionで強調してください。
+
+[治輝 齋藤] comment_id=77
+ANCHOR: Despite these theoretical considerations, no nationwide study has examined the association between prefectural-level terrain slope and fracture surgery rates using population-based administrative data. International ecological studies from Norway (NOREPOS) and China (CHARLS) have demonstrated significant associations between high elevation, complex terrain, and elevated hip fracture risk, [20, 21]
+python : Traceback (most recent call last):
+発生場所 C:\Users\user\AppData\Local\Temp\ps-script-048100e3-fa4e-42bd-a498-36b0d004f7a7.ps1:79 文字:1
++ python "c:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\proje ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "c:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\projects\NDB_XXX_slope_fracture\04_Manuscripts\_extract
+_docx_comments.py", line 70, in <module>
+    main()
+    ~~~~^^
+  File "c:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\projects\NDB_XXX_slope_fracture\04_Manuscripts\_extract
+_docx_comments.py", line 66, in main
+    print(f"TEXT: {c['text']}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\u2013' in position 24: illegal multibyte sequence
+FILE: Manuscript_slope_fracture_20260425_saito0430(1).docx
+
+================================================================================
+
+[治輝 齋藤] comment_id=12
+ANCHOR: Model 2 (multivariable): Multiple linear regression of fracture rate on terrain slope, aging rate, fast walking rate, and population density.In the primary causal interpretation, aging rate and fast walking rate were treated as confounder-adjustment variables rather than formal mediators.
+TEXT: (佐藤先生コメント①) 完全な媒介因子として考えることは難しいので、交絡因子として処理する旨を記載しました。
+
+[治輝 齋藤] comment_id=13
+python : Traceback (most recent call last):
+発生場所 C:\Users\user\AppData\Local\Temp\ps-script-048100e3-fa4e-42bd-a498-36b0d004f7a7.ps1:79 文字:298
++ ... tract.txt"; python "c:\Users\user\SharedWorkspace\projects\NDB_Resear ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "c:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\projects\NDB_XXX_slope_fracture\04_Manuscripts\_extract
+_docx_comments.py", line 70, in <module>
+    main()
+    ~~~~^^
+  File "c:\Users\user\SharedWorkspace\projects\NDB_Research_Hub\projects\NDB_XXX_slope_fracture\04_Manuscripts\_extract
+_docx_comments.py", line 65, in main
+    print(f"ANCHOR: {snip}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\u2013' in position 154: illegal multibyte sequence

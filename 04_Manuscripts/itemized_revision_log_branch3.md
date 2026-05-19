@@ -67,3 +67,27 @@
 - **DATA**: 主解析の β・CI・*p* は変更なし；感度分析の詳細は本文・Table 3 脚注に残置
 - **UTF-8**: pass
 - **意図的に未変更**: β/OLS の平易化（No.3）、末尾の *N*=47 注意（No.7 で整理可）
+
+---
+
+## No.3（exec 5/32）— エージェント草案（未コミット）【山3・再実施】
+
+- **前提**: qmd を **No.2 コミット `3552974`** の状態に戻した（誤って実施していた山5＝β 平易化は取り消し）
+- **変更範囲**: Abstract のみ（**山3**：`8.57 degrees (SD 3.16)` の意味説明）
+- **置換（康永推奨案・2文）**: `Across prefectures, the mean terrain slope was 8.57 degrees (SD, 3.16). Slopes ranged from 1.81 to 15.43 degrees, reflecting how steep residential land is in each prefecture.`
+- **MQ**: 鉄則1（分割）・2・4・7・11
+- **DATA**: 8.57, 3.16, 1.81, 15.43 は本文 Table 1 と同一
+- **UTF-8**: （コミット前に検証）
+- **意図的に未変更**: β 記法（**山5** → Checklist No.5）、年間 per 100,000（山4）、県名（山25）
+
+---
+
+## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
+
+- **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
+- **訂正要点**:
+  - **山3** = `8.57 degrees (SD 3.16)` の意味説明（旧 No.3「OLS/β」と不一致）
+  - **山5** = `β = 5.65` の平易化（Discussion 調）→ 手動コミット「No.3」で実施済みの内容は **山5** に相当
+  - **山14** = Methods の `(not by image-generative AI tools)` 不要（旧 No.11「Methods 短縮」と不一致）
+- **未対応**: **山3**（平均傾斜の説明）は次コミットで対応（整合順では Checklist **No.3** として再定義）
+- 詳細: `itemized_revision_checklist_branch3.md` 山岸表を全面差し替え

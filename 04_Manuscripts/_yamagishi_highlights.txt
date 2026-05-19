@@ -1,0 +1,82 @@
+FILE: Manuscript_slope_fracture_20260425_saito0430-1_saito0519.docx
+================================================================================
+
+### word_id=1
+HIGHLIGHT: Abstract
+COMMENT: 今のままだと、ちょっと難解で、統計の細かい知識がない人でも、どのような分析をしたのかがイメージできるような書き方でないと、なかなか読まれないのではないかと心配します。（本文よりもabstractの方が難解に書かれているので、本文の書き方を持ってくる方がいい）　abstractを全体的にもう一度見直して、重要なメッセージがストレートに伝わるように検討してみてください。
+
+### word_id=31
+COMMENT: 感度分析の話は細かいのでabstractには不要ではないか。
+
+### word_id=35
+HIGHLIGHT: ean slope was 8.57 degrees (SD 3.16)
+COMMENT: これが何を意味するのかがわかりにくいので説明が必要と思います。
+
+### word_id=42
+HIGHLIGHT: 100,000
+COMMENT: 年間１０万人当たりという意味ですか？
+
+### word_id=45
+HIGHLIGHT: β = 5.65
+COMMENT: これが何を意味するのかがよくわかりませんでした。Discussionで使われている表現の方がわかりやすい。
+
+### word_id=50
+COMMENT: これもこれだけだと何かがよくわからないと思います。何で調整したのかも書く必要があります。
+
+### word_id=62
+HIGHLIGHT: , but inferential sensitivity at small ecological N warrants cautious interpretation
+COMMENT: 抄録の最後でこのようなことは言わない方がいい。重要なことは、「傾斜が強い県に住んでいる人では股関節骨折手術が多いが、それ以外の骨折は関係ない」ことが、明確に読者に伝わることです。それ以外の細かな情報は本文で議論すればよい。
+
+### word_id=65
+HIGHLIGHT: which may lead to chronic deconditioning and increased frailty
+COMMENT: なんとなく、傾斜地に住んでいる人の方が、坂を上ったり下りたりするので、足腰が鍛えられる気がしますが、どのようには考えられないですか？逆に傾斜地はしんどいので車を使う人が多いということもあるのでは？
+
+### word_id=76
+HIGHLIGHT: prefectural-level
+COMMENT: ここで県レベルというのがでてくるが、県レベルで十分なのですか？山の多い県でも実際に人々が多く住んでいるのは平野部で、山奥に住んでいる人はわずかですが、それでも代表性は担保できるのですか？limitationで少し述べられていますが、そのような欠点があっても、今回の研究を出す意義があることをdiscussionまたはconclusionで強調してください。
+
+### word_id=119
+HIGHLIGHT: Aging rate
+COMMENT: 老年人口割合のことですか？この書き方だと１年間にどれだけ高齢化が進んだかの指標のように見える。proportion of individuals aged ≥65 yearsだけでいいのでは？
+
+### word_id=142
+HIGHLIGHT: (not by image-generative AI tools)
+COMMENT: これは不要では？
+
+### word_id=146
+HIGHLIGHT: rate
+COMMENT: rateという単語は、疫学では、単位時間当たりを含む概念なので、単に割合を意味するならproprotionの方がいい。ほかも同様です。
+
+### word_id=147
+HIGHLIGHT: Figure 2
+COMMENT: これはTable2と何が違いますか？どちらかだけでいいのでは？
+
+### word_id=150
+HIGHLIGHT: (both intervals include null)
+COMMENT: これは必要ですか？
+
+### word_id=152
+HIGHLIGHT: .
+COMMENT: "-”が何を意味するのかがわからないので、「秘匿になっているセルを0と仮定したとき」など、読者にわかりやすく書く方がいいと思います。
+
+### word_id=160
+HIGHLIGHT: Each additional degree of slope corresponded to approximately 3.5 additional hip fracture surgeries per 100,000 population under the primary OLS parameterization.
+COMMENT: abstractもこのような書き方の方が理解されやすいと思います。
+
+### word_id=161
+HIGHLIGHT: The adjusted association was specific to hip fractures and was not observed for humerus or forearm fractures.
+COMMENT: ここも同様に、abstractをこのように書く方がわかりやすいと思います。
+
+### word_id=162
+HIGHLIGHT: steeper habitable terrain
+COMMENT: そのような県に住んでいること、との関連という方がこの研究の特徴を表せるように思います。
+
+### word_id=219
+HIGHLIGHT: Older adults residing in high-slope regions are exposed to such challenging terrain daily during shopping and outdoor activities, leading to chronic fear of falling, reduced outdoor activity, and progressive deconditioning (disuse muscle atrophy).
+COMMENT: 車の影響が考察されていないのが気になります。地方で傾斜地で高齢者ならほぼ車を使う人ばかりと思います。
+
+### word_id=225
+HIGHLIGHT: cost-effective
+COMMENT: 根拠がなければ、やや言い過ぎのように思われます。
+
+TOTAL: 20
