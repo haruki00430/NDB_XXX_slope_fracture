@@ -69,12 +69,12 @@ print(f"Femur rate range: {df['femur_rate'].min():.1f} - {df['femur_rate'].max()
 # ---------------------------------------------------------------------------
 # 共通レイアウト設定
 # ---------------------------------------------------------------------------
-FONT_TITLE  = 14
-FONT_LABEL  = 9
-FONT_TICK   = 8
+FONT_TITLE  = 16
+FONT_LABEL  = 12
+FONT_TICK   = 10
 EDGE_COLOR  = "white"
 LINE_WIDTH  = 0.5
-DPI         = 180
+DPI         = 300
 
 def style_ax(ax):
     """地図軸の共通スタイル設定"""
