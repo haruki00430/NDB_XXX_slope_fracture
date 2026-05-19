@@ -93,6 +93,17 @@
 
 ---
 
+## No.5（exec 7/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（**山5**：`β = 5.65` / `β = 3.49` → Discussion Main Findings 調）
+- **置換**: 約5.7件・約3.5件 per 100,000 population per degree；CI・*p* は Table 3 のまま
+- **MQ**: 鉄則1・4（Steeper terrain was / each additional degree corresponded）；鉄則5（hip fracture を文頭）；鉄則2（unadjusted models 削除）
+- **DATA**: 5.65→5.7、3.49→3.5 は丸めのみ；No.4 の annual per 100,000 population と整合
+- **UTF-8**: pass
+- **意図的に未変更**: 調整変数の列挙（山6）、抄録末尾（山7）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
