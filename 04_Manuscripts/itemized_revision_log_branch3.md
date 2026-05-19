@@ -174,6 +174,18 @@
 
 ---
 
+## No.11（exec 14/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Methods §6 末尾・図生成1文のみ（**山14**：PDF コメントは括弧内に限定）
+- **削除**: `(not by image-generative AI tools)` のみ
+- **置換後**: `…generated programmatically from study data using reproducible Python workflows…`（パッケージ列挙・Figure 1–5 の手順は維持）
+- **MQ**: 鉄則2（指摘箇所のみ修正；過剰削除を回避）
+- **UTF-8**: pass
+- **意図的に未変更**: 文末の AI 利用開示セクション（図は生成AI未使用の明示はそちらで維持）
+- **注**: 初版草案で長文全体を可用性1文に差し替えていたが、PDF 突合のうえ括弧削除に限定
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
