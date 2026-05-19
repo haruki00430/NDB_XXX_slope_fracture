@@ -126,6 +126,18 @@
 
 ---
 
+## No.16（exec 10/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（**山21**：Discussion Main Findings 調の結果記述）
+- **置換**: 調整前後を `each additional degree of slope corresponded to approximately X…` で平行化；調整後に `terrain slope was positively associated with annual hip fracture surgery rates` を追加（Discussion §1 と同趣旨）
+- **MQ**: 鉄則1（短文分割）・4・5；鉄則2（`those covariates` で調整変数の反復を抑制）
+- **DATA**: 5.7・3.5・CI・*p* 不変
+- **UTF-8**: pass
+- **意図的に未変更**: 末尾 hip 特異文（No.7）、`under the primary OLS parameterization`（Abstract では不入）
+- **意図的に未変更**: 山22 向け部位特異の追加（No.17 で差分があれば最小限）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
