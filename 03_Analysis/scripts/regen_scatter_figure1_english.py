@@ -87,7 +87,7 @@ def main() -> None:
     tval = stats.t.ppf(0.975, dof)
     ci = tval * se
 
-    plt.figure(figsize=(10, 7))
+    plt.figure(figsize=(11, 8))
     ax = plt.gca()
     ax.fill_between(xs, ys - ci, ys + ci, color="#f8b4b4", alpha=0.7, linewidth=0)
     ax.plot(xs, ys, color="red", linewidth=2)
@@ -97,15 +97,16 @@ def main() -> None:
         ax.annotate(
             row["pref_en"],
             (row["habitable_slope_weighted"], row["femur_rate"]),
-            fontsize=6,
+            fontsize=9,
             ha="center",
             va="bottom",
             alpha=0.85,
         )
 
-    ax.set_xlabel("Habitable Slope")
-    ax.set_ylabel("Femur Fracture Rate")
-    ax.set_title("Slope vs Femur Fracture Rate")
+    ax.set_xlabel("Habitable-area-weighted slope (degrees)", fontsize=11)
+    ax.set_ylabel("Hip fracture surgery rate (per 100,000)", fontsize=11)
+    ax.set_title("Terrain slope and hip fracture surgery rate by prefecture", fontsize=12)
+    ax.tick_params(labelsize=10)
     ax.grid(True, linestyle="--", alpha=0.35)
     plt.tight_layout()
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

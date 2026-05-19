@@ -4,8 +4,8 @@
 
 ## 原稿体裁
 
-- [x] 通常論文 4000–6000 語（図・表・参考文献除く）。`Manuscript_slope_fracture.qmd` で **Introduction〜Data availability** を概算すると **約 4300 語**（英単語ベースの機械カウント）。超過時は誌に理由が求められる場合あり。
-- [x] Abstract 250 語以下、参照は原則なし（現稿で約 224 語・引用なし）。
+- [x] 通常論文 4000–6000 語（図・表・参考文献除く）。branch-3 改稿後 **5044 words**（Introduction〜Data availability；`_wordcount_branch3.py`）。6,000 以内のため Discussion 一括削減は見送り。
+- [x] Abstract 250 語以下、参照なし（**200 words**）。
 - [x] Keywords 1–7（英語）。複合語は最小限に。
 - [x] Highlights は別ファイル（ファイル名に `highlights`）、3–5 点、各 **85 文字以内（スペース含む）**。→ `highlights_Health_and_Place.txt`
 - [ ] 編集可能ソース（`.docx` / `.tex` 等）。提出用 PDF はソースに代わらない。→ Quarto で `.docx` 生成し EM にアップロード。
