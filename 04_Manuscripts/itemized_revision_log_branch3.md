@@ -115,6 +115,17 @@
 
 ---
 
+## No.7（exec 9/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（**山7**：末尾簡潔化・hip 特異メッセージ）
+- **削除**: lateral-fall mechanisms、`inferential sensitivity at small ecological *N*`（本文へ）
+- **置換**: `The association was specific to hip fracture surgery rates and was not observed for humerus or forearm fracture surgeries.`
+- **MQ**: 鉄則1・5（hip を文頭）；鉄則2（重複する2文を1文に）；鉄則6（過剰な方法論的留保を Abstract から除去）
+- **UTF-8**: pass
+- **意図的に未変更**: 居住フレーミング（山23）、山21–22 の追加 polish（No.16–17）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
