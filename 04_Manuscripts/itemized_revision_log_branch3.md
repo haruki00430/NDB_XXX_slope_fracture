@@ -138,6 +138,17 @@
 
 ---
 
+## No.17（exec 11/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（**山22**：部位特異の書き方を Discussion §1 に合わせる）
+- **置換**: `The association` → `The adjusted association`；`fracture surgeries` → `fracture surgery rates`（対称）
+- **参照**: Discussion「The adjusted association was specific to hip fractures and was not observed for humerus or forearm fractures.」
+- **MQ**: 鉄則4・5；鉄則2（調整後であることを明示）
+- **UTF-8**: pass
+- **意図的に未変更**: 結果3文（No.16 済み）、fracture vs surgery の全文統一（江口 No.21 済み部分のみ Abstract 内）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
