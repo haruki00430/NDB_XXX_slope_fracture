@@ -45,3 +45,14 @@
 - **DATA**: 調整変数・モデルは ca57785 / Methods と整合（数値変更なし）
 - **UTF-8**: pass
 - **意図的に未変更**: HC3/bootstrap の削除（No.2）、Abstract 全体の平易化（No.1 以降）
+
+---
+
+## No.1（exec 3/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Abstract のみ（山1：平易化・マクロストーリー）
+- **MQ**: 鉄則1（セミコロン連結を短文化）、2（burden/imposes→place a heavy burden）、4（We studied / We linked）、5（hip fracture を文頭）、11（能動態）
+- **DATA**: 数値・β・*p*・HC3・*B*=5000 は ca57785/Table 照合値のまま
+- **UTF-8**: pass
+- **体裁**: Abstract は単一段落のまま（H&P 向け）
+- **意図的に未変更**: HC3/bootstrap 削除（No.2）、OLS/β の言い換え（No.3）、年間 per 100,000（No.4）、Main Findings 調（No.5）、調整変数の追加説明（No.6）、末尾簡潔化（No.7）
