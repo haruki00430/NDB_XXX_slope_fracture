@@ -186,6 +186,18 @@
 
 ---
 
+## No.13（exec 15/32）— エージェント草案（未コミット）
+
+- **変更範囲**: Results §2・Figure 凡例・埋め込み・Methods 図生成1文（**山16**：Table 2 と重複する Figure 2 削除）
+- **削除**: Figure 2（相関ヒートマップ）の本文言及・凡例・`heatmap_correlation.png` 埋め込み
+- **繰り下げ**: 旧 Figure 3–5 → **Figure 2–4**（地図3枚）
+- **Results §2**: Table 2 で相関を提示、Figure 1 で主要 exposure–outcome のみ図示；fast-walking の *p* = 0.073（Table 2 の *r* = −0.264、*N* = 47 と整合）
+- **MQ**: 鉄則2（Table と Figure の役割分担）
+- **UTF-8**: pass
+- **意図的に未変更**: §3 見出し「Primary Regression…」（No.14 以降）；解析スクリプト・図ファイル名（提出時は Figure_2–4 として地図を指定）
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
