@@ -248,6 +248,16 @@
 - **UTF-8**: pass
 - **意図的に未変更**: 寳澤提案の分析手順そのもの（既存）；Discussion の間接標準化解釈段落（別コミット可）
 
+### No.9（山9・県レベル研究意義）
+
+- **PDF（山9, word_id=76, `prefectural-level`）**: 県レベルで十分か／山の多い県でも居住は平野部が多い／Limitations で触れている欠点があっても**研究を出す意義**を Discussion または Conclusion で強調
+- **対象**: **Conclusions のみ**（Discussion §3 は**変更なし**）
+- **方針（ユーザー確定）**: Limitations を正本として `summarized in Limitations` で橋渡し；意義は Conclusion に集約（新規文献なし・Methods/Study design の自己記述）
+- **Conclusions 置換**: 結果要約段落の後に2段落追加—(1) 限界を認めつつ open NDB・47都道府県・habitable 加重の位置づけ (2) 個人曝露の証明ではないが全国初の open-data 定量と細尺度研究への動機
+- **Discussion**: §3 Comparison は No.9 前の文末（`modifiable environmental correlate of fracture burden`）を維持
+- **DATA**: 新規数値なし
+- **意図的に未変更**: Limitations §8 本文
+
 ### No.29（江口・新潟・長野の事実確認）
 
 - **対象**: Discussion（NOREPOS 比較段落）の都道府県例示
