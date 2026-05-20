@@ -327,6 +327,28 @@
 
 ---
 
+## No.24（江口・total fracture Methods）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **16/32**（江口 **江4**）
+- **参照**: `g260519 ③` §4（Results の「全骨折」に対し Methods の定義・範囲が不足）
+- **変更範囲**: Methods §2 Outcome 1文追加；§6 secondary 1文の言い換え（正本・匿名版同期）
+- **方針**:
+  - **§2**: total は3部位の合算のみであり、claims の全骨折手術ではないことを明示（No.21 の定義を補強）
+  - **§6**: secondary が上記 **total fracture surgery rate** を指すことを `(as defined above)` で接続（No.23 の secondary 枠組みと整合）
+- **康永 MQ**（当該段落のみ）:
+  - 鉄則1: 追加文は2短文（各約16–18語）
+  - 鉄則5: `This aggregate` で total の中心を明確化
+  - 鉄則6: `is not a count of all` で過大解釈を抑制（否定は文前半）
+  - 鉄則11: `We defined` / `Secondary analyses applied`（能動態）
+  - 鉄則2: §2 と §6 で同じ定義を繰り返しすぎない（§6 は参照のみ）
+- **DATA**: 数値・抽出カテゴリは不変（3部位合算の定義のみ）
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: Results §4 の regression 数値；Abstract；primary/secondary の第1段落（No.23 済み）
+
+**提案コミットメッセージ**: `rev(branch-3): No.24 Methods clarify total fracture surgery rate definition (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
