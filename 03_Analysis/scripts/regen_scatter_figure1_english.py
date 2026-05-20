@@ -67,7 +67,7 @@ JP_TO_EN = {
 
 def main() -> None:
     df = pd.read_csv(CSV_PATH, encoding="utf-8")
-    df["pref_en"] = df["prefecture"].map(JP_TO_EN)
+    df["pref_en"] = df["prefecture"].replace(JP_TO_EN)
     missing = df.loc[df["pref_en"].isna(), "prefecture"].tolist()
     if missing:
         raise SystemExit(f"Unmapped prefectures: {missing}")
@@ -91,21 +91,24 @@ def main() -> None:
     ax = plt.gca()
     ax.fill_between(xs, ys - ci, ys + ci, color="#f8b4b4", alpha=0.7, linewidth=0)
     ax.plot(xs, ys, color="red", linewidth=2)
-    ax.scatter(x, y, color="steelblue", s=40, zorder=3, edgecolors="white", linewidths=0.5)
+    ax.scatter(x, y, color="steelblue", s=48, zorder=3, edgecolors="white", linewidths=0.5)
 
-    for _, row in df.iterrows():
+    labels = df["pref_en"].astype(str).tolist()
+    xs_lab = df["habitable_slope_weighted"].astype(float).tolist()
+    ys_lab = df["femur_rate"].astype(float).tolist()
+    for lbl, xf, yf in zip(labels, xs_lab, ys_lab, strict=True):
         ax.annotate(
-            row["pref_en"],
-            (row["habitable_slope_weighted"], row["femur_rate"]),
-            fontsize=6,
+            lbl,
+            (xf, yf),
+            fontsize=8,
             ha="center",
             va="bottom",
             alpha=0.85,
         )
 
-    ax.set_xlabel("Habitable Slope")
-    ax.set_ylabel("Femur Fracture Rate")
-    ax.set_title("Slope vs Femur Fracture Rate")
+    ax.set_xlabel("Habitable-area-weighted terrain slope (degrees)", fontsize=11)
+    ax.set_ylabel("Hip fracture surgery rate (per 100,000 population)", fontsize=11)
+    ax.tick_params(labelsize=10)
     ax.grid(True, linestyle="--", alpha=0.35)
     plt.tight_layout()
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

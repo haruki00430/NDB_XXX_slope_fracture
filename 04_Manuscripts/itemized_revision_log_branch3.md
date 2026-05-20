@@ -489,6 +489,27 @@
 
 ---
 
+## No.32（江口・図フォント・300 dpi・地図3パネル統合）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **32/32**（江口 **図フォント・300 dpi**）
+- **レイアウト方針（ユーザー提案・了承）**: 旧 Figure 2–4（傾斜・手術率・二変量）を **Figure 2 1枚**に統合
+  - 上段: **(A)** 傾斜 | **(B)** 手術率（横並び）
+  - 下段: **(C)** 二変量コロプレス（全幅・大きめ）
+- **スクリプト**:
+  - `03_Analysis/scripts/10_create_prefecture_maps.py` — `DPI=300`、パネルラベル・カラーバー文字拡大；出力 `fig_map_geography_composite.png`
+  - `03_Analysis/scripts/regen_scatter_figure1_english.py` — 軸ラベル・県名フォント拡大（`dpi=300` 既存）
+- **qmd**（正本・匿名版同期）:
+  - Methods: `Figures 2–4` → `Figure 2 (panels A–C)` + 300 dpi 明記
+  - Figure legends: 旧 Fig 2–4 → **Figure 2 統合凡例**（A/B/C）
+  - 埋め込み: `fig_map_geography_composite.png` のみ（Fig 3–4 セクション削除）
+  - Discussion（匿名版）: `Figures 2–4` → `Figure 2`
+- **レガシー出力**: `fig_map_slope.png` 等はデバッグ用にスクリプト内で引き続き生成
+- **UTF-8**: `python 04_Manuscripts/_verify_utf8_qmd.py` 通過後に手動 commit
+
+**提案コミットメッセージ**: `rev(branch-3): No.32 composite Figure 2 maps at 300 dpi with legible fonts (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記

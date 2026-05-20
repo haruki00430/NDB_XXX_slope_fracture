@@ -75,7 +75,7 @@ Model performance was assessed using the coefficient of determination (R²), adj
 
 As an additional sensitivity analysis for age-structure confounding, we performed indirect standardization for the femur-surgery outcome. We combined NDB age-stratified surgery tables with 2020 census 5-year age-group population counts from e-Stat. Some age-stratified surgery counts in public NDB Open Data are withheld for disclosure control. These counts appear as a hyphen (`"-"`) in the tables. We prespecified three replacement scenarios: 0, 5, or 9 surgeries per withheld cell. We repeated indirect standardization under each scenario. For each scenario, we calculated national age-specific surgery rates, expected prefectural counts, the standardized incidence ratio (SIR; observed-to-expected surgery count ratio), and the indirectly standardized surgery rate (per 100,000), computed as SIR times the national crude surgery rate. We then regressed the indirectly standardized rate on terrain slope with and without covariate adjustment. These analyses were treated as sensitivity analyses only (not primary inference), given potential secondary masking.
 
-All manuscript figures were generated programmatically from study data using reproducible Python workflows: Python 3.14.2 with `pandas` 2.3.3, `numpy` 2.3.5, `matplotlib` 3.10.8, `seaborn` 0.13.2, `scipy` 1.16.3, `geopandas` 1.1.2, and `japanize_matplotlib` 1.1.3. Figure 1 was generated via linear-fit visualization from the prefecture-level analytical dataset, and Figures 2–4 by joining prefecture-level indicators to national prefectural boundary geodata and rendering choropleth maps.
+All manuscript figures were generated programmatically from study data using reproducible Python workflows: Python 3.14.2 with `pandas` 2.3.3, `numpy` 2.3.5, `matplotlib` 3.10.8, `seaborn` 0.13.2, `scipy` 1.16.3, `geopandas` 1.1.2, and `japanize_matplotlib` 1.1.3. Figure 1 was generated via linear-fit visualization from the prefecture-level analytical dataset, and Figure 2 by joining prefecture-level indicators to national prefectural boundary geodata and rendering a three-panel choropleth composite (panels A–C) at 300 dpi.
 
 This study used publicly available aggregate data; individual informed consent was not required, and institutional ethics review was not applicable in accordance with Japanese ethical guidelines for epidemiological research.
 
@@ -109,7 +109,7 @@ In the unadjusted model, slope was significantly associated with total fracture 
 
 ## 1. Main Findings
 
-This ecological study showed a positive association between prefectural-level terrain slope and hip fracture surgery rates across Japan after adjustment for proportion aged ≥65 years, fast-walking proportion, and population density (β = 3.49 per one-degree increase, *p* = 0.043 in conventional OLS). After the same adjustment, each additional degree of slope was associated with approximately 3.5 additional hip fracture surgeries per 100,000 population. This association was specific to hip fractures and was not observed for humerus or forearm fractures. Figures 2–4 map prefectural distributions of terrain slope, hip fracture rates, and their joint classification. Together, these findings suggest that residence in prefectures with steeper habitable terrain may be associated with greater hip-specific surgical burden beyond compositional aging and self-reported walking pace, although robust and bootstrap intervals were borderline at *N* = 47.
+This ecological study showed a positive association between prefectural-level terrain slope and hip fracture surgery rates across Japan after adjustment for proportion aged ≥65 years, fast-walking proportion, and population density (β = 3.49 per one-degree increase, *p* = 0.043 in conventional OLS). After the same adjustment, each additional degree of slope was associated with approximately 3.5 additional hip fracture surgeries per 100,000 population. This association was specific to hip fractures and was not observed for humerus or forearm fractures. Figure 2 maps prefectural distributions of terrain slope, hip fracture rates, and their joint classification. Together, these findings suggest that residence in prefectures with steeper habitable terrain may be associated with greater hip-specific surgical burden beyond compositional aging and self-reported walking pace, although robust and bootstrap intervals were borderline at *N* = 47.
 
 ## 2. Biological Plausibility
 
@@ -340,11 +340,7 @@ Each row replaces the crude outcome in Table 3 Model 2 with the indirectly stand
 
 **Figure 1.** Scatter plot showing the association between habitable-area-weighted terrain slope (degrees) and hip fracture surgery rate (per 100,000 population) across 47 Japanese prefectures. Each point represents one prefecture, labeled with the prefecture name in English. The solid line represents the simple linear regression fit.
 
-**Figure 2.** Prefectural distribution of habitable-area-weighted terrain slope (degrees) across Japan. Darker shading indicates steeper terrain. Prefectures in the Chugoku, Shikoku, and Kyushu mountain ranges show the highest slope values. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
-
-**Figure 3.** Prefectural distribution of hip fracture surgery rate (per 100,000 population) across Japan. Darker shading indicates higher rates. Prefectures in mountainous regions tend to show elevated rates. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
-
-**Figure 4.** Bivariate choropleth map displaying the joint distribution of terrain slope (horizontal axis of legend) and hip fracture surgery rate (vertical axis of legend) by prefecture. The 3×3 color grid classifies each prefecture into one of nine categories based on tertile rankings of each variable. Purple-brown colors indicate high slope and high fracture rate; light grey indicates low on both dimensions. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
+**Figure 2.** Geographic distribution of study variables across Japan by prefecture. **(A)** Prefectural distribution of habitable-area-weighted terrain slope (degrees); darker shading indicates steeper terrain. Prefectures in the Chugoku, Shikoku, and Kyushu mountain ranges show the highest slope values. **(B)** Prefectural distribution of hip fracture surgery rate (per 100,000 population); darker shading indicates higher rates. Prefectures in mountainous regions tend to show elevated rates. **(C)** Bivariate choropleth displaying the joint distribution of terrain slope (horizontal axis of inset legend) and hip fracture surgery rate (vertical axis of inset legend). The 3×3 color grid classifies each prefecture into one of nine categories based on tertile rankings of each variable; purple-brown colors indicate high slope and high fracture rate, and light grey indicates low on both dimensions. **Note:** map lines delineate study areas and do not necessarily depict accepted national boundaries (here, prefectures used as the analytic geography).
 
 ## Figure 1
 
@@ -352,12 +348,4 @@ Each row replaces the crude outcome in Table 3 Model 2 with the indirectly stand
 
 ## Figure 2
 
-![](../03_Analysis/results/figures/fig_map_slope.png)
-
-## Figure 3
-
-![](../03_Analysis/results/figures/fig_map_fracture.png)
-
-## Figure 4
-
-![](../03_Analysis/results/figures/fig_map_bivariate.png)
+![](../03_Analysis/results/figures/fig_map_geography_composite.png)
