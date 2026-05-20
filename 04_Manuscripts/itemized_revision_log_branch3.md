@@ -248,6 +248,15 @@
 - **UTF-8**: pass
 - **意図的に未変更**: 寳澤提案の分析手順そのもの（既存）；Discussion の間接標準化解釈段落（別コミット可）
 
+### No.8（山8・Intro 競合メカニズム）
+
+- **対象**: Introduction のみ（`chronic deconditioning and increased frailty` 付近）
+- **PDF（山8, word_id=65）**: 傾斜地は足腰が鍛えられるのでは／しんどくて**車**を使うのでは、という競合仮説への言及
+- **置換**: deconditioning 文の直後に2文追加（坂での筋力向上 vs 急傾斜・農村での車依存と坂歩行曝露の低下）
+- **意図的に未変更**: Discussion の deconditioning・車利用段落（**山29** → Checklist No.19）
+- **康永 MQ**: 鉄則1（追加2文は各20語未満）；鉄則6（断定せず plausible / may）
+- **DATA**: 新規数値なし（理論的バランスの追記のみ）
+
 ### No.25（江口・傾斜 range に県名）
 
 - **対象**: Abstract（山3 説明文）；Results §1 記述統計
