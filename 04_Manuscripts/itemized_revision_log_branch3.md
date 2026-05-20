@@ -198,17 +198,15 @@
 
 ---
 
-## No.23（exec 16/32）— エージェント草案（未コミット）（山23）
+## No.18（山23・居住フレーミング）
 
-- **PDF 再確認**（`Manuscript_slope_fracture_20260425_saito0430-1.pdf` / `_yamagishi_highlights.txt` word_id=162）:
-  - ハイライト: `steeper habitable terrain`
-  - コメント: 「**そのような県に住んでいること**、との関連という方がこの研究の特徴を表せる」
-- **番号メモ**: 山岸表の **No.18 = 山23**（Discussion）。整合順の **Checklist No.23** は江口・Methods 副次解析（別項目）— 本コミットは **山23 のみ**
-- **変更範囲**: Discussion §1 Main Findings の締め1文のみ
-- **置換**: `steeper habitable terrain may track … at the population level` → `residence in prefectures with steeper habitable terrain may be associated with … at the prefecture level`（県単位生态学の解釈を明示）
-- **MQ**: 鉄則4・5（研究デザインと整合した framing）；鉄則2（過剰な Main Findings 全面書き換えは No.18 相当の別コミットとして回避）
-- **UTF-8**: pass
-- **意図的に未変更**: Comparison 節の dose-response 記述；Biological Plausibility の地形メカニズム（No.19 山29 で車利用を別途）
+- **PDF**（word_id=162）: `steeper habitable terrain` → **「そのような県に住んでいること」との関連**
+- **番号メモ**: 山岸 **No.18 = 山23**（Discussion）。Checklist **No.23** は江口・Methods 副次解析（別項目）
+- **対象**: Discussion §1 Main Findings **締めのみ**（正本）；匿名版は同趣旨の `Together, …` 文から冗長 `at the prefecture level` を削除
+- **置換（正本）**: `steeper habitable terrain may track` 系 → `Residence in prefectures with steeper habitable terrain may be associated with …`＋`although individual-level fracture incidence cannot be inferred`
+- **康永 MQ**: 鉄則5（`Residence` を文頭）；鉄則1（1文→2短文）；鉄則6（`cannot be inferred`）；鉄則2（`at the prefecture level` 重複削除）
+- **DATA**: 変更なし
+- **意図的に未変更**: Main Findings 前半（β・HC3 記述）；Biological Plausibility
 
 ---
 
