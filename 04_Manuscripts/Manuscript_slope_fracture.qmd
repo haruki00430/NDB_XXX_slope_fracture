@@ -69,7 +69,7 @@ The proportion of individuals aged ≥65 years (%) was obtained from the 2020 Na
 
 ## 6. Statistical Analysis
 
-The primary analysis tested whether habitable-area-weighted terrain slope predicted hip fracture surgery rate. We used Model 1 (unadjusted) and Model 2 (multivariable), adjusting for proportion aged ≥65 years, fast-walking proportion, and population density. Secondary analyses applied the same regression framework to total fracture surgery rate (as defined above), humerus fracture surgery rate, and forearm fracture surgery rate.
+The primary analysis tested whether habitable-area-weighted terrain slope predicted hip fracture surgery rate. We used Model 1 (unadjusted) and Model 2 (multivariable), adjusting for proportion aged ≥65 years, fast-walking proportion, and population density. Secondary analyses applied the same regression framework to total fracture surgery rate (sum of hip, humerus, and forearm fracture surgery counts), humerus fracture surgery rate, and forearm fracture surgery rate.
 
 We summarized prefecture-level distributions using mean, SD, median, 25th and 75th percentiles, minimum, and maximum. Pearson correlation coefficients were computed between terrain slope and each outcome and covariate variable (Table 2). We report these correlations for descriptive context only and did not treat them as formal mediation tests. We fit two regression models for each fracture outcome:
 
