@@ -18,8 +18,9 @@
 
 ## 図表・地図
 
-- [x] 図は別添ファイル、本文で Figure を参照。→ 原稿 *Submission note* に EM 用の別ファイル添付を明記。
-- [x] 地図: 研究域の境界が国際的合意を意味しない旨の注記（該当時）。→ Figure 3–5 キャプションに誌の表記に沿った注記あり。
+- [x] 図は別添ファイル、本文で Figure を参照。→ 原稿 *Submission note* に EM 用の別ファイル添付を明記（`Figure_1.png`, `Figure_2.png`）。
+- [x] 図番号・構成（branch-3 No.32 反映）: **Figure 1** = 散布図（`scatter_slope_fracture.png`）；**Figure 2** = 地図3パネル合成1枚（`fig_map_geography_composite.png`、パネル A–C、300 dpi）。旧 Figure 3–4 は統合済み・原稿非掲載。
+- [x] 地図: 研究域の境界が国際的合意を意味しない旨の注記（該当時）。→ **Figure 2** 凡例（および Methods 図生成説明）に注記あり。沖縄はインセット（本島のみ・別縮尺）；本土パネルは表示用に離島ジオメトリを簡略化（都道府県値は不変）。
 
 ## データ・倫理・CRediT
 
