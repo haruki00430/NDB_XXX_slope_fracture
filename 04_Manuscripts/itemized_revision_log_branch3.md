@@ -448,6 +448,24 @@
 
 ---
 
+## No.20（山31・Policy cost-effective 控えめ）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **30/32**（山岸 **山31**）
+- **PDF**（word_id=225）: `cost-effective` — **根拠がなければ言い過ぎ**
+- **変更範囲**: Discussion §6 Policy **最終文1文のみ**（正本・匿名版同期）
+- **置換**: `represent cost-effective strategies to mitigate` → `may help mitigate`（費用対効果の評価は本研究にないため削除）
+- **康永 MQ**（当該1文のみ）:
+  - 鉄則6: 未実施の cost-effectiveness 分析を示唆する `cost-effective` を削除
+  - 鉄則11: `may help mitigate`（能動・抑制）
+  - 鉄則1: 1文のまま簡潔
+- **DATA**: 数値不変
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: Strengths §7（`_ref_run_branch3_itemized_commits.py` の biomechanics 文は No.20 対象外—山31 は cost-effective のみ）
+
+**提案コミットメッセージ**: `rev(branch-3): No.20 Policy remove unsubstantiated cost-effective claim (Yamagishi 山31)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
