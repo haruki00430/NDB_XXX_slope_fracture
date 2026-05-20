@@ -248,6 +248,16 @@
 - **UTF-8**: pass
 - **意図的に未変更**: 寳澤提案の分析手順そのもの（既存）；Discussion の間接標準化解釈段落（別コミット可）
 
+### No.25（江口・傾斜 range に県名）
+
+- **対象**: Abstract（山3 説明文）；Results §1 記述統計
+- **DATA ソース**: `03_Analysis/data/processed/analysis_dataset_v1.csv`（`habitable_slope_weighted` の argmin/argmax）
+- **検証**: min 1.8094… → **茨城県**（Ibaraki）；max 15.4309… → **新潟県**（Niigata）。Table 1 の Min/Max（1.81・15.43）と一致
+- **注意**: `_ref_run_branch3_itemized_commits.py` の Chiba/Kochi は **未採用**（解析データと不一致）
+- **置換（Abstract）**: `Slopes ranged from 1.81 degrees in Ibaraki to 15.43 degrees in Niigata, …`
+- **置換（Results）**: `range 1.81 degrees in Ibaraki–15.43 degrees in Niigata)`
+- **康永 MQ**: 鉄則1（from X to Y の単純構造）；県名は解析由来のみ
+
 ### No.15 追記（康永 MQ・Methods 開示抑制文）
 
 - **対象**: Methods §6 間接標準化の開示抑制説明（1文→4短文）
