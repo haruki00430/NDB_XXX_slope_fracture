@@ -198,7 +198,7 @@
 
 ---
 
-## No.23（山23）— エージェント草案（未コミット）
+## No.23（exec 16/32）— エージェント草案（未コミット）（山23）
 
 - **PDF 再確認**（`Manuscript_slope_fracture_20260425_saito0430-1.pdf` / `_yamagishi_highlights.txt` word_id=162）:
   - ハイライト: `steeper habitable terrain`
@@ -212,7 +212,7 @@
 
 ---
 
-## No.26（exec 18/32）— エージェント草案（未コミット）
+## No.26（exec 17/32）— エージェント草案（未コミット）
 
 - **変更範囲**: Discussion §5（江口：地形–fast-walking の相関 *p* 追記）
 - **確認**: Results §2 は No.13 済み `(r = −0.264, *p* = 0.073)`（Table 2 と整合）
@@ -220,6 +220,21 @@
 - **DATA**: *r*・*p* は Table 2（*N* = 47）と一致；α = 0.05 では非有意である旨は Results の “weak negative” で既出のため Discussion では *p* 値のみ追記
 - **UTF-8**: pass
 - **意図的に未変更**: Table 2 行列の個別 *p* 脚注；humerus/forearm の *r* = 0.138・0.177
+
+---
+
+## No.14（exec 18/32）— エージェント草案（未コミット）（山17）
+
+- **PDF 再確認**（word_id=150）:
+  - ハイライト: **`(both intervals include null)` のみ**
+  - コメント: 「これは必要ですか？」
+  - **採用方針**: 括弧句のみ削除（残差診断・Shapiro・HC3/bootstrap の段落全体は維持）
+- **変更範囲**: Results §3・Model 2 直後の感度1文（正本 qmd のみ；匿名版は当該段落なし）
+- **置換**: `…was −0.03 to 7.09 (both intervals include null).` → `…was −0.03 to 7.09.`
+- **康永 MQ**: 鉄則2（CI と *p* = 0.063 でヌル含有は読者が判断可能なため冗長）；鉄則6（「inferential fragility」は維持）
+- **DATA**: HC3・bootstrap の区間・*p* 不変
+- **UTF-8**: pass
+- **意図的に未変更**: Limitations §8・Conclusions の borderline 記述；Table 3 脚注；No.14 旧案の感度段落全面削除・小見出し分割（No.27）
 
 ---
 
