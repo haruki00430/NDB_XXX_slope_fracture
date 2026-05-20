@@ -371,6 +371,40 @@
 
 ---
 
+## No.19 追記 — 文献 [42] Abe 2020（初登場順・繰り下げ）
+
+- **方針**: 新規文献を **[42]**、旧 [42]–[48] を **[43]–[49]** に全面繰り下げ（正本・匿名版・番号付きリスト）
+- **本文**: Discussion §5「…medical visits.**[42]**」— 地方・郊外部・地方での車同乗／交通不利（Abe 2020）
+- **references.bib**: `abeFrailtyStatusTransportDisadvantage2020`（DOI [10.3390/ijerph17176367](https://doi.org/10.3390/ijerph17176367)、PMID 32882994）
+- **DATA**: 新規数値なし
+- **注意**: 2文目「Car-dependent travel may reduce…」は仮説のまま無引用
+
+---
+
+## No.19（山29・Discussion 車利用）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **27/32**（山岸 **山29**）
+- **PDF**（word_id=219）: `Older adults residing in high-slope regions…` 付近—**車の影響が考察にない**（地方の傾斜地では高齢者はほぼ車）
+- **参照**: Intro No.8（坂鍛錬 vs 車依存の competing mechanisms）と整合；新規数値・新規 bib なし
+- **変更範囲**: Discussion §5 Walking Speed as a Mediator のみ（正本・匿名版同期）
+- **置換**:
+  - 坂歩行・廃用の1文を2短文に分割し `daily` を削除（`may` で曝露を抑制）
+  - 車依存3文を追加（private cars／prefecture-level metrics／NDB に自動車データなし）
+  - 節末の future-studies 文に travel-mode・automobile dependence を追記
+- **康永 MQ**（§5 当該段落のみ）:
+  - 鉄則1: 車段落は3短文（各約12–18語）
+  - 鉄則5: 車依存を第2文の主題に
+  - 鉄則6: `may`／`could not evaluate`／future studies は `warranted to test`（断定回避）
+  - 鉄則11: `We could not evaluate`（能動態）
+  - 鉄則2: Intro No.8 と同趣旨の繰り返しは最小限（Discussion ではデータ制約まで）
+- **DATA**: 数値不変；自動車利用率の記載なし（捏造防止）
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: Policy §6；Limitations（車は §5 で言及済み）；Main Findings
+
+**提案コミットメッセージ**: `rev(branch-3): No.19 Discussion car dependence competing mechanism (Yamagishi 山29)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
