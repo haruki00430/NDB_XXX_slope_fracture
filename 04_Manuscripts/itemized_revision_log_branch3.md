@@ -248,6 +248,17 @@
 - **UTF-8**: pass
 - **意図的に未変更**: 寳澤提案の分析手順そのもの（既存）；Discussion の間接標準化解釈段落（別コミット可）
 
+### No.29（江口・新潟・長野の事実確認）
+
+- **対象**: Discussion（NOREPOS 比較段落）の都道府県例示
+- **DATA ソース**: `03_Analysis/data/processed/analysis_dataset_v1.csv`（`habitable_slope_weighted` 降順）
+- **検証結果**:
+  - 新潟県: 15.43°、**47都道府県中1位** → 「全国で最も急」は Table 1 / No.25 と一致
+  - 長野県: 13.42°、**5位** → 「among the steepest」は妥当
+  - 山形県: 9.40°、**14位** → 旧文の3県並列例示から**削除**（本データでは急傾斜県の例として不適切）
+- **置換**: `snowy mountainous prefectures (e.g., Niigata, Nagano, Yamagata)` → `snowy and steep prefectures (e.g., Niigata, which had the steepest habitable-area-weighted slope nationally, and inland prefectures such as Nagano, which also ranked among the steepest)`
+- **上位参考（ログのみ）**: 2位山梨 14.57°、3位徳島 13.84°、4位高知 13.67°
+
 ### No.8（山8・Intro 競合メカニズム）
 
 - **対象**: Introduction のみ（`chronic deconditioning and increased frailty` 付近）
