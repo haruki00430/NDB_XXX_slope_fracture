@@ -103,7 +103,7 @@ In the unadjusted model (Model 1), terrain slope was significantly and positivel
 
 Residual diagnostics for Model 2 did not indicate gross deviations from linearity in residuals versus fitted values. The Shapiro–Wilk test on OLS residuals was *W* = 0.957 (*p* = 0.079). Sensitivity analyses, however, indicated inferential fragility for the primary slope coefficient at *N* = 47: heteroskedasticity-robust (HC3) 95% CIs were −0.19 to 7.17 (*p* = 0.063), and a nonparametric bootstrap 95% CI (prefecture resampling, *B* = 5,000) was −0.03 to 7.09.
 
-Multivariable linear regression models of indirectly standardized hip (femur) surgery rates (per 100,000) used terrain slope, proportion aged ≥65 years, fast-walking proportion, and population density, matching Table 3 Model 2 (Methods). Terrain slope coefficients were positive with *p* < 0.05 under conventional standard errors in all three imputation scenarios (Table 5).
+In masking-imputation indirect-standardization sensitivity analyses, the slope coefficient remained positive across all scenarios. In multivariable models (ISR ~ slope + proportion aged ≥65 years + fast-walking proportion + population density), β was 5.71 (95% CI, 0.54–10.88; p = 0.031) for `"-" = 0`, 3.61 (95% CI, 0.30–6.92; p = 0.033) for `"-" = 5`, and 3.64 (95% CI, 0.28–7.00; p = 0.035) for `"-" = 9`. Thus, the direction of association was stable, whereas the effect size varied across masking assumptions.
 
 ## 4. Regression Analysis: Total, Humerus, and Forearm Fractures
 
