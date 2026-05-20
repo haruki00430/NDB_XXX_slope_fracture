@@ -425,6 +425,29 @@
 
 ---
 
+## No.30（江口・environmental correlate 表現）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **29/32**（江口 **江10**＋③の risk factor / environmental hazard 指摘）
+- **参照**: `g260519 ③`（生態学研究で因果未確立—`risk factor`・`environmental hazard` を避ける）
+- **変更範囲**: Discussion §3 末1文・§4 全文（正本・匿名版同期）
+- **置換（地形×slope に関する表現）**:
+  - `environmental hazard` → `a topographical contextual challenge`
+  - `risk correlate` / `risk factor` → `environmental correlate`（`may` で抑制）
+  - `modifiable layer of fracture risk` / `modifiable environmental risk factor` → `modifiable contextual correlate of hip fracture surgery burden`
+  - `independent environmental hazard that chronically erodes` → 削除し正本と同趣旨の `may … be associated with functional decline`
+  - `hip fracture`（§4 部分関連）→ `hip fracture surgery rates` where describing **our** slope association
+- **康永 MQ**（§3末・§4のみ）:
+  - 鉄則6: `may constitute` / `may represent` / `could be associated`（断定回避）
+  - 鉄則11: 受動・名詞化を減らし能動・動詞中心
+  - 鉄則2: 匿名版 §4 を正本 §4 と同じ3段落構造に揃え（No.28 以降の調整後・borderline トーン含む）
+- **DATA**: 数値不変
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: §2 バイオメカニクス文献の `fracture risk`（他研究の確立知見）；§5–§8；Policy の一般 `fall risk` 1箇所
+
+**提案コミットメッセージ**: `rev(branch-3): No.30 Discussion terrain as environmental correlate not risk factor (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
