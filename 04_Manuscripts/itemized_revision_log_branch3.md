@@ -258,6 +258,15 @@
 - **DATA**: 新規数値なし
 - **意図的に未変更**: Limitations §8 本文
 
+### No.9 追記（康永 MQ・Conclusions のみ）
+
+- **対象**: Conclusions の意義段落（2ブロック→3短文群×3）
+- **鉄則1**: 1文40語超の Despite…—… 文を単文に分割（各文≈20語未満）
+- **鉄則4–5**: `We linked` / `They do not prove` を前に；否定を文頭へ
+- **鉄則2–3**: `spatial-aggregation limitations summarized` / `quantification linking` / `offer contextual evidence to support` を削減
+- **鉄則6**: `may live` `may support` `remains informative`（過剰断定を避ける）
+- **意味**: No.9 方針（Discussion 不変更・Limitations 参照）は維持
+
 ### No.29（江口・新潟・長野の事実確認）
 
 - **対象**: Discussion（NOREPOS 比較段落）の都道府県例示
