@@ -466,6 +466,29 @@
 
 ---
 
+## No.31（江口・Conclusions 政策中心）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **31/32**（江口 **江11**）
+- **参照**: `g260519 ③` §11（Conclusion から OLS・β・*p* を削減し、メッセージと政策・展望に集約）
+- **変更範囲**: Conclusions **第1段落の全面置換**＋**最終1文**（正本・匿名版同期）
+- **第1段落**:
+  - 削除: `OLS`・`β ≈ 3.5`・`*p* = 0.043`・`α = 0.05`・biomechanical 繰り返し
+  - 追加: `Residence in prefectures…`（No.18 と整合）、手術率 proxy、*N* = 47、`hypothesis-generating for health geography and environment-aware fall-prevention planning`
+  - `walking speed` → `fast-walking proportion`
+- **最終文**: 因果経路の長文 → `travel-mode`・`environment-specific prevention strategies in high-slope communities`（No.19 と整合）
+- **康永 MQ**（Conclusions のみ）:
+  - 鉄則7: 結果の数値羅列を避け、Conclusion はメッセージ中心
+  - 鉄則6: `suggestively`・`hypothesis-generating`・`should be interpreted`
+  - 鉄則1: 第1段落を4短文に分割
+  - 鉄則5: `Residence` を第1文頭に
+- **DATA**: 新規数値なし（*N* = 47 のみ既出）
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: No.9 追記の Conclusions 第2–4段落（Limitations 橋渡し・open NDB 意義）
+
+**提案コミットメッセージ**: `rev(branch-3): No.31 Conclusions policy-focused summary without OLS stats (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
