@@ -405,6 +405,26 @@
 
 ---
 
+## No.28（江口・Discussion 冒頭・調整後明記）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **28/32**（江口 **江8**）
+- **参照**: `g260519 ③` §8（約3.5件/10万は**調整後**の関連であることを Main Findings で明記）
+- **変更範囲**: Discussion §1 Main Findings **第1–2文のみ**（正本・匿名版同期）
+- **置換**:
+  - 第1文: `walking speed` → `fast-walking proportion`（Methods/Results 用語と整合）
+  - 第2文: 先頭に `After the same adjustment,` を追加（3.5件/10万が Model 2 由来であることを明示）
+- **康永 MQ**（当該2文のみ）:
+  - 鉄則2: `After the same adjustment` で共変量列挙の重複を避ける
+  - 鉄則6: 第1文の borderline（HC3/bootstrap）記述は維持
+  - 鉄則4: 主語 `This ecological study` / `each additional degree` を前に
+- **DATA**: β = 3.49・約3.5・CI・*p* は不変
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: No.30 の risk factor / environmental hazard 表現；§4–§8；Conclusions
+
+**提案コミットメッセージ**: `rev(branch-3): No.28 Discussion Main Findings adjusted-rate framing (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
