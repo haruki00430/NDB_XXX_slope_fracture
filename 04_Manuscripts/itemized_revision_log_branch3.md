@@ -303,6 +303,30 @@
 
 ---
 
+## No.23（江口・Methods 副次解析明記）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **15/32**（江口 **江3**）
+- **参照**: `g260519 ③`（主要解析＋高齢化・速歩の副次的検証を Methods に明記）；Gemini 文案は**未転記**
+- **変更範囲**: Methods §6 冒頭のみ（正本・匿名版同期）
+- **方針**:
+  - **Primary**: hip fracture surgery rate（Model 1/2）
+  - **Secondary**: total・humerus・forearm（同一回帰枠組み）
+  - **共変量との関連**: Results の Table 2 相関に整合—**共変量をアウトカムとした単回帰は実施していない**ため、exploratory OLS は書かず「相関は記述用・媒介検定ではない」と明示
+- **置換**: §6 先頭に解析枠組み3文を追加；相関文に `(Table 2)` と mediation 否認1文；`primary causal interpretation` → `primary interpretation`；Model リスト後に空行
+- **康永 MQ**（当該段落のみ）:
+  - 鉄則1: 解析枠組みを3短文（各約14–18語）
+  - 鉄則5: 第1文で hip fracture surgery rate を中心テーマに
+  - 鉄則6: `did not treat … as formal mediation tests` で断定を抑制
+  - 鉄則11: `We tested` / `We used` / `We report`（能動態）
+  - 鉄則2: 共変量をアウトカムとする回帰の虚偽記載を回避（Results との整合）
+- **DATA**: 数値・モデル定義は不変
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py` を実行
+- **意図的に未変更**: HC3・bootstrap・間接標準化の段落；Results §3–§4；Discussion
+
+**提案コミットメッセージ**: `rev(branch-3): No.23 Methods primary/secondary analysis framework (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記
