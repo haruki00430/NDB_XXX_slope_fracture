@@ -349,6 +349,28 @@
 
 ---
 
+## No.27（江口・Results 小見出し分割）— エージェント草案（未コミット）
+
+- **Checklist**: 整合コミット順 **20/32**（江口 **江7**；No.14・No.23–24 と整合）
+- **参照**: `g260519 ③`／④（主解析 vs 感度 vs 副次の構造分離）；`_ref_run_branch3_itemized_commits.py` の全面短縮案は**不採用**
+- **変更範囲**: Results §3–§5 の見出しと段落配置のみ（正本・匿名版同期）
+- **構造**:
+  - **§3 Primary Regression Analysis: Hip Fracture Surgery Rate** — Model 1/2 の OLS 結果（数値・本文は No.14 済みのまま移動なし）
+  - **§4 Sensitivity Analyses** — 残差診断・Shapiro・HC3/bootstrap（正本のみ）；間接標準化（Table 5）
+  - **§5 Secondary Regression Analysis: Total, Humerus, and Forearm Fracture Surgery Rates** — 旧 §4（副次アウトカム）
+- **康永 MQ**（当該見出し・配置のみ）:
+  - 鉄則5: §3 見出しで hip fracture surgery rate を中心テーマに
+  - 鉄則10: Results は事実のみ—見出し追加による解釈文は入れない
+  - 鉄則2: No.14 で維持した感度段落は**削除せず** §4 へ移動のみ
+  - 鉄則11: 既存段落の能動態・数値表現は変更しない
+- **DATA**: β・CI・*p*・Table 5 数値は一切不変
+- **UTF-8**: コミット前に `python 04_Manuscripts/_verify_utf8_qmd.py`
+- **意図的に未変更**: Discussion；Methods；Table 3 脚注；正本 §3 内の HC3（fast-walking）係数記述（主解析表の一部として残置）
+
+**提案コミットメッセージ**: `rev(branch-3): No.27 Results split primary, sensitivity, and secondary sections (Eguchi)`
+
+---
+
 ## 2026-05-19: チェックリスト訂正（PDF・DOCX 再突合）
 
 - **正本**: `Manuscript_slope_fracture_20260425_saito0430-1.pdf` の [山1]–[山31] 表記

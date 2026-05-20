@@ -91,13 +91,15 @@ Across the 47 Japanese prefectures, the mean habitable-area-weighted terrain slo
 
 Bivariate correlations are summarized in Table 2 and illustrated for the primary exposure–outcome pair in Figure 1. Terrain slope correlated positively with hip fracture surgery rate (r = 0.475, *p* < 0.01) and with total fracture surgery rate (r = 0.394, *p* < 0.01). Slope correlated positively with proportion aged ≥65 years (r = 0.505, *p* < 0.01) and showed a weak negative correlation with fast-walking proportion (r = −0.264, *p* = 0.073). Correlations with humerus and forearm surgery rates were weak and non-significant (r = 0.138 and 0.177, respectively).
 
-## 3. Regression Analysis: Hip Fracture
+## 3. Primary Regression Analysis: Hip Fracture Surgery Rate
 
 In the unadjusted model (Model 1), terrain slope was significantly and positively associated with hip fracture surgery rate (β = 5.65; 95% CI, 2.50–8.79; R² = 0.225; *p* = 0.001). After adjustment for proportion aged ≥65 years, fast-walking proportion, and population density (Model 2), the association between slope and hip fracture rate remained statistically significant (β = 3.49; 95% CI, 0.11–6.86; R² = 0.385; *p* = 0.043) (Table 3). Proportion aged ≥65 years was also independently associated with hip fracture rate (β = 5.53; 95% CI, 1.32–9.74; *p* = 0.011). Fast-walking proportion showed a tendency toward a negative association with hip fracture rate, although this did not reach statistical significance (β = 2.02; *p* = 0.091). Population density was not significantly associated with hip fracture rate (β = −0.001; *p* = 0.818).
 
+## 4. Sensitivity Analyses
+
 Indirect standardization sensitivity analyses addressed age-structure confounding (Methods). In public NDB tables, some age-by-prefecture surgery counts are withheld for disclosure control and appear as a hyphen (`"-"`). We replaced each withheld cell with 0, 5, or 9 surgeries in prespecified scenarios and regressed the indirectly standardized hip (femur) surgery rate on terrain slope, adjusting for proportion aged ≥65 years, fast-walking proportion, and population density. When withheld counts were replaced by 0 surgeries, the slope coefficient was 5.71 (95% CI, 0.54–10.88; *p* = 0.031). When each withheld cell was replaced by 5 or 9 surgeries, β was 3.61 (95% CI, 0.30–6.92; *p* = 0.033) and 3.64 (95% CI, 0.28–7.00; *p* = 0.035), respectively (Table 5). The association direction was stable across scenarios, but the effect size depended on the replacement assumption.
 
-## 4. Regression Analysis: Total, Humerus, and Forearm Fractures
+## 5. Secondary Regression Analysis: Total, Humerus, and Forearm Fracture Surgery Rates
 
 In the unadjusted model, slope was significantly associated with total fracture surgery rate (β = 6.85; 95% CI, 2.06–11.64; R² = 0.156; *p* = 0.006). In the multivariable model, however, slope did not reach statistical significance for total fracture rate (β = 4.47; *p* = 0.099), although proportion aged ≥65 years remained a significant predictor (β = 7.19; *p* = 0.035; R² = 0.276). Neither humerus fracture rate (Model 1: *p* = 0.355; Model 2: R² = 0.107) nor forearm fracture rate (Model 1: *p* = 0.233; Model 2: R² = 0.062) was significantly associated with terrain slope in either model.
 
