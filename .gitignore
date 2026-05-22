@@ -13,12 +13,20 @@ venv/
 ENV/
 .env
 .env.*
+config/config.local.yaml
 *.egg-info/
 .claude/settings.local.json
 
 02_Data/raw/
 02_Data/processed/
 *.csv
+# Public release: prefecture-level tables only (N=47) for Zenodo/GitHub
+!data/release/
+!data/release/**
+!data/release/*.csv
+!data/release/*.json
+!data/release/*.md
+
 *.xlsx
 *.parquet
 *.sqlite

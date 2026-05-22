@@ -1,0 +1,44 @@
+# Citation metadata for GitHub + Zenodo (update version/date/DOI at release)
+cff-version: 1.2.0
+message: "If you use this software or the deposited prefecture-level dataset, please cite as below."
+type: software
+title: "Terrain Slope and Hip Fracture Surgery Rates: Prefecture-Level Ecological Analysis (NDB Open Data)"
+version: 1.0.0
+date-released: 2026-05-21
+license: MIT
+url: "https://github.com/haruki00430/NDB_XXX_slope_fracture"
+repository-code: "https://github.com/haruki00430/NDB_XXX_slope_fracture"
+doi: 10.5281/zenodo.XXXXXXX
+abstract: >-
+  Reproducible code and prefecture-level aggregated data (N = 47) for an
+  ecological study linking habitable-area-weighted terrain slope to hip,
+  humerus, and forearm fracture surgery rates in Japan, using the 10th NDB
+  Open Data, 2020 census covariates, and GSI terrain derivatives.
+keywords:
+  - hip fracture
+  - ecological study
+  - NDB Open Data
+  - terrain slope
+  - Japan
+  - reproducibility
+authors:
+  - family-names: Saito
+    given-names: Haruki
+    affiliation: Fukushima Medical University
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Ohira
+    given-names: Tetsuya
+    affiliation: Fukushima Medical University
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+preferred-citation:
+  type: article
+  title: "Association between Terrain Slope and Hip Fracture Surgery Rates Among Older Adults: A Nationwide Ecological Study in Japan"
+  authors:
+    - family-names: Saito
+      given-names: Haruki
+    - family-names: Ohira
+      given-names: Tetsuya
+  journal: "Health & Place"
+  year: 2026
+  notes: "Manuscript under review; update journal volume/pages when published."
+  doi: 10.5281/zenodo.XXXXXXX

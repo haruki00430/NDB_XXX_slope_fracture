@@ -2,24 +2,33 @@
 """
 10_create_prefecture_maps.py
 ----------------------------
-都道府県別日本地図を作成するスクリプト。
+Purpose (plain language)
+    Draw maps of Japan showing how terrain slope and hip fracture surgery rates
+    vary across prefectures—the main map figure for the manuscript (Figure 2).
 
-Main manuscript figure (Figure 2, three panels):
-  (A) Terrain slope | (B) Hip fracture surgery rate  [top row, side by side]
-  (C) Bivariate choropleth (slope × surgery rate)   [bottom row, full width]
+What this script produces (Figure 2 layout)
+    Panel A (top left):  Habitable-area-weighted mean terrain slope (degrees).
+    Panel B (top right): Hip fracture surgery rate per 100,000 population.
+    Panel C (bottom):    Combined two-color map (slope category × surgery rate category).
 
-Okinawa is drawn in a separate inset (upper-left of each map axes) so the mainland
-fills the frame; otherwise the Kyūshū–Okinawa extent wastes canvas and shrinks
-readable detail.
+How to run
+    From the project root or this folder:
+        python 03_Analysis/scripts/10_create_prefecture_maps.py
 
-Display geometry (not analytic data):
-  - Mainland: drop tiny / far-south parts (e.g. Ogasawara) so Honshu–Hokkaido fill the panel.
-  - Okinawa inset: largest island only (沖縄本島), independent zoom.
+Inputs
+    - ``analysis_dataset_v1.csv`` (47 prefectures with slope and surgery rates).
+    - ``japan.geojson`` prefecture boundaries (see DATA_SOURCES.md / GIS folder).
 
-Also writes legacy single-panel PNGs (fig_map_slope.png, etc.) for debugging.
+Map display notes (does not change the analysis numbers)
+    - Okinawa is shown in a small inset so the main islands use more space.
+    - Tiny remote islands may be omitted from drawing only, for readability.
+    - Okinawa inset zooms to the main Okinawa island.
 
-実行方法（NDB_XXX_slope_fracture ルートまたは 03_Analysis/scripts から）:
-    python 10_create_prefecture_maps.py
+Additional outputs
+    Single-panel PNG files (e.g. slope only) for debugging.
+
+Requirements
+    geopandas, matplotlib, shapely (see requirements.txt; add geopandas if missing).
 """
 
 import os
@@ -40,7 +49,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 try:
-    import japanize_matplotlib
+    import japanize_matplotlib  # noqa: F401  # registers Japanese fonts via import side effect
 except ImportError:
     import matplotlib.font_manager as fm
 

@@ -1,0 +1,11 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Applies to files under `data/release/` only (prefecture-level aggregated tables).
+
+You are free to share and adapt these data files under the terms of CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution should cite the Zenodo DOI, the GitHub repository, and the underlying
+MHLW NDB Open Data, e-Stat, and GSI sources listed in DATA_SOURCES.md.
+
+Raw NDB Excel files are not redistributed and remain subject to MHLW terms.

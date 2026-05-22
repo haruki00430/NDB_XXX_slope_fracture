@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "n_units": 47,
+  "unit_type": "prefecture",
+  "tables": {
+    "analysis_dataset_prefecture_n47.csv": {
+      "description": "Ecological analysis dataset for manuscript main models",
+      "columns": {
+        "prefecture": {"type": "string", "description": "Prefecture name (Japanese)"},
+        "total_pop": {"type": "integer", "unit": "persons", "source": "2020 Population Census"},
+        "aging_rate": {"type": "float", "unit": "percent", "source": "2020 Population Census"},
+        "pop_density": {"type": "float", "unit": "persons_per_km2", "source": "2020 Population Census"},
+        "femur_rate": {"type": "float", "unit": "surgeries_per_100000_per_year", "source": "NDB Open Data No.10 Reiwa 5"},
+        "humerus_rate": {"type": "float", "unit": "surgeries_per_100000_per_year", "source": "NDB Open Data No.10 Reiwa 5"},
+        "forearm_rate": {"type": "float", "unit": "surgeries_per_100000_per_year", "source": "NDB Open Data No.10 Reiwa 5"},
+        "fast_walking_rate": {"type": "float", "unit": "percent", "source": "NDB Open Data No.10 Reiwa 4 Specific Health Checkup Q12"},
+        "habitable_slope_weighted": {"type": "float", "unit": "degrees", "source": "GSI DEM habitable-area-weighted mean slope"}
+      }
+    },
+    "prefecture_habitable_slope.csv": {
+      "description": "Terrain exposure used in manuscript",
+      "columns": {
+        "prefecture": {"type": "string"},
+        "habitable_slope_weighted": {"type": "float", "unit": "degrees"}
+      }
+    }
+  }
+}

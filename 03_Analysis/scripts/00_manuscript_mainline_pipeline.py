@@ -1,16 +1,35 @@
 # pyright: reportGeneralTypeIssues=false, reportAttributeAccessIssue=false, reportArgumentType=false, reportCallIssue=false, reportOperatorIssue=false, reportIndexIssue=false, reportReturnType=false
 
 """
-Manuscript mainline pipeline (true single-file implementation).
+00_manuscript_mainline_pipeline.py
+--------------------------------
+Purpose (plain language)
+    Rebuild the entire prefecture-level analysis for the manuscript from
+    official open data: fracture surgery counts and health-checkup walking
+    data (NDB), population statistics (census), and precomputed terrain slope.
 
-This file alone performs:
-1) NDB fracture extraction
-2) NDB walking-speed extraction
-3) census merge (manual baseline used in current manuscript)
-4) dataset integration
-5) regression / tables / core figures
-6) residual diagnostics + HC3 + bootstrap
-7) manuscript headline-value verification
+What this script does (step by step)
+    1. Extract hip / upper-arm / forearm surgery counts per prefecture from NDB Excel.
+    2. Extract the proportion reporting “fast walking” from the Specific Health Checkup file.
+    3. Load 2020 census-based population, aging rate, and density (47 rows).
+    4. Merge all sources with habitable-area-weighted mean slope (degrees).
+    5. Compute surgery rates per 100,000 population per year.
+    6. Run correlation heatmap and linear regression (Models 1–2 for hip rate).
+    7. Run residual checks, robust standard errors (HC3), and bootstrap resampling.
+    8. Verify that key numbers match the published Abstract (8.57°, 254, β values).
+
+Requirements
+    - Copy ``config/config.yaml.example`` to ``config/config.local.yaml`` and set paths
+      to your NDB Excel files, census CSV, and terrain slope CSV (see DATA_SOURCES.md).
+    - Python packages in ``requirements.txt`` (install in a virtual environment).
+
+Output folders
+    - ``03_Analysis/data/interim/`` — intermediate tables
+    - ``03_Analysis/data/processed/analysis_dataset_v1.csv`` — final 47-row dataset
+    - ``03_Analysis/results/`` — regression text, diagnostics, figures
+
+Note for GitHub readers
+    For a quick check without NDB downloads, use ``reproduce_from_release.py`` instead.
 """
 
 from __future__ import annotations
@@ -25,32 +44,34 @@ import seaborn as sns
 import statsmodels.formula.api as smf
 from scipy import stats
 
-if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+from _utils import configure_stdout_utf8, load_project_paths  # noqa: E402
+
+configure_stdout_utf8()
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-INTERIM_DIR = PROJECT_ROOT / "03_Analysis" / "data" / "interim"
-PROCESSED_DIR = PROJECT_ROOT / "03_Analysis" / "data" / "processed"
-RESULTS_DIR = PROJECT_ROOT / "03_Analysis" / "results"
-FIG_DIR = RESULTS_DIR / "figures"
-STATS_DIR = PROJECT_ROOT / "results" / "statistics"
+_CFG = load_project_paths(PROJECT_ROOT)
 
-INPUT_NDB_FRACTURE = Path(
-    "C:/Users/user/SharedWorkspace/projects/NDB_Research_Hub/02_Data/raw/NDB_OpenData/No.10/"
-    "01_医科診療行為（算定回数）/01_公費レセプトを含まないデータ/K_手術/款別都道府県別算定回数.xlsx"
-)
-INPUT_NDB_WALKING = Path(
-    "C:/Users/user/SharedWorkspace/projects/NDB_Research_Hub/02_Data/raw/NDB_OpenData/No.10/"
-    "07_特定健診 質問票/01_公費レセプトを含まないデータ/"
-    "標準的な質問票（質問項目１２） 都道府県別性年齢階級別分布.xlsx"
-)
-INPUT_SLOPE = STATS_DIR / "prefecture_habitable_slope.csv"
+INTERIM_DIR = _CFG.interim_dir
+PROCESSED_DIR = _CFG.processed_dir
+RESULTS_DIR = _CFG.results_dir
+FIG_DIR = RESULTS_DIR / "figures"
+
+INPUT_NDB_FRACTURE = _CFG.ndb_fracture_xlsx
+INPUT_NDB_WALKING = _CFG.ndb_walking_xlsx
+INPUT_SLOPE = _CFG.habitable_slope_csv
+CENSUS_CSV = _CFG.census_csv
+BOOTSTRAP_REPLICATES = _CFG.bootstrap_replicates
+RANDOM_SEED = _CFG.random_seed
 
 EXPECTED = {"n": 47, "mean_slope": 8.57, "mean_femur_rate": 254.0, "m1_beta": 5.65, "m2_beta": 3.49}
 TOL = {"mean_slope": 0.02, "mean_femur_rate": 0.1, "m1_beta": 0.02, "m2_beta": 0.02}
 
 
 def ensure_dirs() -> None:
+    """Create output folders if they do not exist."""
     INTERIM_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -58,6 +79,10 @@ def ensure_dirs() -> None:
 
 
 def extract_fracture() -> pd.DataFrame:
+    """
+    Read NDB inpatient surgery counts by procedure code and prefecture.
+    Keeps hip (femur), humerus, and forearm fracture-related procedures only.
+    """
     df = pd.read_excel(INPUT_NDB_FRACTURE, sheet_name="入院", header=None)
     target_codes = {
         150016710: ("femur", "K044_ClosedReduction"),
@@ -104,10 +129,15 @@ def extract_fracture() -> pd.DataFrame:
 
 
 def extract_walking() -> pd.DataFrame:
+    """
+    Read Specific Health Checkup Q12 (self-reported fast walking: yes/no).
+    Aggregates ages 65–74 by prefecture and computes percent answering “yes”.
+    """
     df = pd.read_excel(INPUT_NDB_WALKING, header=None)
     records: list[dict[str, object]] = []
     current_pref: str | None = None
-    cols = [7, 8, 15, 16]  # 65-69M,70-74M,65-69F,70-74F
+    # Excel columns for 65–69 and 70–74, male and female counts
+    cols = [7, 8, 15, 16]
     for i in range(5, len(df)):
         row = df.iloc[i]
         if pd.notna(row[0]):
@@ -127,7 +157,9 @@ def extract_walking() -> pd.DataFrame:
     tmp = pd.DataFrame(records)
     out = tmp.pivot_table(index="prefecture", columns="answer", values="count_65_74", aggfunc="sum").reset_index()
     if "はい" not in out.columns or "いいえ" not in out.columns:
-        raise RuntimeError("walking_speed_q12 の「はい/いいえ」列を抽出できませんでした。")
+        raise RuntimeError(
+            "Could not find yes/no answer columns for fast-walking (Q12) in NDB Excel."
+        )
     out["total"] = out["はい"] + out["いいえ"]
     out["fast_walking_rate"] = (out["はい"] / out["total"]) * 100.0
     out.to_csv(INTERIM_DIR / "walking_speed_q12.csv", index=False, encoding="utf-8-sig")
@@ -135,13 +167,22 @@ def extract_walking() -> pd.DataFrame:
 
 
 def census_manual() -> pd.DataFrame:
-    df = pd.read_csv(INTERIM_DIR / "statistics_2020.csv") if (INTERIM_DIR / "statistics_2020.csv").exists() else None
+    """Load 47-prefecture population and covariates from a pre-built census merge file."""
+    census_path = CENSUS_CSV
+    df = pd.read_csv(census_path) if census_path.exists() else None
     if df is not None and len(df) == 47:
         return df
-    raise RuntimeError("statistics_2020.csv が見つからないため本線を継続できません。")
+    raise RuntimeError(
+        f"Missing or invalid {census_path} (need exactly 47 prefecture rows)."
+    )
 
 
 def integrate_dataset(fracture: pd.DataFrame, walking: pd.DataFrame, census: pd.DataFrame) -> pd.DataFrame:
+    """
+    Merge fracture counts, walking rate, census, and terrain slope by prefecture.
+    Computes surgery rates per 100,000 population per year for each body site.
+    """
+    # Map NDB English prefecture codes to Japanese names used in other files
     pref_map = {
         "01_Hokkaido": "北海道", "02_Aomori": "青森県", "03_Iwate": "岩手県", "04_Miyagi": "宮城県",
         "05_Akita": "秋田県", "06_Yamagata": "山形県", "07_Fukushima": "福島県", "08_Ibaraki": "茨城県",
@@ -164,7 +205,7 @@ def integrate_dataset(fracture: pd.DataFrame, walking: pd.DataFrame, census: pd.
     merged = census.merge(agg, on="prefecture", how="left").merge(site, on="prefecture", how="left")
     merged = merged.merge(walking[["prefecture", "fast_walking_rate"]], on="prefecture", how="left")
     if not INPUT_SLOPE.exists():
-        raise RuntimeError(f"傾斜ファイルが見つかりません: {INPUT_SLOPE}")
+        raise RuntimeError(f"Terrain slope file not found: {INPUT_SLOPE}")
     slope = pd.read_csv(INPUT_SLOPE)
     merged = merged.merge(slope[["prefecture", "habitable_slope_weighted", "avg_slope_simple"]], on="prefecture", how="left")
     merged["fracture_rate"] = merged["total_fracture_count"] / merged["total_pop"] * 100000.0
@@ -176,6 +217,10 @@ def integrate_dataset(fracture: pd.DataFrame, walking: pd.DataFrame, census: pd.
 
 
 def run_statistics(df: pd.DataFrame) -> None:
+    """
+    Correlation matrix, hip-fracture regression (Model 2), residual plots,
+    HC3 robust SE, and bootstrap confidence interval for the slope coefficient.
+    """
     corr_cols = [
         "fracture_rate", "femur_rate", "humerus_rate", "forearm_rate",
         "habitable_slope_weighted", "aging_rate", "fast_walking_rate", "pop_density",
@@ -210,9 +255,9 @@ def run_statistics(df: pd.DataFrame) -> None:
     fig.savefig(FIG_DIR / "fig_residual_diagnostics_hip_m2.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
 
-    rng = np.random.default_rng(42)
+    rng = np.random.default_rng(RANDOM_SEED)
     coefs = []
-    for _ in range(5000):
+    for _ in range(BOOTSTRAP_REPLICATES):
         idx = rng.integers(0, len(df), size=len(df))
         sub = df.iloc[idx]
         coefs.append(
@@ -231,6 +276,7 @@ def run_statistics(df: pd.DataFrame) -> None:
 
 
 def verify_headline(df: pd.DataFrame) -> None:
+    """Stop with an error if recomputed values differ from the manuscript Abstract."""
     m1 = smf.ols("femur_rate ~ habitable_slope_weighted", data=df).fit()
     m2 = smf.ols("femur_rate ~ habitable_slope_weighted + aging_rate + fast_walking_rate + pop_density", data=df).fit()
     observed = {
@@ -245,17 +291,33 @@ def verify_headline(df: pd.DataFrame) -> None:
     for k in ("mean_slope", "mean_femur_rate", "m1_beta", "m2_beta"):
         if abs(observed[k] - EXPECTED[k]) > TOL[k]:
             raise RuntimeError(f"{k} mismatch: observed={observed[k]:.4f}, expected={EXPECTED[k]:.4f}, tol={TOL[k]}")
-    print("[OK] headline values validated")
+    print("[OK] Headline values match the manuscript Abstract.")
 
 
 def main() -> int:
+    """Run the full manuscript analysis pipeline end to end."""
+    print("Step 0: Preparing output directories...")
     ensure_dirs()
+
+    print("Step 1: Extracting fracture surgery counts from NDB Open Data...")
     fracture = extract_fracture()
+
+    print("Step 2: Extracting fast-walking proportion from Specific Health Checkup...")
     walking = extract_walking()
+
+    print("Step 3: Loading census-based population and covariates (47 prefectures)...")
     census = census_manual()
+
+    print("Step 4: Merging sources and computing surgery rates per 100,000...")
     df = integrate_dataset(fracture, walking, census)
+
+    print("Step 5: Running regressions, diagnostics, and saving figures...")
     run_statistics(df)
+
+    print("Step 6: Verifying headline statistics reported in the Abstract...")
     verify_headline(df)
+
+    print("Pipeline finished successfully.")
     return 0
 
 

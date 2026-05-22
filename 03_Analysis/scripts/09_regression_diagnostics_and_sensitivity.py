@@ -1,12 +1,32 @@
 # -*- coding: utf-8 -*-
 """
-OLS 回帰の診断（残差 vs 予測、Q-Q、Shapiro-Wilk）と感度分析（HC3、非置換ブートストラップ）。
-主アウトカム: femur_rate（股関節骨折手術率）、Model 1 / Model 2。
-結果は results/regression_diagnostics_report.txt と figures/ に出力。
+09_regression_diagnostics_and_sensitivity.py
+--------------------------------------------
+Purpose (plain language)
+    Check whether the linear regression linking terrain slope to hip fracture
+    surgery rate is trustworthy, and test whether results stay similar when
+    using alternative statistical methods.
+
+What this script does
+    1. Summarizes distribution of each variable (skewness, Shapiro–Wilk test).
+    2. Fits Model 1 (slope only) and Model 2 (slope + aging + fast walking + density).
+    3. Plots residuals vs fitted values and a normal Q–Q plot (Model 2).
+    4. Repeats Model 2 with heteroskedasticity-robust standard errors (HC3).
+    5. Bootstrap resamples prefectures 5,000 times to form a 95% interval for the slope.
+    6. Writes a text report and saves a diagnostic figure.
+
+Primary outcome
+    ``femur_rate`` = annual hip fracture surgeries per 100,000 population.
+
+Outputs
+    - ``03_Analysis/results/regression_diagnostics_report.txt``
+    - ``03_Analysis/results/figures/fig_residual_diagnostics_hip_m2.png``
+
+Run after
+    ``00_manuscript_mainline_pipeline.py`` (needs ``analysis_dataset_v1.csv``).
 """
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 
@@ -16,12 +36,12 @@ import pandas as pd
 import statsmodels.formula.api as smf
 from scipy import stats
 
-# Windows コンソール UTF-8
-if hasattr(sys.stdout, "reconfigure"):
-    try:
-        sys.stdout.reconfigure(encoding="utf-8")
-    except Exception:
-        pass
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+from _utils import as_float, as_series, configure_stdout_utf8  # noqa: E402
+
+configure_stdout_utf8()
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
@@ -48,6 +68,7 @@ TABLE1_COLS = [
 
 
 def skewness_series(x: pd.Series) -> float:
+    """Measure asymmetry of a variable's distribution (for Table 1 notes)."""
     x = x.dropna().astype(float)
     if len(x) < 3:
         return float("nan")
@@ -55,14 +76,19 @@ def skewness_series(x: pd.Series) -> float:
 
 
 def shapiro_w(x: pd.Series) -> tuple[float, float]:
-    x = x.dropna().astype(float).values
-    if len(x) < 3:
+    """Shapiro–Wilk normality test statistic and p-value for one variable."""
+    values = as_series(x).dropna().astype(float).to_numpy()
+    if len(values) < 3:
         return float("nan"), float("nan")
-    stat, p = stats.shapiro(x)
+    stat, p = stats.shapiro(values)
     return float(stat), float(p)
 
 
 def bootstrap_slope_m2(df: pd.DataFrame, n_boot: int, seed: int) -> np.ndarray:
+    """
+    Resample prefectures with replacement many times and refit Model 2 each time.
+    Returns the collection of slope coefficients (for a bootstrap confidence interval).
+    """
     rng = np.random.default_rng(seed)
     formula = (
         "femur_rate ~ habitable_slope_weighted + aging_rate + "
@@ -75,13 +101,15 @@ def bootstrap_slope_m2(df: pd.DataFrame, n_boot: int, seed: int) -> np.ndarray:
         sub = df.iloc[idx]
         try:
             m = smf.ols(formula, data=sub).fit()
-            coefs.append(m.params["habitable_slope_weighted"])
+            coefs.append(as_float(m.params["habitable_slope_weighted"]))
         except Exception:
             coefs.append(np.nan)
     return np.asarray(coefs, dtype=float)
 
 
 def main() -> int:
+    """Run all diagnostic and sensitivity analyses and write the report file."""
+    print("Regression diagnostics and sensitivity analysis (N = 47 prefectures)")
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -91,25 +119,29 @@ def main() -> int:
 
     df = pd.read_csv(DATA_PATH, encoding="utf-8")
     lines: list[str] = []
-    w = lambda s: (lines.append(s), print(s))
 
-    w("=" * 72)
-    w("Regression diagnostics & sensitivity (prefecture N=47)")
-    w(f"Data: {DATA_PATH}")
-    w("=" * 72)
+    def write_line(text: str) -> None:
+        lines.append(text)
+        print(text)
+
+    write_line("=" * 72)
+    write_line("Regression diagnostics & sensitivity (prefecture N=47)")
+    write_line(f"Data: {DATA_PATH}")
+    write_line("=" * 72)
 
     # --- Marginal distributions (Table 1 variables) ---
-    w("\n## Marginal distributions (for Table 1 reporting)\n")
-    w(f"{'Variable':<40} {'n':>4} {'skew':>8} {'SW p':>10}")
-    w("-" * 72)
+    write_line("\n## Marginal distributions (for Table 1 reporting)\n")
+    write_line(f"{'Variable':<40} {'n':>4} {'skew':>8} {'SW p':>10}")
+    write_line("-" * 72)
     skew_map: dict[str, float] = {}
     for col, label in TABLE1_COLS:
         if col not in df.columns:
             continue
-        sk = skewness_series(df[col])
-        _, swp = shapiro_w(df[col])
+        series = as_series(df[col])
+        sk = skewness_series(series)
+        _, swp = shapiro_w(series)
         skew_map[col] = sk
-        w(f"{label[:39]:<40} {len(df[col].dropna()):>4} {sk:>8.3f} {swp:>10.4f}")
+        write_line(f"{label[:39]:<40} {len(series.dropna()):>4} {sk:>8.3f} {swp:>10.4f}")
 
     # --- Model 1 & 2: femur (hip) ---
     f1 = "femur_rate ~ habitable_slope_weighted"
@@ -121,19 +153,22 @@ def main() -> int:
     m2 = smf.ols(f2, data=df).fit()
     m2_hc3 = smf.ols(f2, data=df).fit(cov_type="HC3")
 
-    w("\n## Model 2 OLS (default SE)\n")
-    w(m2.summary().as_text())
+    write_line("\n## Model 1 OLS (slope only)\n")
+    write_line(m1.summary().as_text())
 
-    w("\n## Model 2 OLS with heteroskedasticity-robust SE (HC3)\n")
-    w(m2_hc3.summary().as_text())
+    write_line("\n## Model 2 OLS (default SE)\n")
+    write_line(m2.summary().as_text())
+
+    write_line("\n## Model 2 OLS with heteroskedasticity-robust SE (HC3)\n")
+    write_line(m2_hc3.summary().as_text())
 
     resid2 = m2.resid
     fitted2 = m2.fittedvalues
     sw_stat, sw_p = stats.shapiro(resid2.values)
 
-    w("\n## Residual normality (Model 2), Shapiro–Wilk on OLS residuals\n")
-    w(f"Shapiro–Wilk W = {sw_stat:.4f}, p = {sw_p:.4f}")
-    w("(Small-sample tests on residuals are indicative only.)\n")
+    write_line("\n## Residual normality (Model 2), Shapiro–Wilk on OLS residuals\n")
+    write_line(f"Shapiro–Wilk W = {sw_stat:.4f}, p = {sw_p:.4f}")
+    write_line("(Small-sample tests on residuals are indicative only.)\n")
 
     # Plots
     plt.rcParams["font.family"] = "DejaVu Sans"
@@ -151,29 +186,29 @@ def main() -> int:
     fig_path = FIGURES_DIR / "fig_residual_diagnostics_hip_m2.png"
     fig.savefig(fig_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
-    w(f"Saved: {fig_path}")
+    write_line(f"Saved: {fig_path}")
 
     # Bootstrap CI for slope in Model 2
-    w(f"\n## Nonparametric bootstrap for β(slope), Model 2 (B={N_BOOT}, prefecture resampling)\n")
+    write_line(f"\n## Nonparametric bootstrap for β(slope), Model 2 (B={N_BOOT}, prefecture resampling)\n")
     boot = bootstrap_slope_m2(df, N_BOOT, RNG_SEED)
     boot_clean = boot[np.isfinite(boot)]
     lo, hi = np.percentile(boot_clean, [2.5, 97.5])
-    w(f"Bootstrap 95% CI for habitable_slope_weighted: [{lo:.4f}, {hi:.4f}]")
-    w(f"OLS 95% CI (default):   [{m2.conf_int().loc['habitable_slope_weighted', 0]:.4f}, {m2.conf_int().loc['habitable_slope_weighted', 1]:.4f}]")
-    w(f"OLS 95% CI (HC3):      [{m2_hc3.conf_int().loc['habitable_slope_weighted', 0]:.4f}, {m2_hc3.conf_int().loc['habitable_slope_weighted', 1]:.4f}]")
-    w(f"Point estimate β:      {m2.params['habitable_slope_weighted']:.4f}")
+    write_line(f"Bootstrap 95% CI for habitable_slope_weighted: [{lo:.4f}, {hi:.4f}]")
+    write_line(f"OLS 95% CI (default):   [{m2.conf_int().loc['habitable_slope_weighted', 0]:.4f}, {m2.conf_int().loc['habitable_slope_weighted', 1]:.4f}]")
+    write_line(f"OLS 95% CI (HC3):      [{m2_hc3.conf_int().loc['habitable_slope_weighted', 0]:.4f}, {m2_hc3.conf_int().loc['habitable_slope_weighted', 1]:.4f}]")
+    write_line(f"Point estimate β:      {m2.params['habitable_slope_weighted']:.4f}")
 
     # HC3 p for slope
     p_hc3 = float(m2_hc3.pvalues["habitable_slope_weighted"])
-    w(f"p-value (slope, default SE): {float(m2.pvalues['habitable_slope_weighted']):.4f}")
-    w(f"p-value (slope, HC3):        {p_hc3:.4f}")
+    write_line(f"p-value (slope, default SE): {float(m2.pvalues['habitable_slope_weighted']):.4f}")
+    write_line(f"p-value (slope, HC3):        {p_hc3:.4f}")
 
-    w("\n## Synthesis for manuscript\n")
-    w(
+    write_line("\n## Synthesis for manuscript\n")
+    write_line(
         "- OLS assumes linearity and (for classical SE) homoskedastic, independent errors; "
         "marginal normality of Table 1 variables is not required."
     )
-    w(
+    write_line(
         "- Compare bootstrap / HC3 to default OLS: if substantive conclusions agree, "
         "state robustness in Methods/Results."
     )

@@ -1,0 +1,27 @@
+# Copy to config/config.local.yaml and edit paths (do not commit config.local.yaml)
+#
+# Paths may be absolute or relative to the project root (NDB_XXX_slope_fracture/).
+# Example below assumes this repo lives inside NDB_Research_Hub next to 02_Data/.
+
+project:
+  name: NDB_XXX_slope_fracture
+
+paths:
+  # NDB Open Data No.10 — see DATA_SOURCES.md for download URLs
+  ndb_fracture_xlsx: "../../02_Data/raw/NDB_OpenData/No.10/01_医科診療行為（算定回数）/01_公費レセプトを含まないデータ/K_手術/款別都道府県別算定回数.xlsx"
+  ndb_walking_xlsx: "../../02_Data/raw/NDB_OpenData/No.10/07_特定健診 質問票/01_公費レセプトを含まないデータ/標準的な質問票（質問項目１２） 都道府県別性年齢階級別分布.xlsx"
+
+  # Census merge (47 rows) — build with 01_fetch_census_data.py or copy from data/release/
+  census_csv: "03_Analysis/data/interim/statistics_2020.csv"
+
+  # Terrain slope (47 rows) — from pipeline output or data/release/
+  habitable_slope_csv: "results/statistics/prefecture_habitable_slope.csv"
+
+  # Pipeline output directories (relative to project root)
+  interim_dir: "03_Analysis/data/interim"
+  processed_dir: "03_Analysis/data/processed"
+  results_dir: "03_Analysis/results"
+
+analysis:
+  bootstrap_replicates: 5000
+  random_seed: 42

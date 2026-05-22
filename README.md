@@ -1,4 +1,5 @@
-﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_slope_fracture
+﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_slope_fracture  
+> **再現・公開:** [`REPRODUCE.md`](REPRODUCE.md) · [`DATA_SOURCES.md`](DATA_SOURCES.md) · [`03_Analysis/scripts/README.md`](03_Analysis/scripts/README.md) · [`docs/ZENODO_DEPOSIT_MANIFEST.md`](docs/ZENODO_DEPOSIT_MANIFEST.md) · [`CITATION.cff`](CITATION.cff)
 
 # NDB_XXX_slope_fracture
 
