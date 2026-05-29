@@ -36,6 +36,16 @@ config/config.local.yaml
 05_Outputs/figures/
 05_Outputs/reports/
 
+# Quarto生成HTML出力（.qmdから再生成可能）
+*.html
+04_Manuscripts/variants/outputs/
+
+# デバッグ・作業中の一時ファイル
+git_names.txt
+git_stat.txt
+**/manuscript_v2_extracted.txt
+03_Analysis/scripts/00_temp_inspect*
+
 .DS_Store
 Thumbs.db
 desktop.ini
