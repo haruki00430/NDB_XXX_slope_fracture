@@ -4,7 +4,7 @@ message: "If you use this software or the deposited prefecture-level dataset, pl
 type: software
 title: "Terrain Slope and Hip Fracture Surgery Rates: Prefecture-Level Ecological Analysis (NDB Open Data)"
 version: 1.0.0
-date-released: 2026-05-21
+date-released: 2026-05-30
 license: MIT
 url: "https://github.com/haruki00430/NDB_XXX_slope_fracture"
 repository-code: "https://github.com/haruki00430/NDB_XXX_slope_fracture"
