@@ -67,6 +67,8 @@ nul
 
 # 大容量アーカイブ・生データ（再ダウンロードで再現）
 *.zip
+# Zenodo提出用バンドル（create_zenodo_bundle.py の出力）
+*_zenodo_v*.zip
 *.7z
 *.pkl
 
