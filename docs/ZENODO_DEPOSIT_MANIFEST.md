@@ -2,7 +2,7 @@
 
 **Record type:** Software + dataset (prefecture-level aggregate, N = 47)  
 **GitHub tag:** `v1.0.0`  
-**DOI (reserve before submission):** `10.5281/zenodo.XXXXXXX`  
+**DOI:** `10.5281/zenodo.20452953`  
 **License:** Code MIT; data CC BY 4.0 (derived aggregates only)
 
 ---
